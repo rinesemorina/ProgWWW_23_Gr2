@@ -1,8 +1,10 @@
 @import url('./colors.css');
 @import url('./utilities.css');
+@import url('./components/header.css');
 
 body{
     font-family: 'Raleway', sans-serif;
+    margin: 0;
 }
 
 .material-symbols-outlined {
