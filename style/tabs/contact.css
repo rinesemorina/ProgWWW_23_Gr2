@@ -1,0 +1,52 @@
+#contact-container {
+    display: flex;
+    align-items: center;
+
+.container {
+    display: flex;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+
+.left-side, .right-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    padding-top: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.left-side {
+    background: var(--violet-9);
+    background: -moz-linear-gradient(-45deg, var(--violet-9) 0%, var(--blue-11) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, var(--violet-9)), color-stop(100%, var(--blue-11)));
+    background: -webkit-linear-gradient(-45deg, var(--violet-9) 0%, var(--blue-11) 100%);
+    background: -o-linear-gradient(-45deg, var(--violet-9) 0%, var(--blue-11) 100%);
+    background: -ms-linear-gradient(-45deg, var(--violet-9) 0%, var(--blue-11) 100%);
+    background: -webkit-linear-gradient(315deg, var(--violet-9) 0%, var(--blue-11) 100%);
+    background: -o-linear-gradient(315deg, var(--violet-9) 0%, var(--blue-11) 100%);
+    background: linear-gradient(135deg, var(--violet-9) 0%, var(--blue-11) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='var(--violet-9)', endColorstr='var(--blue-11)', GradientType=1);
+}
+
+.right-side {
+var(--white) background-color: var(--white);
+    align-items: center;
+    justify-content: center;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+}
