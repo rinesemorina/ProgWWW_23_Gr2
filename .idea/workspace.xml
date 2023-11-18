@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b74e6090-5117-4b5e-826f-3b2b8a0aabf6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style/configs.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/configs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/tabs/contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/tabs/contact.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tabs/contact-us/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tabs/contact-us/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,6 +54,8 @@
       <recent name="$PROJECT_DIR$/assets/icons" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/style/tabs" />
+      <recent name="$PROJECT_DIR$/tabs/contact-us" />
       <recent name="$PROJECT_DIR$/functions/utils" />
     </key>
   </component>
@@ -65,7 +67,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1700325158221</updated>
-      <workItem from="1700325159937" duration="11079000" />
+      <workItem from="1700325159937" duration="19700000" />
     </task>
     <servers />
   </component>
