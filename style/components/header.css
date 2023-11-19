@@ -5,9 +5,9 @@
     .logo-container{
         display: flex;
         .logo{
-            width: 45px;
-            height: 40px;
-            margin: 10px 15px;
+            width: 180px;
+            margin-left: 10px;
+            margin-top: 5px;
         }
         .mt-25{
             margin-top: 21px;
