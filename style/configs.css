@@ -2,9 +2,14 @@
 @import url('./utilities.css');
 @import url('./components/header.css');
 
+@import url('./tabs/products.css');
+
 body{
     font-family: 'Raleway', sans-serif;
     margin: 0;
+}
+#tab-content{
+    padding: 48px 75px;
 }
 
 .material-symbols-outlined {
