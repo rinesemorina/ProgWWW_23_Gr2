@@ -36,7 +36,7 @@
     changeTab('home')
     function changeTab(tab){
         $(function(){
-            $('#tab-content').load(`${tab}/"index.html`);
+            $('#tab-content').load("tabs/"+tab+"/index.html");
         });
     }
     function createTabs(){
