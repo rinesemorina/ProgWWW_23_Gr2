@@ -1,1 +1,50 @@
-<p>Products page</p>
+<div id="products-container">
+    <p class="bold fs-20">All products</p>
+
+    <div class="header">
+
+    </div>
+    <div id="products-list" class="list">
+        <!-- Product cards will be injected here -->
+    </div>
+</div>
+
+<script>
+    let all_data = []
+    let list = document.getElementById("products-list")
+
+    getData()
+
+    function getData(){
+        fetch('../assets/data/products.json')
+            .then((response) => response.json())
+            .then((json) => {
+                all_data = json
+                displayData()
+            });
+    }
+    function displayData(){
+        list.innerHTML = ''
+
+        all_data.forEach(item => {
+            let item_html = document.createElement('div')
+            item_html.className = 'card'
+            let formatted_description = `${item.cpu}, ${item.ram}GB, ${item.space > 1024 ? item.space % 1024 + 'TB' : item.space + 'GB'}, ${item.display}"`
+            item_html.innerHTML = `
+                <div class="center mb-20">
+                    <img class="img" src="${item.images && item.images.length > 0 ? item.images[0] : '../../assets/images/no-img.png'}" alt="">
+                </div>
+                <p class="bold mb-10">${item.brand} ${item.model}</p>
+                <p class="description">${formatted_description}</p>
+                <div class="footer">
+                    <p class="bold">${item.price}</p>
+                    <p class="more-link fs-14" onclick="showDetails('${item.id}')">More Details -></p>`
+
+            list.append(item_html)
+        })
+    }
+    function showDetails(id){
+        console.log({id})
+    }
+
+</script>

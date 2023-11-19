@@ -1,0 +1,87 @@
+[{
+  "id": "b52f7f0b-bf3b-4dff-8906-ce4fa6340179",
+  "category": "pc",
+  "type": "laptop",
+  "brand": "Lenovo",
+  "model": "YOGA Air14s",
+  "cpu":  "Intel Core i7-1280P",
+  "ram": 16,
+  "space": "1024",
+  "graphics-card": null,
+  "display": 14,
+  "price": 1723.46,
+  "colors": ["white"],
+  "reviews": 4,
+  "features": [
+    "Touch Screen",
+    "Notebook"
+  ],
+  "img": {
+    "folder": "lenovo-yogaair14s",
+    "cover" : "img1.png",
+    "all": ["img1.png", "img2.png", "img3.png"]
+  },
+  "images": [
+    "assets/data/product-images/lenovo-yogaair14s/img1.png",
+    "assets/data/product-images/lenovo-yogaair14s/img2.png",
+    "assets/data/product-images/lenovo-yogaair14s/img3.png"
+  ]
+}, {
+  "id": "87b42314-a3bb-4abe-9b3a-6473b80ede6a",
+  "category": "pc",
+  "type": "laptop",
+  "brand": "Microsoft",
+  "model": "Surface Book3",
+  "cpu":  "Core i7-1065G7",
+  "ram": 16,
+  "space": "256",
+  "graphics-card": null,
+  "display": 13.5,
+  "price": 1723.46,
+  "color": ["white", "black"],
+  "reviews": 3,
+  "features": [
+    "full rotate",
+    "tablet"
+  ],
+  "images": [
+    "assets/data/product-images/microsoft-surfacebook3/img1.png",
+    "assets/data/product-images/microsoft-surfacebook3/img2.png",
+    "assets/data/product-images/microsoft-surfacebook3/img3.png"
+  ]
+},{
+  "id": "515d19df-593a-4488-9a92-7d4662be2615",
+  "category": "pc",
+  "type": "laptop",
+  "brand": "Apple",
+  "model": "MacBook Air",
+  "cpu":  "M1",
+  "ram": 8,
+  "space": 256,
+  "graphics-card": null,
+  "display": 13.3,
+  "price": 879.50,
+  "color": ["Space Gray"],
+  "reviews": 4,
+  "features": [],
+  "images": [
+    "assets/data/product-images/apple-macbookair/img1.png",
+    "assets/data/product-images/apple-macbookair/img2.png",
+    "assets/data/product-images/apple-macbookair/img3.png"
+  ]
+}, {
+  "id": "515d19df-593a-4488-9a92-7d4662be2615",
+  "category": "pc",
+  "type": "laptop",
+  "brand": "Apple",
+  "model": "MacBook Air",
+  "cpu":  "M1",
+  "ram": 8,
+  "space": 256,
+  "graphics-card": null,
+  "display": 13.3,
+  "price": 879.50,
+  "color": ["Space Gray"],
+  "reviews": 4,
+  "features": []
+}]
