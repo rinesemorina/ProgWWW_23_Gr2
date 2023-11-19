@@ -32,11 +32,24 @@
     ]
     let header = document.getElementById('nav-list')
 
+
     createTabs()
     changeTab('home')
+
     function changeTab(tab){
+        if(tab === 'home')
+            $(function(){
+                $('#slider').load("tabs/home/slider.html", function(){
+                    $(this).css('opacity',0).stop(1000).animate({"opacity": 1}); });
+            });
+        else
+            $(function(){
+                document.getElementById("slider").innerHTML = ''
+            });
+
         $(function(){
-            $('#tab-content').load("tabs/"+tab+"/index.html");
+            $('#tab-content').load("tabs/"+tab+"/index.html", function(){
+                $(this).css('opacity',0).stop(1000).animate({"opacity": 1}); });
         });
     }
     function createTabs(){
