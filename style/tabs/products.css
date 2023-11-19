@@ -1,5 +1,76 @@
 #products-container{
+    .header{
+        --icon-size: 24px;
+
+        display: flex;
+        justify-content: space-between;
+        .display-type{
+            display: flex;
+            border: 2px solid var(--black-4);
+            border-radius: 5px;
+            height: fit-content;
+
+        }
+        .icon-wrapper{
+            padding: 4px;
+            height: var(--icon-size);
+            cursor: pointer;
+        }
+        .icon-wrapper:first-child{
+            border-right: 2px solid var(--black-4);
+        }
+        .icon{
+            height: var(--icon-size);
+            width: auto;
+            opacity: 30%;
+        }
+        .icon:hover,.active{
+            opacity: 60%;
+        }
+    }
     .list{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 40px;
+        row-gap: 40px;
+        .card{
+            border-radius: 20px;
+            border: 1px solid var(--black-4);
+            padding: 40px;
+            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.075);
+            display: flex;
+            gap: 40px;
+            .img{
+                max-width: 200px;
+                height: 140px;
+                margin: auto;
+            }
+            .description{
+                height: 32px;
+            }
+            .footer{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                .more-link{
+                    color: var(--violet-9);
+                    cursor: pointer;
+                    font-size: 14px;
+                    transition: 0.5s ease;
+                }
+                .more-link:hover{
+                    color: var(--violet-7);
+                    transition: 0.5s ease;
+                }
+            }
+        }
+        .card:hover{
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
+            transform: translateY(-0.5px)
+        }
+    }
+    .grid{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         column-gap: 40px;
@@ -34,8 +105,8 @@
             }
         }
         .card:hover{
-            /*box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);*/
-            /*transform: translateY(-0.5px)*/
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
+            transform: translateY(-0.5px)
         }
     }
 }
