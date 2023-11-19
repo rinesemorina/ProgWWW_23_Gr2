@@ -1,6 +1,7 @@
 @import url('./colors.css');
 @import url('./utilities.css');
 @import url('./components/header.css');
+@import url('./style-for-slider.css');
 
 body{
     font-family: 'Raleway', sans-serif;
