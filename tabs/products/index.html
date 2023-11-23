@@ -56,6 +56,10 @@
         })
     }
     function showDetails(id){
+        lastSelectedItem = all_data.find(item => item.id == id)
+        $(function(){
+            $('#tab-content').load("/tabs/products/details-page.html");
+        });
         console.log({id})
     }
     function changeDisplayType(type){
