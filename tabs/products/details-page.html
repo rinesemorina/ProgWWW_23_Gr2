@@ -1,6 +1,91 @@
-<p>the details page</p>
+<div class="container">
+  <div class="product-images">
+    <img src="/assets/images/pic1.webp" class="main-image" alt="Main Product Image">
+    <div class="small-images">
+      <img src="/assets/images/pic6.webp" class="small-image" alt="Small Product Image 1">
+      <img src="/assets/images/pic7.webp" class="small-image" alt="Small Product Image 2">
+      <img src="/assets/images/pic16.webp" class="small-image" alt="Small Product Image 3">
+      <img src="/assets/images/pic18.webp" class="small-image" alt="Small Product Image 4">
+    </div>
+  </div>
+  <div class="product-details">
+    <h1 class="product-name">Product Name</h1>
+    <p class="product-description">
+      Here comes the details of the product. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis
+      libero in nisl pulvinar, eget
+      malesuada leo sollicitudin.
+    </p>
+    <p class="product-price">$19.99</p>
+    <button class="add-to-cart-btn">Add to Cart</button>
+  </div>
+</div>
 
 <script>
-    console.log({lastSelectedItem})
-</script>
+  console.log({ lastSelectedItem })
 
+  document.addEventListener("DOMContentLoaded", function () {
+    const smallImages = document.querySelectorAll('.small-image');
+
+      function handleImageClick(event) {
+        const clickedImageSrc = event.target.src;
+        const mainImage = document.querySelector('.main-image');
+        mainImage.src = clickedImageSrc;
+      }
+
+      smallImages.forEach(smallImage => {
+        smallImage.addEventListener('click', handleImageClick);
+      });
+
+
+
+      
+    fetch('products.json')
+      .then(response => response.json())
+      .then(data => {
+        // Select the container to display products
+        const productContainer = document.querySelector('.product-details');
+
+        // Loop through each product and create HTML elements to display their information
+        data.forEach(product => {
+          const productDiv = document.createElement('div');
+          productDiv.classList.add('product');
+
+          const productName = document.createElement('h1');
+          productName.classList.add('product-name');
+          productName.textContent = product.name;
+
+          const productDescription = document.createElement('p');
+          productDescription.classList.add('product-description');
+          productDescription.textContent = product.description;
+
+          const productPrice = document.createElement('p');
+          productPrice.classList.add('product-price');
+          productPrice.textContent = `$${product.price.toFixed(2)}`;
+
+          const productSpecs = document.createElement('ul');
+          productSpecs.classList.add('product-specifications');
+          for (const spec in product.specifications) {
+            const specItem = document.createElement('li');
+            specItem.textContent = `${spec}: ${product.specifications[spec]}`;
+            productSpecs.appendChild(specItem);
+          }
+
+          const addToCartBtn = document.createElement('button');
+          addToCartBtn.classList.add('add-to-cart-btn');
+          addToCartBtn.textContent = 'Add to Cart';
+
+          productDiv.appendChild(productName);
+          productDiv.appendChild(productDescription);
+          productDiv.appendChild(productPrice);
+          productDiv.appendChild(productSpecs);
+          productDiv.appendChild(addToCartBtn);
+
+          productContainer.appendChild(productDiv);
+          
+        });
+      })
+      .catch(error => {
+        console.error('Error fetching products:', error);
+      });
+  });
+</script>
