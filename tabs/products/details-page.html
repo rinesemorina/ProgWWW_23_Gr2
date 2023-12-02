@@ -1,11 +1,11 @@
 <div class="container">
   <div class="product-images">
-    <img src="/assets/images/pic1.webp" class="main-image" alt="Main Product Image">
+    <img src="/assets/images/pic1.webp" class="main-image" alt="Main Product Image" id="main-image">
     <div class="small-images">
-      <img src="/assets/images/pic1.webp" class="small-image" alt="Small Product Image 0">
-      <img src="/assets/images/pic6.webp" class="small-image" alt="Small Product Image 1">
-      <img src="/assets/images/pic17.webp" class="small-image" alt="Small Product Image 2">
-      <img src="/assets/images/pic18.webp" class="small-image" alt="Small Product Image 3">
+      <img src="/assets/images/pic1.webp" class="small-image" alt="Small Product Image 0" onclick="toggleImage('/assets/images/pic1.webp')">
+      <img src="/assets/images/pic6.webp" class="small-image" alt="Small Product Image 1" onclick="toggleImage('/assets/images/pic6.webp')">
+      <img src="/assets/images/pic17.webp" class="small-image" alt="Small Product Image 2" onclick="toggleImage('/assets/images/pic17.webp')">
+      <img src="/assets/images/pic18.webp" class="small-image" alt="Small Product Image 3" onclick="toggleImage('/assets/images/pic18.webp')">
     </div>
   </div>
   <div class="product-details">
@@ -18,86 +18,10 @@
   </div>
 </div>
 <script>
-  
-  document.addEventListener("DOMContentLoaded", function() {
-    let smallImages = document.querySelectorAll('.small-image');
-    let mainImage = document.querySelector('.main-image');
-    let currentIndex = 0;
 
-    function toggleImage(event) {
-      let clickedImageSrc = event.target.src;
-      let clickedImageIndex = Array.from(smallImages).findIndex(img => img.src === clickedImageSrc);
-      if (clickedImageIndex !== -1) {
-        mainImage.src = clickedImageSrc;
-        currentIndex = clickedImageIndex;
-      }
-    }
+  function toggleImage(src) {
+    let mainImage = document.querySelector('#main-image');
+    mainImage.src = src;
+  }
 
-    function cycleImages() {
-      currentIndex = (currentIndex + 1) % smallImages.length;
-      mainImage.src = smallImages[currentIndex].src;
-    }
-
-    smallImages.forEach(smallImage => {
-      smallImage.addEventListener('click', toggleImage);
-    });
-
-  });
 </script>
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Product Page</title>
-  <link rel="stylesheet" href="../../style/tabs/detials-page.css">
-</head>
-<body>
-  <div class="container">
-    <div class="product-images">
-      <img src="/assets/images/pic1.webp" class="main-image" alt="Main Product Image">
-      <div class="small-images">
-        <img src="/assets/images/pic1.webp" class="small-image" alt="Small Product Image 0">
-        <img src="/assets/images/pic6.webp" class="small-image" alt="Small Product Image 1">
-        <img src="/assets/images/pic17.webp" class="small-image" alt="Small Product Image 2">
-        <img src="/assets/images/pic18.webp" class="small-image" alt="Small Product Image 3">
-      </div>
-    </div>
-    <div class="product-details">
-      <h1 class="product-name">Product Name</h1>
-      <p class="product-description">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero in nisl pulvinar, eget malesuada leo sollicitudin.
-      </p>
-      <p class="product-price">$19.99</p>
-      <button class="add-to-cart-btn">Add to Cart</button>
-    </div>
-  </div>
-  <script>
-
-    document.addEventListener("DOMContentLoaded", function() {
-      let smallImages = document.querySelectorAll('.small-image');
-      let mainImage = document.querySelector('.main-image');
-      let currentIndex = 0;
-
-      function toggleImage(event) {
-        let clickedImageSrc = event.target.src;
-        let clickedImageIndex = Array.from(smallImages).findIndex(img => img.src === clickedImageSrc);
-        if (clickedImageIndex !== -1) {
-          mainImage.src = clickedImageSrc;
-          currentIndex = clickedImageIndex;
-        }
-      }
-
-      function cycleImages() {
-        currentIndex = (currentIndex + 1) % smallImages.length;
-        mainImage.src = smallImages[currentIndex].src;
-      }
-
-      smallImages.forEach(smallImage => {
-        smallImage.addEventListener('click', toggleImage);
-      });
-
-    });
-  </script>
-</body>
-</html> -->
