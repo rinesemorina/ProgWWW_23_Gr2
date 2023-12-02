@@ -43,3 +43,14 @@
         }
     }
 }
+
+  /* Style for the language selector */
+  .language-selector select {
+    padding: 8px;
+    border-radius: 5px;
+    background-color: white;
+    color: #b210e4;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    cursor: pointer; 
+  }
