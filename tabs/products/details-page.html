@@ -1,27 +1,43 @@
-<div class="container">
-  <div class="product-images">
-    <img src="/assets/images/pic1.webp" class="main-image" alt="Main Product Image" id="main-image">
-    <div class="small-images">
-      <img src="/assets/images/pic1.webp" class="small-image" alt="Small Product Image 0" onclick="toggleImage('/assets/images/pic1.webp')">
-      <img src="/assets/images/pic6.webp" class="small-image" alt="Small Product Image 1" onclick="toggleImage('/assets/images/pic6.webp')">
-      <img src="/assets/images/pic17.webp" class="small-image" alt="Small Product Image 2" onclick="toggleImage('/assets/images/pic17.webp')">
-      <img src="/assets/images/pic18.webp" class="small-image" alt="Small Product Image 3" onclick="toggleImage('/assets/images/pic18.webp')">
-    </div>
-  </div>
-  <div class="product-details">
-    <h1 class="product-name">Product Name</h1>
-    <p class="product-description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero in nisl pulvinar, eget malesuada leo sollicitudin.
-    </p>
-    <p class="product-price">$19.99</p>
-    <button class="add-to-cart-btn">Add to Cart</button>
-  </div>
+<div class="container" id="product-container">
+  <!-- Product details will be injected here -->
 </div>
-<script>
 
+<script>
+  injectProductDetails();
   function toggleImage(src) {
     let mainImage = document.querySelector('#main-image');
     mainImage.src = src;
   }
 
+  function injectProductDetails(){
+    var html = `
+      <div class="product-images">
+        <div class="main-image-container">
+          <img src="${lastSelectedItem.images[0]}" class="main-image" alt="Main Product Image" id="main-image">
+        </div>
+      <div class="small-images"> ${injectSmallImages()} </div>
+    </div>
+    <div class="product-details">
+      <h1 class="product-name"> ${lastSelectedItem.brand} ${lastSelectedItem.model} </h1>
+      <p class="product-description"> ${formattedDescription(lastSelectedItem)} </p>
+      <p class="product-price">${lastSelectedItem.price}</p>
+      <button class="add-to-cart-btn" onclick="addToCart()" >Add to Cart</button>
+    </div>
+    `;
+    this.document.getElementById('product-container').innerHTML = html;
+  }
+
+  function injectSmallImages(){
+    return lastSelectedItem.images.map((image, index) => {
+      return `
+        <div class="small-image-container">
+          <img src="${image}" class="small-image" alt="Small Product Image ${index}" onclick="toggleImage('${image}')">
+        </div>
+      `;
+    }).join('');
+  }
+
+  function addToCart(){
+    console.log('Add to cart clicked');
+  }
 </script>

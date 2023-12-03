@@ -16,21 +16,39 @@
 
 .main-image {
   width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 8px;
   margin-bottom: 20px;
+}
+
+.main-image-container {
+  width: 600px;
+  height: 420px;
 }
 
 .small-images {
   display: flex;
   justify-content: space-between;
+  padding: 20px 0;
+}
+
+.small-image:hover{
+  height: 100%;
+  transition: height 0.3s ease-in;
 }
 
 .small-image {
-  width: 20%;
-  height: auto;
+  width: auto;
+  height: 90%;
   cursor: pointer;
   border-radius: 8px;
+  margin: auto;
+  transition: height 0.3s ease-out;
+}
+
+.small-image-container {
+  width: auto;
+  height: 100px;
 }
 
 .product-details {
