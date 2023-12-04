@@ -1,3 +1,11 @@
+
+#header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 10000;
+}
 .header-container{
     display: flex;
     box-shadow: 10px 0 10px var(--black-2);

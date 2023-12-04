@@ -5,12 +5,15 @@
 @import url('./tabs/products.css');
 @import url('./tabs/detials-page.css');
 
+html {
+    scroll-behavior: smooth;
+}
 body{
     font-family: 'Raleway', sans-serif;
     margin: 0;
 }
 #tab-content{
-    padding: 48px 75px;
+    padding: 24px 75px;
 }
 
 .material-symbols-outlined {
