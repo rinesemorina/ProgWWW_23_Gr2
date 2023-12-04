@@ -1,0 +1,28 @@
+[
+    {
+        "name": "MacBook Pro",
+        "category": "Laptop",
+        "image": "macbook.jpg",
+        "description": "Powerful laptop with high-resolution Retina display.",
+        "price": 1999.99,
+        "specifications": {
+            "Processor": "Intel Core i7",
+            "RAM": "16GB",
+            "Storage": "512GB SSD",
+            "Graphics": "Intel Iris Xe Graphics"
+        }
+    },
+    {
+        "name": "Canon EOS Rebel T7",
+        "category": "Camera",
+        "image": "canon-camera.jpg",
+        "description": "Entry-level DSLR camera for beginners.",
+        "price": 499.99,
+        "specifications": {
+            "Resolution": "24.1 Megapixels",
+            "Sensor": "APS-C CMOS",
+            "ISO Range": "100-6400",
+            "Lens Mount": "Canon EF-S"
+        }
+    }
+]

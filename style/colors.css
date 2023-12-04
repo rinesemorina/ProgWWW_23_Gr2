@@ -1,0 +1,96 @@
+/* Colors */
+/* Tools
+    Shades:  https://maketintsandshades.com/#db222a
+    Palettes: https://coolors.co/palettes/
+*/
+/* additionally use this for pink: d1105a */
+
+:root{
+    --black-10: #000000;
+    --black-9: #212529;
+    --black-8: #343a40;
+    --black-7: #495057;
+    --black-6: #6c757d;
+    --black-5: #adb5bd;
+    --black-4: #ced4dA;
+    --black-3: #dee2e6;
+    --black-2: #e9ecef;
+    --black-1: #f8f9fA;
+
+    --green-10: #395915;
+    --green-9: #55861f;
+    --green-8: #72b22a;
+    --green-7: #8edf34;
+    --green-6: #99e248;
+    --green-5: #b0e971;
+    --green-4: #b0e971;
+    --green-3: #c7ef9a;
+    --green-2: #ddf5c2;
+    --green-1: #f4fceb;
+
+    --blue-10: #001c4b;
+    --blue-9: #012e7d;
+    --blue-8: #013796;
+    --blue-7: #014ac8;
+    --blue-6: #015cfa;
+    --blue-5: #1a6cfb;
+    --blue-4: #4d8dfc;
+    --blue-3: #80aefd;
+    --blue-2: #b3cefe;
+    --blue-1: #e6efff;
+
+    --violet-10: #3b054c;
+    --violet-9: #63097f;
+    --violet-8: #8b0db1;
+    --violet-7: #b210e4;
+    --violet-6: #c612fd;
+    --violet-5: #d141fd;
+    --violet-4: #d759fe;
+    --violet-3: #e389fe;
+    --violet-2: #eeb8fe;
+    --violet-1: #f9e7ff;
+
+    --pink-10: #31071b;
+    --pink-9: #630f35;
+    --pink-8: #941650;
+    --pink-7: #c61e6a;
+    --pink-6: #f72585;
+    --pink-5: #f83b91;
+    --pink-4: #f966aa;
+    --pink-3: #fb92c2;
+    --pink-2: #fdbeda;
+    --pink-1: #fee9f3;
+
+    --red-10: #2c0708;
+    --red-9: #580e11;
+    --red-8: #831419;
+    --red-7: #af1b22;
+    --red-6: #db222a;
+    --red-5: #df383f;
+    --red-4: #e6646a;
+    --red-3: #ed9195;
+    --red-2: #f4bdbf;
+    --red-1: #fbe9ea;
+
+    --orange-10: #663f00;
+    --orange-9: #995f00;
+    --orange-8: #b36f00;
+    --orange-7: #cc7e00;
+    --orange-6: #ff9e00;
+    --orange-5: #ffa81a;
+    --orange-4: #ffbb4d;
+    --orange-3: #ffcf80;
+    --orange-2: #ffe2b3;
+    --orange-1: #fff5e6;
+
+    --yellow-10: #333012;
+    --yellow-9: #666024;
+    --yellow-8: #999036;
+    --yellow-7: #ccc048;
+    --yellow-6: #fff05a;
+    --yellow-5: #fff26b;
+    --yellow-4: #fff58c;
+    --yellow-3: #fff8ad;
+    --yellow-2: #fffbce;
+    --yellow-1: #fffeef;
+}
