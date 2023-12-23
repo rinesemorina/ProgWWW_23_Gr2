@@ -5,18 +5,19 @@
 @import url('./tabs/products.css');
 @import url('./tabs/user-info.css');
 
-body{
+body {
     font-family: 'Raleway', sans-serif;
     margin: 0;
 }
-#tab-content{
+
+#tab-content {
     padding: 48px 75px;
 }
 
 .material-symbols-outlined {
     font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
 }

@@ -6,22 +6,22 @@ const uploadInput = document.getElementById('upload');
 let creditCard = document.getElementById('creditCard');
 let phone = document.getElementById('phone');
 
-creditCard.addEventListener('user-info-input', function(event) {
+creditCard.addEventListener('user-info-input', function (event) {
   let input = event.target.value.replace(/\s/g, '');
   input = input.replace(/(.{4})/g, '$1 ').trim();
   event.target.value = input;
 });
 
-phone.addEventListener('user-info-input', function(event) {
+phone.addEventListener('user-info-input', function (event) {
   let input = event.target.value.replace(/\D/g, '');
-  
+
   if (input.length > 3) {
     input = input.slice(0, 3) + '/' + input.slice(3);
   }
   if (input.length > 7) {
     input = input.slice(0, 7) + '-' + input.slice(7);
   }
-  
+
   event.target.value = input;
 });
 
@@ -31,7 +31,7 @@ function toggleEdit() {
   });
 }
 
-editButton.onclick = function(){
+editButton.onclick = function () {
   editButton.innerHTML = editButton.innerHTML == 'Save User Info' ? 'Edit User Info' : 'Save User Info';
   toggleEdit();
 }
@@ -55,7 +55,7 @@ function validatePhone(input) {
   const inputValue = document.getElementById('phone').value.trim();
   const phonePattern = /^\d{3}\/\d{3}-\d{3}$/;
   const errorMessage = document.getElementById('errorPhone');
-  if(inputValue === ''){
+  if (inputValue === '') {
     document.getElementById("errorPhone").innerHTML = "This field is mandatory";
     input.classList.add('invalid');
     input.classList.remove('valid');
@@ -77,7 +77,7 @@ function validateCreditCard(input) {
   const inputValue = document.getElementById('creditCard').value.trim();
   const cardPattern = /^\d{4}\s\d{4}\s\d{4}\s\d{4}$/;
   const errorMessage = document.getElementById('errorCard');
-  if(inputValue === ''){
+  if (inputValue === '') {
     document.getElementById("errorCard").innerHTML = "This field is mandatory";
     input.classList.add('invalid');
     input.classList.remove('valid');
@@ -87,7 +87,7 @@ function validateCreditCard(input) {
     document.getElementById("errorCard").innerHTML = "";
     input.classList.add('valid');
     input.classList.remove('invalid');
-  } 
+  }
   else {
     document.getElementById("errorCard").innerHTML = "Invalid card format";
     input.classList.add('invalid');
@@ -100,7 +100,7 @@ function validateEmail(input) {
   const inputValue = document.getElementById('email').value.trim();
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const errorMessage = document.getElementById('errorEmail');
-  if(inputValue === ''){
+  if (inputValue === '') {
     document.getElementById("errorEmail").innerHTML = "This field is mandatory";
     input.classList.add('invalid');
     input.classList.remove('valid');
