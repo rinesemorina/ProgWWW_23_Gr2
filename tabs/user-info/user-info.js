@@ -1,18 +1,18 @@
 const editButton = document.getElementById('editButton');
 const saveButton = document.getElementById('saveButton');
-const formInputs = document.querySelectorAll('#editForm input');
+const formInputs = document.querySelectorAll('#editForm user-info-input');
 const profilePic = document.querySelector('img');
 const uploadInput = document.getElementById('upload');
 let creditCard = document.getElementById('creditCard');
 let phone = document.getElementById('phone');
 
-creditCard.addEventListener('input', function(event) {
+creditCard.addEventListener('user-info-input', function(event) {
   let input = event.target.value.replace(/\s/g, '');
   input = input.replace(/(.{4})/g, '$1 ').trim();
   event.target.value = input;
 });
 
-phone.addEventListener('input', function(event) {
+phone.addEventListener('user-info-input', function(event) {
   let input = event.target.value.replace(/\D/g, '');
   
   if (input.length > 3) {

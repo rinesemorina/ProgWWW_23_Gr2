@@ -1,15 +1,10 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
-  }
-  
-  .user-profile {
+.user-profile {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     width: 80%;
     max-width: 800px;
-    margin: 50px auto;
+    margin: 0px auto;
     background-color: #f3e7f7; 
     border-radius: 20px; 
     padding: 40px;
@@ -19,8 +14,8 @@ body {
   .profile-picture img {
     width: 150px;
     height: 150px;
-    border-radius: 50%; 
-    margin-bottom: 20px;
+    border-radius: 50%;
+    margin-top: 21px;
   }
   
   .user-info {
@@ -39,17 +34,6 @@ body {
     color: #7d3cff; 
     margin-bottom: 10px;
     display: block;
-  }
-  
-  button {
-    padding: 10px 20px;
-    width: 150px;
-    background-color: #7d3cff;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
   }
   
   button:hover {
@@ -83,15 +67,15 @@ body {
     position: relative;
   }
   
-  input.valid {
+  .user-info-input.valid {
     border: 1px solid rgb(0, 207, 0); 
   }
   
-  input.invalid {
+  .user-info-input.invalid {
     border: 1px solid red;
   }
   
-  button {
+  .user-info-button {
     padding: 10px 20px;
     background-color: #7d3cff;
     color: #ffffff;
@@ -100,9 +84,10 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
     margin-right: 20px;
+    width: 150px;
   }
   
-  button:hover {
+  .user-info-button:hover {
     background-color: #5b1f8a; /* Darker violet on hover */
     transform: scale(1.05); /* Scale effect on hover */
   }
