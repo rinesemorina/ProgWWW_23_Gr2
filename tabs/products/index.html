@@ -1,6 +1,4 @@
 <div id="products-container">
-
-
     <div class="header">
         <p class="bold fs-20">All products</p>
         <div class="display-type">
@@ -38,14 +36,13 @@
         all_data.forEach(item => {
             let item_html = document.createElement('div')
             item_html.className = 'card'
-            let formatted_description = `${item.cpu}, ${item.ram}GB, ${item.space > 1024 ? item.space % 1024 + 'TB' : item.space + 'GB'}, ${item.display}"`
             item_html.innerHTML = `
                 <div class="center mb-20">
                     <img class="img" src="${item.images && item.images.length > 0 ? item.images[0] : '../../assets/images/no-img.png'}" alt="">
                 </div>
                 <div>
                     <p class="bold mb-10">${item.brand} ${item.model}</p>
-                    <p class="description">${formatted_description}</p>
+                    <p class="description">${formattedDescription(item)}</p>
                     <div class="footer">
                         <p class="bold mb-0">${item.price}</p>
                         <p class="more-link fs-14 mb-0" onclick="showDetails('${item.id}')">More Details -></p>
@@ -75,5 +72,8 @@
 
         list.className = display_type
         // displayData()
+    }
+    function formattedDescription(item){
+        return `${item.cpu}, ${item.ram}GB, ${item.space > 1024 ? item.space % 1024 + 'TB' : item.space + 'GB'}, ${item.display}"`
     }
 </script>

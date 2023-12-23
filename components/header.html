@@ -32,12 +32,17 @@
     ]
     let header = document.getElementById('nav-list')
 
+
     createTabs()
     changeTab('home')
+
     function changeTab(tab){
-        $(function(){
-            $('#tab-content').load("tabs/"+tab+"/index.html");
-        });
+        if(tab === 'home')
+            navigateTo('#slider', 'tabs/home/slider.html')
+        else
+            document.getElementById("slider").innerHTML = ''
+
+        navigateTo('#tab-content', `tabs/${tab}/index.html`)
     }
     function createTabs(){
         header.innerHTML = ''
