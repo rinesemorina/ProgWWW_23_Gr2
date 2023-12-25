@@ -1,0 +1,102 @@
+<div id="product-filters">
+    <div class="flex-row">
+        <p class="bold fs-20">Filters</p>
+        <div>icon</div>
+    </div>
+    <div id="filters-list">
+        <!--  Filters are dynamically injected here  -->
+        <div class="filter-box">
+            <div class="flex-row bold mb-5">
+                <p>Brand</p>
+                <span class="material-symbols-outlined icon">expand_more</span>
+            </div>
+            <div id="options-list">
+                <div class="flex-row flex-start mt-5">
+                    <input type="checkbox" name="option" class="mr-10">
+                    <label for="option">Brand</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let all_filters = []
+    let selected_filters = []
+    let container = document.getElementById('filters-list')
+    getData()
+    function getData(){
+        fetch('tabs/products/all_filters.json')
+            .then((response) => response.json())
+            .then((json) => {
+                all_filters = json
+                all_filters.forEach(item => {
+                    item.display_options = false
+                    item.options.forEach(opt => opt.checked = false)
+                })
+                displayData()
+            })
+            .catch(err => {
+                console.log(err)
+            })
+    }
+    function displayData(){
+        container.innerHTML = ''
+        let filters_html = ''
+        all_filters.forEach(filter => {
+            let options_list = ``
+
+            if(filter.display_options)
+                filter.options.forEach(opt => {
+                    options_list += `
+                            <div class="flex-row flex-start mt-5">
+                                <input type="checkbox" name="option" class="mr-10"
+                                onclick="selectFilter('${filter.type}', '${opt.code}')">
+                                <label for="option">${opt.name || opt.code }</label>
+                            </div>
+                    `
+                })
+
+            let filter_html = `
+                <div class="filter-box mb-15">
+                    <div class="flex-row bold">
+                        <p>${filter.type}</p>
+                        <span class="material-symbols-outlined icon ${filter.display_options ? 'rotate' : ''}"
+                            onclick="toggleDisplayFilters('${filter.type}')"
+                        >expand_more</span>
+                    </div>
+                    <div id="options-list">
+                        ${options_list}
+                    </div>
+                </div>
+            `
+            filters_html += filter_html
+        })
+        container.innerHTML = filters_html
+    }
+
+    function selectFilter(type, code){
+        console.log({type})
+        console.log({code})
+
+        let item = selected_filters.find(item => item.type === type)
+        if(item && item.options.includes(code)) {
+            item.options = item.options.filter(i => i.code !== code)
+            return
+        }
+
+        if(!item) {
+            selected_filters.push({type, options: []})
+            item = selected_filters.find(item => item.type === type)
+        }
+
+        item.options.push(code)
+
+        console.log({selected_filters})
+    }
+    function toggleDisplayFilters(type){
+        let filter = all_filters.find(f => f.type === type)
+        filter.display_options = !filter.display_options
+        displayData()
+    }
+</script>

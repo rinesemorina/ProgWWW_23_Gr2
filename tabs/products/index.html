@@ -1,17 +1,22 @@
-<div id="products-container">
-    <div class="header">
-        <p class="bold fs-20">All products</p>
-        <div class="display-type">
-            <div class="icon-wrapper" onclick="changeDisplayType('grid')">
-                <img id="grid" class="icon" src="../../assets/icons/grid.png" alt="">
-            </div>
-            <div class="icon-wrapper" onclick="changeDisplayType('list')">
-                <img id="list" class="icon" src="../../assets/icons/list.png" alt="">
+<div class="products-page-wrapper">
+    <div id="filters">
+        <!--  Filters are added here    -->
+    </div>
+    <div id="products-container">
+        <div class="header">
+            <p class="bold fs-20">All products</p>
+            <div class="display-type">
+                <div class="icon-wrapper" onclick="changeDisplayType('grid')">
+                    <img id="grid" class="icon" src="../../assets/icons/grid.png" alt="">
+                </div>
+                <div class="icon-wrapper" onclick="changeDisplayType('list')">
+                    <img id="list" class="icon" src="../../assets/icons/list.png" alt="">
+                </div>
             </div>
         </div>
-    </div>
-    <div id="products-list">
-        <!-- Product cards will be injected here -->
+        <div id="products-list">
+            <!-- Product cards will be injected here -->
+        </div>
     </div>
 </div>
 
@@ -21,6 +26,7 @@
     let list = document.getElementById("products-list")
     changeDisplayType()
     getData()
+    navigateTo('#filters', 'tabs/products/filters.html')
 
     function getData(){
         fetch('../assets/data/products.json')
@@ -57,7 +63,6 @@
         $(function(){
             $('#tab-content').load("/tabs/products/details-page.html");
         });
-        console.log({id})
     }
     function changeDisplayType(type){
         if(!type) type = 'grid'

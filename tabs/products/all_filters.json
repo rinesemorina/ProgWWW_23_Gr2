@@ -1,0 +1,41 @@
+[
+  {
+    "type": "Category",
+    "options": [
+      {
+        "code": "pc",
+        "name": "Personal Computer"
+      },
+      {
+        "code": "phone",
+        "name": "Smart Phone"
+      }
+    ]
+  },
+  {
+    "type": "Brand",
+    "options": [
+      {
+        "code": "Apple"
+      },
+      {
+        "code": "Lenovo"
+      },
+      {
+        "code": "Microsoft"
+      }
+    ]
+  },
+  {
+    "type": "Features",
+    "options": [
+      {
+        "code": "Touch Screen"
+      },
+      {
+        "code": "tablet",
+        "name": "Tablet"
+      }
+    ]
+  }
+]
