@@ -13,18 +13,15 @@
         p{
             margin: 0;
         }
-        .icon:hover{
-            cursor: pointer;
-        }
         .rotate{
             transform: rotateX(180deg);
         }
     }
 }
 #products-container{
+    width: 100%;
     .header{
         --icon-size: 24px;
-
         display: flex;
         justify-content: space-between;
         .display-type{
@@ -132,4 +129,13 @@
             transform: translateY(-0.5px)
         }
     }
+    .col-3{
+        grid-template-columns: 1fr 1fr 1fr!important;
+    }
+}
+.icon:hover{
+    cursor: pointer;
+}
+.no-data{
+    color: var(--red-7);
 }
