@@ -25,7 +25,7 @@
 </div>
 
 <script>
-    let all_data = []
+    var all_data = []
     var all_filters = []
     let showFilters = false
 
@@ -76,9 +76,13 @@
             return data
 
         all_filters.forEach(filter_type => {
-            if(filter_type.options.some(item => item.checked)) {
-                let checked_options = filter_type.options.filter(i => i.checked).map(i => i.code)
-                data = data.filter(opt => checked_options.includes(opt[filter_type.code]))
+            let query = filter_type?.options.filter(i => i.checked)?.map(i => i.code)
+            if(query.length > 0) {
+                data = data.filter(opt => {
+                    if(Array.isArray(opt[filter_type.code]))
+                        return opt[filter_type.code].find(i => query.includes(i))
+                    return query.includes(opt[filter_type.code])
+                })
             }
         })
         return data
