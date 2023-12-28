@@ -21,8 +21,9 @@
             .then((response) => response.json())
             .then((json) => {
                 all_filters = json
+                var url = new URL(window.location)
+
                 all_filters.forEach(item => {
-                    item.display_options = false
                     item.options = []
                 })
                 all_data.forEach(item => {
@@ -31,11 +32,16 @@
                     })
                 })
                 all_filters.forEach(item => {
+                    let selected_options = url.searchParams?.get(item.code)?.split(',') || []
+                    // console.log({selected_options})
+                    item.display_options = selected_options && selected_options.length > 0
                     item.options = item.options.flatMap(i => i)
                     item.options = getUnique(item.options)
-                    item.options = item.options.map(i => ({code: i, checked: false}))
+                    console.log(item.options)
+                    item.options = item.options.map(i => ({code: i, checked: selected_options === i || selected_options.includes(i)}))
                 })
                 displayFilterData()
+                displayData()
             })
             .catch(err => {
                 console.log(err)

@@ -1,11 +1,13 @@
 <div class="products-page-wrapper">
-    <div id="filters">
+    <div id="filters" style="display: none">
         <!--  Filters are added here    -->
     </div>
     <div id="products-container">
         <div class="header">
             <p class="bold fs-20">All products</p>
             <div class="flex-row">
+                <span id="clipboard-msg" class="fs-12 mr-10 no-data" style="display: none;">Search URL copied to clipboard!</span>
+                <span class="material-symbols-outlined icon mr-10" id="copy-filter" onclick="copyFilterUrl()">copy_all</span>
                 <span class="material-symbols-outlined icon mr-10" onclick="toggleShowFilters()">filter_list</span>
                 <div class="display-type">
                     <div class="icon-wrapper" onclick="changeDisplayType('grid')">
@@ -33,6 +35,7 @@
     let list = document.getElementById("products-list")
     changeDisplayType()
     getData()
+    navigateTo('#filters', 'tabs/products/filters.html')
 
     function getData(){
         fetch('../assets/data/products.json')
@@ -107,15 +110,34 @@
     function formattedDescription(item){
         return `${item.cpu}, ${item.ram}GB, ${item.space > 1024 ? item.space % 1024 + 'TB' : item.space + 'GB'}, ${item.display}"`
     }
-
     function toggleShowFilters(){
         showFilters = !showFilters
         if(!showFilters){
-            document.getElementById('filters').innerHTML = ''
+            document.getElementById('filters').style.display = 'none'
         }else{
-            navigateTo('#filters', 'tabs/products/filters.html')
+            document.getElementById('filters').style.display = 'block'
         }
         displayData()
         changeDisplayType()
+    }
+    function copyFilterUrl(){
+        let selected_filters = all_filters.map(filter_type => ({...filter_type, options: filter_type?.options.filter(i => i.checked)?.map(i => i.code)}))
+
+        var url = new URL(window.location)
+        url.searchParams.set('tab', 'products')
+        selected_filters.forEach(filter_type => {
+            if(filter_type.options.length === 0)
+                return
+            if(filter_type.options.length === 1)
+                url.searchParams.append(filter_type.code, filter_type.options[0])
+            else
+                url.searchParams.append(filter_type.code, filter_type.options.map(i => i.toLowerCase()).join(','))
+        })
+
+        navigator.clipboard.writeText(url)
+        document.getElementById('clipboard-msg').style.display = 'block'
+        setTimeout(() => {
+            document.getElementById('clipboard-msg').style.display = 'none'
+        }, 2000)
     }
 </script>
