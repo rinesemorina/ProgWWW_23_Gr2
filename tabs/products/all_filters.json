@@ -1,44 +1,14 @@
 [
   {
     "type": "Category",
-    "code": "category",
-    "options": [
-      {
-        "code": "pc",
-        "name": "Personal Computer"
-      },
-      {
-        "code": "phone",
-        "name": "Smart Phone"
-      }
-    ]
+    "code": "category"
   },
   {
     "type": "Brand",
-    "code": "brand",
-    "options": [
-      {
-        "code": "Apple"
-      },
-      {
-        "code": "Lenovo"
-      },
-      {
-        "code": "Microsoft"
-      }
-    ]
+    "code": "brand"
   },
   {
     "type": "Features",
-    "code": "features",
-    "options": [
-      {
-        "code": "Touch Screen"
-      },
-      {
-        "code": "tablet",
-        "name": "Tablet"
-      }
-    ]
+    "code": "features"
   }
 ]
