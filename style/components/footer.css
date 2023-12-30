@@ -1,6 +1,7 @@
 .footer-content{
     height: 300px;
     position: relative;
+    overflow: hidden;
 }
 .bubble::before {
     content: '';
