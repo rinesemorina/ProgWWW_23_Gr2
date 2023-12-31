@@ -23,17 +23,16 @@ function getProductCard(item){
                 </div>`
     return item_html
 }
-function injectProductsDataInto(div_id, filters){
-    console.log({filters})
-    console.log({all_data})
+function injectProductsDataInto(div_id, filters, limit){
     let list = document.getElementById(div_id)
     list.innerHTML = ''
 
     let filteredData = filters ? getFilteredData(filters) : all_data
-    console.log(filteredData)
     if(filteredData.length === 0){
         list.innerHTML = `<p class="no-data">No data available.</p>`
     }
+
+    if(limit) filteredData = filteredData.slice(0, limit)
 
     filteredData.forEach(item => {
         list.append(getProductCard(item))
@@ -42,11 +41,10 @@ function injectProductsDataInto(div_id, filters){
 
 function getFilteredData(filters){
     let data = JSON.parse(JSON.stringify(all_data))
-    console.log({data})
+
     if(filters.length === 0)
         return data
 
-    console.log("filters applied")
     filters.forEach(filter_type => {
         let query = filter_type?.options.filter(i => i.checked)?.map(i => i.code)
         if(query.length > 0) {
@@ -74,4 +72,9 @@ function getAllFeatures(all_filters){
 
 function getById(id){
     return all_data.find(item => item.id == id)
+}
+
+function showDetails(id){
+    lastSelectedItem = getById(id)
+    navigateTo('#tab-content', '/tabs/products/details-page.html');
 }

@@ -25,7 +25,6 @@
         </div>
     </div>
 </div>
-<script src="../../Product.js"></script>
 <script>
     var all_filters = []
     let showFilters = false
@@ -42,12 +41,8 @@
     function refreshProductsData(){
         injectProductsDataInto("products-list", all_filters)
     }
-    function showDetails(id){
-        lastSelectedItem = getById(id)
-        navigateTo('#tab-content', '/tabs/products/details-page.html');
-    }
     function changeDisplayType(type){
-        display_type = type || display_type || 'products-list'
+        display_type = type || display_type || 'grid'
         let current_active = document.getElementById(display_type)
         current_active.className = current_active.className.replace('active', '')
 

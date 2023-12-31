@@ -361,29 +361,20 @@
     background-attachment: fixed;
     background-repeat: no-repeat;
   }
-  .title{
-    text-transform: uppercase;
-    color: #333333;
-    font-size: 25px;
-    text-align: center;
-    font-weight: bold;
-  }
-  hr{
-    width: 30px;
-  }
 }
 
 /* Our partners section*/
 .partners{
-  margin-top: 70px;
+  margin: 50px 50px 70px;
+  background-color: #f8f8f8;
+  padding: 50px 25px;
+  border-radius: 20px;
   .partners_pic{
-    width: 80%;
-    margin-left: 10%;
     display: flex;
     justify-content: space-between;
-    padding-top: 5%;
     flex-wrap: wrap;
-    padding-bottom: 20px;
+    padding: 20px 0;
+    margin-top: 30px;
   }
   .partners_pic img{
     margin: 15px;
@@ -392,14 +383,19 @@
   .partners_pic img:hover{
     opacity: 1;
   }
-  .title{
-    text-transform: uppercase;
-    color: #333333;
-    font-size: 25px;
-    text-align: center;
-    font-weight: bold;
-  }
-  hr{
-    width: 30px;
-  }
+}
+
+#home-wrapper .title{
+  text-transform: uppercase;
+  color: #333333;
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+}
+#home-wrapper hr{
+  width: 30px;
+}
+
+.best-seller, .new-products{
+  padding: 35px 75px 100px;
 }

@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7795cc23-bd68-4fce-8814-e87545432a00" name="Changes" comment="Open social media links in new page">
+    <list default="true" id="7795cc23-bd68-4fce-8814-e87545432a00" name="Changes" comment="Refactored Products Logic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/Product.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style/components/checkbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/components/checkbox.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style/configs.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/configs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/tabs/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/tabs/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/tabs/products.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/tabs/products.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tabs/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tabs/home/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tabs/products/details-page.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tabs/products/filters.html" beforeDir="false" afterPath="$PROJECT_DIR$/tabs/products/filters.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tabs/products/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tabs/products/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -163,7 +163,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703901041198</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Refactored Products Logic">
+      <option name="closed" value="true" />
+      <created>1704038340778</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1704038340778</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,6 +210,7 @@
     <MESSAGE value="Refactor" />
     <MESSAGE value="Overflow width fix" />
     <MESSAGE value="Open social media links in new page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Open social media links in new page" />
+    <MESSAGE value="Refactored Products Logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored Products Logic" />
   </component>
 </project>

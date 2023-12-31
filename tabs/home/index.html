@@ -1,5 +1,20 @@
 <div id="home-wrapper">
-    <!--  TODO: add a slider with best deals (products)  -->
+    <script>
+        initializeData()
+        async function initializeData(){
+            await getProductsData()
+            injectProductsDataInto("best-seller", [], 4)
+            injectProductsDataInto("new-products", [], 4)
+        }
+    </script>
+
+    <div class="best-seller">
+        <h1 class="title">Best Sellers</h1><hr style="margin-bottom: 30px">
+        <div id="best-seller" class="grid">
+        <!--   Best Sellers (Products) will be injected here  -->
+        </div>
+    </div>
+
     <!--  TODO: add most required brands  -->
     <!--  TODO: add service advantages  -->
 
@@ -23,6 +38,13 @@
                 <span class="right">CONSULTANCY</span><span class="left">75%</span>
                 <div id="bar5"></div>
             </div>
+        </div>
+    </div>
+
+    <div class="new-products">
+        <h1 class="title">New Products</h1><hr style="margin-bottom: 30px">
+        <div id="new-products" class="grid">
+            <!--   Best Sellers (Products) will be injected here  -->
         </div>
     </div>
 
