@@ -5,21 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7795cc23-bd68-4fce-8814-e87545432a00" name="Changes" comment="Open social media links in new page">
-      <change afterPath="$PROJECT_DIR$/assets/images/partners/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/partners/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/partners/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/partners/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/partners/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/partners/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/partners/7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/pic20.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/pic21.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/pic22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/pic23.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/components/checkbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/components/checkbox.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style/configs.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/configs.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style/tabs/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/tabs/home.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tabs/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tabs/home/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tabs/products/details-page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tabs/products/filters.html" beforeDir="false" afterPath="$PROJECT_DIR$/tabs/products/filters.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tabs/products/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tabs/products/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +53,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "develop",
+    "git-widget-placeholder": "home-screen",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/DELL/IdeaProjects/ProgWWW_23_Gr2/assets/images/partners",
     "node.js.detected.package.eslint": "true",
@@ -79,6 +72,7 @@
       <recent name="C:\Users\DELL\IdeaProjects\ProgWWW_23_Gr2\assets\icons\social_media" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\DELL\IdeaProjects\ProgWWW_23_Gr2" />
       <recent name="$PROJECT_DIR$/tabs/home" />
     </key>
   </component>
