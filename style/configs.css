@@ -16,7 +16,7 @@ body{
     overflow: scroll;
 }
 #tab-content{
-    padding: 24px 75px;
+    padding: 24px 0;
 }
 
 .material-symbols-outlined {
