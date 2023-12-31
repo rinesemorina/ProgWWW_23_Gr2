@@ -318,7 +318,7 @@
   display: flex;
   justify-content: space-between;
   background-color: #f8f8f8;
-  padding: 70px;
+  padding: 70px 70px 50px;
   .skills-bar{
     width: 50%;
   }
@@ -365,7 +365,7 @@
 
 /* Our partners section*/
 .partners{
-  margin: 50px 50px 70px;
+  margin: 50px 50px 100px;
   background-color: #f8f8f8;
   padding: 50px 25px;
   border-radius: 20px;
@@ -396,6 +396,37 @@
   width: 30px;
 }
 
-.best-seller, .new-products{
-  padding: 35px 75px 100px;
+.best-seller{
+  padding: 50px 75px 150px;
+}
+.new-products{
+  padding: 70px 75px 100px;
+}
+/* Attribute section */
+#attributes{
+  padding: 50px;
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+}
+
+.attributes-card{
+  background-color: #f8f8f8;
+  border-radius: 20px;
+  padding: 20px;
+  flex: 1;
+  text-align: center;
+}
+.at-title{
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.color{
+  color: var(--purple-9)
+}
+.attributes-card svg{
+  min-height: 100px;
+}
+.attributes-card svg path{
+  fill: var(--purple-9)
 }
