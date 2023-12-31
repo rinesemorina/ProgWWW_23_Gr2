@@ -34,7 +34,11 @@
 
 
     createTabs()
-    changeTab('home')
+
+    let url = new URL(window.location)
+    if(url.searchParams.get('tab'))
+        changeTab(url.searchParams.get('tab'))
+    else changeTab('home')
 
     function changeTab(tab){
         if(tab === 'home')

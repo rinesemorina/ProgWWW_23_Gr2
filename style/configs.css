@@ -1,16 +1,21 @@
 @import url('./colors.css');
 @import url('./utilities.css');
-@import url('./components/header.css');
 @import url('./tabs/home.css');
 @import url('./tabs/products.css');
 @import url('./tabs/user-info.css');
 @import url('./tabs/detials-page.css');
+
+@import url('./components/header.css');
+@import url('./components/footer.css');
+@import url('./components/checkbox.css');
+
 html {
     scroll-behavior: smooth;
 }
 body{
     font-family: 'Raleway', sans-serif;
     margin: 0;
+    overflow: scroll;
 }
 #tab-content{
     padding: 24px 75px;

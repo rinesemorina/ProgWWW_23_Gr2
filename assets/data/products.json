@@ -13,8 +13,8 @@
   "colors": ["white"],
   "reviews": 4,
   "features": [
-    "Touch Screen",
-    "Notebook"
+    "touch screen",
+    "notebook"
   ],
   "img": {
     "folder": "lenovo-yogaair14s",
@@ -100,8 +100,8 @@
     "colors": ["white"],
     "reviews": 4,
     "features": [
-      "Touch Screen",
-      "Notebook"
+      "touch screen",
+      "notebook"
     ],
     "img": {
       "folder": "lenovo-yogaair14s",

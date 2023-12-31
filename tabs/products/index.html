@@ -1,26 +1,41 @@
-<div id="products-container">
-    <div class="header">
-        <p class="bold fs-20">All products</p>
-        <div class="display-type">
-            <div class="icon-wrapper" onclick="changeDisplayType('grid')">
-                <img id="grid" class="icon" src="../../assets/icons/grid.png" alt="">
-            </div>
-            <div class="icon-wrapper" onclick="changeDisplayType('list')">
-                <img id="list" class="icon" src="../../assets/icons/list.png" alt="">
-            </div>
-        </div>
+<div class="products-page-wrapper">
+    <div id="filters" style="display: none">
+        <!--  Filters are added here    -->
     </div>
-    <div id="products-list">
-        <!-- Product cards will be injected here -->
+    <div id="products-container">
+        <div class="header">
+            <p class="bold fs-20">All products</p>
+            <div class="flex-row">
+                <span id="clipboard-msg" class="fs-12 mr-10 no-data" style="display: none;">Search URL copied to clipboard!</span>
+                <span class="material-symbols-outlined icon mr-10" id="copy-filter" onclick="copyFilterUrl()">copy_all</span>
+                <span class="material-symbols-outlined icon mr-10" onclick="toggleShowFilters()">filter_list</span>
+                <div class="display-type">
+                    <div class="icon-wrapper" onclick="changeDisplayType('grid')">
+                        <img id="grid" class="icon" src="../../assets/icons/grid.png" alt="">
+                    </div>
+                    <div class="icon-wrapper" onclick="changeDisplayType('list')">
+                        <img id="list" class="icon" src="../../assets/icons/list.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="products-list">
+            <!-- Product cards will be injected here -->
+        </div>
     </div>
 </div>
 
 <script>
-    let all_data = []
-    let display_type = "list"
+    var all_data = []
+    var all_filters = []
+    let showFilters = false
+
+    let display_type = "grid"
     let list = document.getElementById("products-list")
     changeDisplayType()
     getData()
+    navigateTo('#filters', 'tabs/products/filters.html')
 
     function getData(){
         fetch('../assets/data/products.json')
@@ -33,7 +48,12 @@
     function displayData(){
         list.innerHTML = ''
 
-        all_data.forEach(item => {
+        let filteredData = getFilteredData()
+        if(filteredData.length === 0){
+            list.innerHTML = `<p class="no-data">No data available.</p>`
+        }
+
+        filteredData.forEach(item => {
             let item_html = document.createElement('div')
             item_html.className = 'card'
             item_html.innerHTML = `
@@ -52,28 +72,72 @@
             list.append(item_html)
         })
     }
+    function getFilteredData(){
+        let data = JSON.parse(JSON.stringify(all_data))
+
+        if(all_filters.length === 0)
+            return data
+
+        all_filters.forEach(filter_type => {
+            let query = filter_type?.options.filter(i => i.checked)?.map(i => i.code)
+            if(query.length > 0) {
+                data = data.filter(opt => {
+                    if(Array.isArray(opt[filter_type.code]))
+                        return opt[filter_type.code].find(i => query.includes(i))
+                    return query.includes(opt[filter_type.code])
+                })
+            }
+        })
+        return data
+    }
     function showDetails(id){
         lastSelectedItem = all_data.find(item => item.id == id)
         $(function(){
             $('#tab-content').load("/tabs/products/details-page.html");
         });
-        console.log({id})
     }
     function changeDisplayType(type){
-        if(!type) type = 'grid'
+        display_type = type || display_type || 'products-list'
         let current_active = document.getElementById(display_type)
-        display_type = type
         current_active.className = current_active.className.replace('active', '')
 
-        let active_item = document.getElementById(type)
+        let active_item = document.getElementById(type || display_type)
         active_item.className = active_item.className + " " + 'active'
 
-        // let display_item = document.getElementById("display_type")
-
-        list.className = display_type
+        list.className = display_type + (showFilters && display_type === 'grid' ? ' col-3' : '')
         // displayData()
     }
     function formattedDescription(item){
         return `${item.cpu}, ${item.ram}GB, ${item.space > 1024 ? item.space % 1024 + 'TB' : item.space + 'GB'}, ${item.display}"`
+    }
+    function toggleShowFilters(){
+        showFilters = !showFilters
+        if(!showFilters){
+            document.getElementById('filters').style.display = 'none'
+        }else{
+            document.getElementById('filters').style.display = 'block'
+        }
+        displayData()
+        changeDisplayType()
+    }
+    function copyFilterUrl(){
+        let selected_filters = all_filters.map(filter_type => ({...filter_type, options: filter_type?.options.filter(i => i.checked)?.map(i => i.code)}))
+
+        var url = new URL(window.location)
+        url.searchParams.set('tab', 'products')
+        selected_filters.forEach(filter_type => {
+            if(filter_type.options.length === 0)
+                return
+            if(filter_type.options.length === 1)
+                url.searchParams.append(filter_type.code, filter_type.options[0])
+            else
+                url.searchParams.append(filter_type.code, filter_type.options.map(i => i.toLowerCase()).join(','))
+        })
+
+        navigator.clipboard.writeText(url)
+        document.getElementById('clipboard-msg').style.display = 'block'
+        setTimeout(() => {
+            document.getElementById('clipboard-msg').style.display = 'none'
+        }, 2000)
     }
 </script>
