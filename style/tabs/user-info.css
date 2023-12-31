@@ -1,0 +1,104 @@
+.user-profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    max-width: 800px;
+    margin: 0px auto;
+    background-color: #f3e7f7;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 21px;
+}
+
+.user-info {
+    flex: 1;
+    margin-left: 40px;
+    text-align: left;
+}
+
+#userProfileTitle {
+    color: #7d3cff;
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+
+label {
+    color: #7d3cff;
+    margin-bottom: 10px;
+    display: block;
+}
+
+button:hover {
+    background-color: #5b1f8a;
+}
+
+.button-group {
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #7d3cff;
+    border-radius: 5px;
+    flex: 1;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.input-with-button {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.user-info-input.valid {
+    border: 1px solid rgb(0, 207, 0);
+}
+
+.user-info-input.invalid {
+    border: 1px solid red;
+}
+
+.user-info-button {
+    padding: 10px 20px;
+    background-color: #7d3cff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-right: 20px;
+    width: 150px;
+}
+
+.user-info-button:hover {
+    background-color: #5b1f8a;
+    /* Darker violet on hover */
+    transform: scale(1.05);
+    /* Scale effect on hover */
+}
+
+.errorLabel {
+    font-size: 13px;
+    color: red;
+}
+
+.pair {
+    margin: 20px;
+}

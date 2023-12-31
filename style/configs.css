@@ -2,11 +2,13 @@
 @import url('./utilities.css');
 @import url('./tabs/home.css');
 @import url('./tabs/products.css');
+@import url('./tabs/user-info.css');
 @import url('./tabs/detials-page.css');
 
 @import url('./components/header.css');
 @import url('./components/footer.css');
 @import url('./components/checkbox.css');
+
 html {
     scroll-behavior: smooth;
 }
@@ -21,8 +23,8 @@ body{
 
 .material-symbols-outlined {
     font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
 }
