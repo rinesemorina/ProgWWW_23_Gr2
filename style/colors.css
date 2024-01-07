@@ -5,7 +5,7 @@
 */
 /* additionally use this for pink: d1105a */
 
-:root{
+:root {
     --black-10: #000000;
     --black-9: #212529;
     --black-8: #343a40;
@@ -40,18 +40,28 @@
     --blue-2: #b3cefe;
     --blue-1: #e6efff;
 
+    --purple-11:#7f279c; /**violet-9*/
+    --purple-10:#3b054c; /**violet-11*/
+    --purple-9: #63097f;/**violet-10*/
+    --purple-8: #8b0db1;
+    --purple-7: #b210e4;
+    --purple-6: #c612fd;
+    --purple-5: #d141fd;
+    --purple-4: #d759fe;
+    --purple-3: #e389fe;
+    --purple-2: #eeb8fe;
+    --purple-1: #f9e7ff;
 
-    --violet-11:#3b054c;
-    --violet-10: #63097f;
-    --violet-9:#7f279c;
-    --violet-8: #8b0db1;
-    --violet-7: #b210e4;
-    --violet-6: #c612fd;
-    --violet-5: #d141fd;
-    --violet-4: #d759fe;
-    --violet-3: #e389fe;
-    --violet-2: #eeb8fe;
-    --violet-1: #f9e7ff;
+    --violet-10: #1e1a45;
+    --violet-9: #322b73;
+    --violet-8: #453ca0;
+    --violet-7: #594dce;
+    --violet-6: #594dce;
+    --violet-5: #7367e8;
+    --violet-4: #9289ed;
+    --violet-3: #b1abf2;
+    --violet-2: #d0ccf7;
+    --violet-1: #efeefc;
 
     --pink-10: #31071b;
     --pink-9: #630f35;

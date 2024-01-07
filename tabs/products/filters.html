@@ -1,0 +1,106 @@
+<div id="product-filters">
+    <div class="flex-row">
+        <p class="bold fs-20">Filters</p>
+        <div>
+            <span class="material-symbols-outlined icon-button" onclick="clearFilters()">remove_selection</span>
+            <span class="material-symbols-outlined icon-button" onclick="toggleShowFilters()">filter_list</span>
+        </div>
+    </div>
+    <div id="filters-list">
+        <!--  Filters are dynamically injected here  -->
+    </div>
+</div>
+
+<script>
+    all_filters = []
+
+    let container = document.getElementById('filters-list')
+    getData()
+    function getData(){
+        fetch('tabs/products/all_filters.json')
+            .then((response) => response.json())
+            .then((json) => {
+                all_filters = json
+                var url = new URL(window.location)
+
+                all_filters.forEach(item => {
+                    item.options = []
+                })
+                all_data.forEach(item => {
+                    all_filters.forEach(filter => {
+                        filter.options.push(item[filter.code])
+                    })
+                })
+                all_filters.forEach(item => {
+                    let selected_options = url.searchParams?.get(item.code)?.split(',') || []
+                    // console.log({selected_options})
+                    item.display_options = selected_options && selected_options.length > 0
+                    item.options = item.options.flatMap(i => i)
+                    item.options = getUnique(item.options)
+                    console.log(item.options)
+                    item.options = item.options.map(i => ({code: i, checked: selected_options === i || selected_options.includes(i)}))
+                })
+                displayFilterData()
+                displayData()
+            })
+            .catch(err => {
+                console.log(err)
+            })
+
+    }
+    function displayFilterData(){
+        container.innerHTML = ''
+        let filters_html = ''
+        all_filters.forEach(filter => {
+            let options_list = ``
+
+            if(filter.display_options)
+                filter.options.forEach(opt => {
+                    options_list += `
+                            <div class="flex-row flex-start mt-5">
+                                <input type="checkbox" name="option" class="mr-10"
+                                ${opt.checked ? 'checked' : ''}
+                                onclick="selectFilter('${filter.type}', '${opt.code}')">
+                                <label for="option" class="capitalize">${opt.name || opt.code }</label>
+                            </div>
+                    `
+                })
+
+            let filter_html = `
+                <div class="filter-box mb-15">
+                    <div class="flex-row bold">
+                        <p>${filter.type}</p>
+                        <span class="material-symbols-outlined icon ${filter.display_options ? 'rotate' : ''}"
+                            onclick="toggleDisplayFilters('${filter.type}')"
+                        >expand_more</span>
+                    </div>
+                    <div id="options-list">
+                        ${options_list}
+                    </div>
+                </div>
+            `
+            filters_html += filter_html
+        })
+        container.innerHTML = filters_html
+    }
+    function selectFilter(type, code){
+        let item = all_filters.find(item => item.type === type)
+        let opt = item.options.find(opt => opt.code === code)
+        opt.checked = !opt.checked
+        displayFilterData()
+        displayData()
+    }
+    function toggleDisplayFilters(type){
+        let filter = all_filters.find(f => f.type === type)
+        filter.display_options = !filter.display_options
+        displayFilterData()
+    }
+
+    function clearFilters(){
+        all_filters.forEach(filter => {
+            filter.options.forEach(option => option.checked = false)
+        })
+        displayFilterData()
+        displayData()
+    }
+</script>
