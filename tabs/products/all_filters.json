@@ -1,0 +1,14 @@
+[
+  {
+    "type": "Category",
+    "code": "category"
+  },
+  {
+    "type": "Brand",
+    "code": "brand"
+  },
+  {
+    "type": "Features",
+    "code": "features"
+  }
+]

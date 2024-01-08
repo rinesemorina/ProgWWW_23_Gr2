@@ -19,18 +19,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-
+    <script src="assets/utilities.js"></script>
     <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
     <script>
-        $(function(){
-            $('#header').load("components/header.html");
-        });
+        navigateTo('#header', 'components/header.html')
+        navigateTo('#footer', 'components/footer.html')
     </script>
+
+    <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 </head>
 
 <body>
+<div id="slider"></div>
 <div id="header"></div>
 <div id="tab-content"></div>
+<div id="footer"></div>
 </body>
 
 </html>
