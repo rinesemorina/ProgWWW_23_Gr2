@@ -13,7 +13,6 @@
 
 <script>
     all_filters = []
-
     let container = document.getElementById('filters-list')
     getData()
     function getData(){
@@ -26,22 +25,16 @@
                 all_filters.forEach(item => {
                     item.options = []
                 })
-                all_data.forEach(item => {
-                    all_filters.forEach(filter => {
-                        filter.options.push(item[filter.code])
-                    })
-                })
+                getAllFeatures(all_filters)
                 all_filters.forEach(item => {
                     let selected_options = url.searchParams?.get(item.code)?.split(',') || []
-                    // console.log({selected_options})
                     item.display_options = selected_options && selected_options.length > 0
                     item.options = item.options.flatMap(i => i)
                     item.options = getUnique(item.options)
-                    console.log(item.options)
                     item.options = item.options.map(i => ({code: i, checked: selected_options === i || selected_options.includes(i)}))
                 })
                 displayFilterData()
-                displayData()
+                refreshProductsData()
             })
             .catch(err => {
                 console.log(err)
@@ -88,19 +81,18 @@
         let opt = item.options.find(opt => opt.code === code)
         opt.checked = !opt.checked
         displayFilterData()
-        displayData()
+        refreshProductsData()
     }
     function toggleDisplayFilters(type){
         let filter = all_filters.find(f => f.type === type)
         filter.display_options = !filter.display_options
         displayFilterData()
     }
-
     function clearFilters(){
         all_filters.forEach(filter => {
             filter.options.forEach(option => option.checked = false)
         })
         displayFilterData()
-        displayData()
+        refreshProductsData()
     }
 </script>

@@ -4,46 +4,70 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7795cc23-bd68-4fce-8814-e87545432a00" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/style/configs.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/configs.css" afterDir="false" />
+    <list default="true" id="7795cc23-bd68-4fce-8814-e87545432a00" name="Changes" comment="Added Best Seller and New products section">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/tabs/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/tabs/home.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tabs/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tabs/home/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tabs/products/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tabs/products/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="tsconfig.json" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="footer" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2YOn71wf7QOcx27L9qlLAFdb1xo" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "automated-slider",
-    "last_opened_file_path": "/Users/ronalatifaj/vscode_java/ProgWWW_23_Gr2",
+    "git-widget-placeholder": "home-screen",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/DELL/IdeaProjects/ProgWWW_23_Gr2/assets/images/partners",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\DELL\IdeaProjects\ProgWWW_23_Gr2\assets\images\partners" />
+      <recent name="C:\Users\DELL\IdeaProjects\ProgWWW_23_Gr2\assets\images" />
+      <recent name="C:\Users\DELL\IdeaProjects\ProgWWW_23_Gr2\assets\icons" />
+      <recent name="C:\Users\DELL\IdeaProjects\ProgWWW_23_Gr2\assets\icons\social_media" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\DELL\IdeaProjects\ProgWWW_23_Gr2" />
       <recent name="$PROJECT_DIR$/tabs/home" />
     </key>
   </component>
@@ -56,10 +80,141 @@
       <option name="presentableId" value="Default" />
       <updated>1700405324342</updated>
       <workItem from="1700405325484" duration="938000" />
+      <workItem from="1703445488032" duration="10077000" />
+      <workItem from="1703507593417" duration="21651000" />
+      <workItem from="1703881179134" duration="13612000" />
+      <workItem from="1703937157218" duration="125000" />
+      <workItem from="1703968053623" duration="3524000" />
     </task>
+    <task id="LOCAL-00001" summary="Added filters ui">
+      <option name="closed" value="true" />
+      <created>1703525667756</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1703525667756</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Filtering logic and UI improvements on Product List">
+      <option name="closed" value="true" />
+      <created>1703537146624</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1703537146624</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Dynamic filter options">
+      <option name="closed" value="true" />
+      <created>1703716381065</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1703716381065</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Clear all filters functionality">
+      <option name="closed" value="true" />
+      <created>1703717310303</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1703717310303</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Filter by url query parameters">
+      <option name="closed" value="true" />
+      <created>1703723863783</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1703723863783</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Footer">
+      <option name="closed" value="true" />
+      <created>1703899103246</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1703899103246</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Refactor">
+      <option name="closed" value="true" />
+      <created>1703899160790</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1703899160790</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Overflow width fix">
+      <option name="closed" value="true" />
+      <created>1703899369169</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1703899369169</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Open social media links in new page">
+      <option name="closed" value="true" />
+      <created>1703901041198</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1703901041198</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Refactored Products Logic">
+      <option name="closed" value="true" />
+      <created>1704038340778</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1704038340778</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Added Best Seller and New products section">
+      <option name="closed" value="true" />
+      <created>1704057022903</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1704057022903</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/products-list" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added filters ui" />
+    <MESSAGE value="Filtering logic and UI improvements on Product List" />
+    <MESSAGE value="Dynamic filter options" />
+    <MESSAGE value="Clear all filters functionality" />
+    <MESSAGE value="Filter by url query parameters" />
+    <MESSAGE value="Footer" />
+    <MESSAGE value="Refactor" />
+    <MESSAGE value="Overflow width fix" />
+    <MESSAGE value="Open social media links in new page" />
+    <MESSAGE value="Refactored Products Logic" />
+    <MESSAGE value="Added Best Seller and New products section" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Best Seller and New products section" />
   </component>
 </project>
