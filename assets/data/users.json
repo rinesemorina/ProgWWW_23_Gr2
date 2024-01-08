@@ -1,0 +1,41 @@
+[
+    {
+        "id":1,
+        "name": "jane",
+        "surname": "doe",
+        "address": "123 main st",
+        "phone": "123456789",
+        "email": "jane.doe@email.com",
+        "wishlist": [
+            "1b4a9260-bc19-436b-824b-7a23125d6b80",
+            "87b42314-a3bb-4abe-9b3a-6473b80ede6a",
+            "515d19df-593a-4488-9a92-7d4662be2615"
+        ]
+    },
+    {
+        "id":2,
+        "name": "john",
+        "surname": "doe",
+        "address": "123 main st",
+        "phone": "123456789",
+        "email": "john.doe@hotmail.com",
+        "wishlist": [
+            "1b4a9260-bc19-436b-824b-7a23125d6b80",
+            "87b42314-a3bb-4abe-9b3a-6473b80ede6a",
+            "515d19df-593a-4488-9a92-7d4662be2615"
+        ]
+    },
+    {
+        "id":3,
+        "name": "rona",
+        "surname": "latfiaj",
+        "address": "123 main st",
+        "phone": "123456789",
+        "email": "rona.latifaj@gmail.com",
+        "wishlist": [
+            "1b4a9260-bc19-436b-824b-7a23125d6b80",
+            "87b42314-a3bb-4abe-9b3a-6473b80ede6a",
+            "515d19df-593a-4488-9a92-7d4662be2615"
+        ]
+    }
+]
