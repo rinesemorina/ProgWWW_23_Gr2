@@ -13,9 +13,9 @@ loginBtn.addEventListener('click', () => {
 });
 
 signupBtn.onclick = () => {
-    window.location.href = "https://www.youtube.com";
+    window.location.replace("http://127.0.0.1:5500/index.html");
 };
 signinBtn.onclick = () => {
-    window.location.href = "https://www.youtube.com";
+    location.href = "http://127.0.0.1:5500/index.html";
     console.log('signin');
 };

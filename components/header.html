@@ -38,13 +38,18 @@
     let url = new URL(window.location)
     if(url.searchParams.get('tab'))
         changeTab(url.searchParams.get('tab'))
-    else changeTab('home')
+    else changeTab('login-page')
 
     function changeTab(tab){
         if(tab === 'home')
             navigateTo('#slider', 'tabs/home/slider.html')
         else
             document.getElementById("slider").innerHTML = ''
+
+        if(tab === 'login-page')
+            document.getElementById("footer").innerHTML = ''
+        else
+            navigateTo('#footer', 'components/footer.html')
 
         navigateTo('#tab-content', `tabs/${tab}/index.html`)
     }
