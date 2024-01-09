@@ -51,10 +51,13 @@
                 filter.options.forEach(opt => {
                     options_list += `
                             <div class="flex-row flex-start mt-5">
-                                <input type="checkbox" name="option" class="mr-10"
-                                ${opt.checked ? 'checked' : ''}
-                                onclick="selectFilter('${filter.type}', '${opt.code}')">
-                                <label for="option" class="capitalize">${opt.name || opt.code }</label>
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" name="option" class="mr-10"
+                                    ${opt.checked ? 'checked' : ''}
+                                    onclick="selectFilter('${filter.type}', '${opt.code}')">
+                                </div>
+
+                                <label for="option" class="capitalize m-0">${opt.name || opt.code }</label>
                             </div>
                     `
                 })

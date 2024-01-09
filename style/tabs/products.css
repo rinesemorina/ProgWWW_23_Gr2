@@ -16,6 +16,9 @@
         .rotate{
             transform: rotateX(180deg);
         }
+        label{
+            color: var(--black-8);
+        }
     }
 }
 #products-container{
