@@ -6,14 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="7795cc23-bd68-4fce-8814-e87545432a00" name="Changes" comment="merged changes from develop">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style/configs.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/configs.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style/tabs/contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/tabs/contact.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tabs/contact-us/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tabs/contact-us/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -59,7 +65,7 @@
       <option name="presentableId" value="Default" />
       <updated>1700405324342</updated>
       <workItem from="1700405325484" duration="938000" />
-      <workItem from="1704820596543" duration="9969000" />
+      <workItem from="1704820596543" duration="19255000" />
     </task>
     <task id="LOCAL-00001" summary="merged changes from develop">
       <option name="closed" value="true" />

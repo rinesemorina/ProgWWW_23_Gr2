@@ -8,23 +8,23 @@
             <form method="POST" id="contactForm" name="contactForm" class="contactForm">
 
                 <div class="form-group">
-                    <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Name" required>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" name="surname" id="surname" placeholder="Last Name">
+                    <input type="text" class="form-control" name="surname" id="surname" placeholder="Last Name" required>
                 </div>
                 <div class="form-group">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="youremail@gmail.com">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="youremail@gmail.com" required>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" name="phone" id="phone" placeholder="+383 44 111 222">
+                    <input type="tel" class="form-control" name="phone" id="phone" maxlength="11" placeholder="123/456-789">
                 </div>
                 <div class="form-group">
                     <textarea name="message" class="form-control" id="message" cols="30" rows="6"
-                              placeholder="Message"></textarea>
+                              placeholder="Message" required></textarea>
                 </div>
 
-                <input type="submit" value="Send Message">
+                <input type="submit" id="submitButton" value="Send Message" onsubmit="">
             </form>
         </div>
         <div class="right-side">
@@ -58,10 +58,110 @@
 
 
 <script>
- var webUrl = new String("http://localhost:63343/ProgWWW_23_Gr2");
- var address = new String("https://www.google.com/maps/dir/42.6577868,21.1533572/fshmn+location+in+prishtina+google+maps/@42.6572768,21.1485004,15z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x13549ee896b552d7:0x31bf5e925cb705a3!2m2!1d21.1612898!2d42.6554261?entry=ttu");
+
+ // region constants
+ const webUrl = new String("http://localhost:63343/ProgWWW_23_Gr2");
+ const address = new String("https://www.google.com/maps/dir/42.6577868,21.1533572/fshmn+location+in+prishtina+google+maps/@42.6572768,21.1485004,15z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x13549ee896b552d7:0x31bf5e925cb705a3!2m2!1d21.1612898!2d42.6554261?entry=ttu");
  document.getElementById("websiteUrl").setAttribute("href", webUrl);
  document.getElementById("addressLink").setAttribute("href", address);
+ // endregion
+
+ // region validate form-inputs
+ let form = document.querySelector("#contactForm");
+ let name = document.getElementById('name')
+ let surname = document.getElementById('surname')
+ let phone = document.getElementById('phone')
+ let email = document.getElementById('email')
+ let message = document.getElementById('message')
+
+ form.addEventListener('submit', function (event) {
+     event.preventDefault();
+     if (validateFormInputs()) {
+         showValidationSuccess();
+     }
+ });
+
+ function validateFormInputs() {
+     let isFormValid = true;
+
+     if (!validateName(name.value)) {
+         isFormValid = false;
+     }
+     if (!validateSurname(surname.value)){
+         isFormValid = false;
+     }
+     if (!validateEmail(email.value.trim())){
+         isFormValid = false;
+     }
+     if (!validatePhone(phone.value)){
+         isFormValid = false;
+     }
+     if (!validateMessage(message.value.trim())){
+         isFormValid = false;
+     }
+     return isFormValid;
+ }
+ // endregion
+
+ // region validate individual fields
+ function validateName(name) {
+     if (name.length < 2 || name.length > 20) {
+         showValidationError("Please type a name between 2-20 characters");
+         return false;
+     }
+     return true;
+ }
+ function validateSurname(surname){
+     if (surname.length < 2 || surname.length > 30){
+         showValidationError("Please type a last name between 2-30 characters");
+         return false;
+     }
+     return true;
+ }
+ function validateEmail(email){
+     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+     if (emailPattern.test(email)) {
+         return true;
+     }
+     showValidationError("Invalid email address");
+     return false;
+ }
+ function validatePhone(phone){
+     const phonePattern = /^\d{3}\/\d{3}-\d{3}$/;
+     if (phone && !phonePattern.test(phone)) {
+         showValidationError("Invalid phone number. Please use the format: 123/456-789");
+         return false;
+     }
+     return true;
+ }
+ function validateMessage(message){
+     if (message.length < 1) {
+         showValidationError("Please enter a message");
+         return false;
+     }
+     return true;
+ }
+ // endregion
+
+ // region show validation message
+ function showValidationError(message) {
+     Swal.fire({
+         icon: 'error',
+         title: 'Oops!',
+         text: message,
+     });
+ }
+ function showValidationSuccess() {
+     Swal.fire({
+         icon: 'success',
+         title: 'Thank you!',
+         text: 'Your message was submitted successfully!',
+     }).then(() => {
+         form.submit();
+     });
+ }
+ // endregion
+
 </script>
 
 
