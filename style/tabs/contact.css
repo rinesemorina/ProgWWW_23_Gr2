@@ -126,10 +126,13 @@ input[type=submit]:hover{
 }
 
 .info-row {
-    display: flex;
+    display: block;
     gap: 8px;
     align-items: center;
-    justify-content: space-around;
+    justify-content: start;
+}
+.info-keyword{
+    margin-left: 12px;
 }
 
 .right-side {
