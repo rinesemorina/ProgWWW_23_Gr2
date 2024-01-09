@@ -20,6 +20,9 @@ body{
 #tab-content{
     padding: 24px 75px;
 }
+#tab-content:has(#home-wrapper){
+    padding: 24px 0;
+}
 
 .material-symbols-outlined {
     font-variation-settings:

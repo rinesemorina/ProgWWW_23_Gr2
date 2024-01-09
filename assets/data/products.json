@@ -39,8 +39,8 @@
   },
   {
     "id": "87b42314-a3bb-4abe-9b3a-6473b80ede6a",
-    "category": "pc",
-    "type": "laptop",
+    "category": "tablet",
+    "type": "tablet",
     "brand": "Microsoft",
     "model": "Surface Book3",
     "cpu": "Core i7-1065G7",
@@ -66,7 +66,7 @@
   },
   {
     "id": "515d19df-593a-4488-9a92-7d4662be2615",
-    "category": "pc",
+    "category": "laptop",
     "type": "laptop",
     "brand": "Apple",
     "model": "MacBook Air",
@@ -89,7 +89,7 @@
   },
   {
     "id": "0f481a76-7cd9-4288-a292-68cc049e96cd",
-    "category": "pc",
+    "category": "laptop",
     "type": "laptop",
     "brand": "Apple",
     "model": "MacBook Air",
@@ -112,7 +112,7 @@
   },
   {
     "id": "b52f7f0b-bf3b-4dff-8906-ce4fa6340179",
-    "category": "pc",
+    "category": "laptop",
     "type": "laptop",
     "brand": "Lenovo",
     "model": "YOGA Air14s",
@@ -147,7 +147,7 @@
   },
   {
     "id": "87b42314-a3bb-4abe-9b3a-6473b80ede6a",
-    "category": "pc",
+    "category": "laptop",
     "type": "laptop",
     "brand": "Microsoft",
     "model": "Surface Go",
@@ -183,7 +183,7 @@
   },
   {
     "id": "b4960905-936b-4336-9de9-367fe2348824",
-    "category": "pc",
+    "category": "laptop",
     "type": "laptop",
     "brand": "Apple",
     "model": "MacBook Air",
@@ -206,7 +206,7 @@
   },
   {
     "id": "9eb6fa38-da05-4876-8bee-450f0f64f20f",
-    "category": "pc",
+    "category": "laptop",
     "type": "laptop",
     "brand": "Apple",
     "model": "MacBook Air",
@@ -265,7 +265,7 @@
   },
   {
     "id": "1af241d6-3c5f-4029-a073-344deda9c9cd",
-    "category": "pc",
+    "category": "laptop",
     "type": "laptop",
     "brand": "MSI",
     "model": "Katana 17",
@@ -301,7 +301,7 @@
   },
   {
     "id": "6d4a190b-b478-4038-a331-d5f8eb32c1a1",
-    "category": "pc",
+    "category": "laptop",
     "type": "laptop",
     "brand": "Apple",
     "model": "Apple MacBook Pro",
@@ -646,7 +646,7 @@
   },
   {
     "id": "0b14e42e-a1c1-48ed-816e-d335b122077e",
-    "category": "pc",
+    "category": "laptop",
     "type": "laptop",
     "brand": "Apple",
     "model": "Apple MacBook Air",
@@ -677,7 +677,7 @@
   },
   {
     "id": "398d0b26-fbe5-4f76-b77d-f52dabf26b46",
-    "category": "pc",
+    "category": "laptop",
     "type": "laptop",
     "brand": "Microsoft",
     "model": "Surface Go",
