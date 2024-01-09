@@ -9,7 +9,6 @@
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    align-items: center;
     background-color: var(--purple-0);
 }
 
@@ -40,7 +39,6 @@
 
 .right-side {
 var(--white) background-color: var(--white);
-    align-items: center;
     justify-content: center;
 }
 
@@ -98,8 +96,9 @@ input[type=submit]:hover{
 
 .contact-info table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
     margin-top: 20px;
+    border-spacing:  5em;
 }
 
 .contact-info td {
@@ -120,6 +119,48 @@ input[type=submit]:hover{
     margin-right: 20px;
 }
 
+.info {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 3em;
+}
+
+.info-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: space-around;
+}
+
 .right-side {
     padding-left: 20px;
+}
+
+.right-side p {
+    padding-bottom: 4.5em;
+}
+
+textarea {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 0;
+        /*background-color: var(--white);*/
+        background-color: #fff;
+        flex-direction: column;
+        gap: 20px;
+        box-shadow: none;
+    }
+
+    .right-side {
+        background-color: var(--purple-0);
+    }
+
+    .right-side p {
+        padding-bottom: 0;
+    }
 }
