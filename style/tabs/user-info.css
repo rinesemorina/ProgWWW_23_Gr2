@@ -51,7 +51,7 @@ button:hover {
     margin-bottom: 20px;
 }
 
-input {
+.user-info-input {
     width: calc(100% - 20px);
     padding: 10px;
     border: 1px solid #7d3cff;
