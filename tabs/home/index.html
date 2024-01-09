@@ -6,6 +6,10 @@
             injectProductsDataInto("best-seller", [], 4)
             injectProductsDataInto("new-products", [], 4)
         }
+
+        function goToProducts(){
+            navigateTo('#tab-content', `tabs/products/index.html`)
+        }
     </script>
 
     <div class="best-seller">
@@ -13,53 +17,14 @@
         <div id="best-seller" class="grid">
         <!--   Best Sellers (Products) will be injected here  -->
         </div>
-    </div>
-
-    <!-- Our skills section  -->
-    <div class="skills">
-        <div class="bckg-img"></div>
-        <div class="skills-bar">
-            <div class="skills_text">
-                <h1 class="title">Our skills</h1>
-                <hr>
-            </div>
-            <div class="bars">
-                <span class="right">CODING</span><span class="left">80%</span>
-                <div id="bar1"></div>
-                <span class="right">DESIGN</span><span class="left">90%</span>
-                <div id="bar2"></div>
-                <span class="right">BRANDING</span><span class="left">60%</span>
-                <div id="bar3"></div>
-                <span class="right">MARKETING</span><span class="left">73%</span>
-                <div id="bar4"></div>
-                <span class="right">CONSULTANCY</span><span class="left">75%</span>
-                <div id="bar5"></div>
-            </div>
+        <div class="flex-row center space-around">
+            <button onclick="goToProducts()">
+                <span style="margin: auto">See all products</span>
+                <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
         </div>
     </div>
 
-    <div class="new-products">
-        <h1 class="title">New Products</h1><hr style="margin-bottom: 50px">
-        <div id="new-products" class="grid">
-            <!--   New products will be injected here  -->
-        </div>
-    </div>
-
-    <!--  Our partners section  -->
-    <div class="partners" id="partners">
-        <h1 class="title">Our Partners</h1>
-        <hr>
-        <div class="partners_pic">
-            <div class="partner"><a href="#"><img src="../../assets/images/partners/1.png"></a></div>
-            <div class="partner"><a href="#"><img src="../../assets/images/partners/2.png"></a></div>
-            <div class="partner"><a href="#"><img src="../../assets/images/partners/3.png"></a></div>
-            <div class="partner"><a href="#"><img src="../../assets/images/partners/4.png"></a></div>
-            <div class="partner"><a href="#"><img src="../../assets/images/partners/5.png"></a></div>
-        </div>
-    </div>
-
-    <h1 class="title">Advantages</h1>
-    <hr>
     <div id="attributes">
         <div class="attributes-card">
             <svg fill="#594dce" xmlns="http://www.w3.org/2000/svg" width="80" height="82" viewBox="0 0 80 82">
@@ -128,4 +93,80 @@
         </div>
 
     </div>
+
+    <div class="videos">
+        <video src="../../assets/videos/pexels-pavel-danilyuk-8004275%20(2160p).mp4" autoplay loop></video>
+        <video src="../../assets/videos/pexels-pavel-danilyuk-8003609.mp4" autoplay loop></video>
+        <video src="../../assets/videos/pexels-pavel-danilyuk-8003414%20(2160p).mp4" autoplay loop></video>
+        <video src="../../assets/videos/pexels-pavel-danilyuk-8004689.mp4" autoplay loop></video>
+        <video class="side-video" src="../../assets/videos/pexels-pavel-danilyuk-8005696%20(2160p)%20(online-video-cutter.com).mp4" autoplay loop></video>
+
+    </div>
+
+    <div class="new-products">
+        <h1 class="title">New Products</h1><hr style="margin-bottom: 50px">
+        <div id="new-products" class="grid">
+            <!--   New products will be injected here  -->
+        </div>
+        <div class="flex-row center space-around">
+            <button onclick="goToProducts()">
+                <span style="margin: auto">See all products</span>
+                <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="skills">
+        <div class="bckg-img"></div>
+        <div class="skills-bar">
+            <div class="skills_text">
+                <h1 class="title">Our skills</h1>
+                <hr>
+            </div>
+            <div class="bars">
+                <span class="right">CODING</span><span class="left">80%</span>
+                <div id="bar1"></div>
+                <span class="right">DESIGN</span><span class="left">90%</span>
+                <div id="bar2"></div>
+                <span class="right">BRANDING</span><span class="left">60%</span>
+                <div id="bar3"></div>
+                <span class="right">MARKETING</span><span class="left">73%</span>
+                <div id="bar4"></div>
+                <span class="right">CONSULTANCY</span><span class="left">75%</span>
+                <div id="bar5"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="gallery flex-row">
+        <div class="flex-col">
+            <video src="../../assets/images/home-gallery/pexels-kampus-production-7287515%20(2160p).mp4" autoplay loop></video>
+            <img src="../../assets/images/home-gallery/harrison-broadbent-1mu9gF8OhNk-unsplash (1).jpg" alt="">
+            <img src="../../assets/images/home-gallery/pexels-ruben-daems-5552789.jpg" alt="">
+        </div>
+        <div class="flex-col">
+            <img src="../../assets/images/home-gallery/pexels-pramod-tiwari-17330220.jpg" alt="">
+            <video src="../../assets/images/home-gallery/pexels-ivan-samkov-7567452%20(1080p).mp4" autoplay loop></video>
+            <img src="../../assets/images/home-gallery/pexels-roberto-nickson-7238759.jpg" alt="">
+        </div>
+        <div class="flex-col">
+            <video src="../../assets/images/home-gallery/pexels-diva-plavalaguna-6985525%20(2160p).mp4" autoplay loop></video>
+            <img src="../../assets/images/home-gallery/pexels-garrett-morrow-610945.jpg" alt="">
+            <img src="../../assets/images/home-gallery/pexels-marcus-aurelius-4064696%20(1).jpg" alt="">
+        </div>
+
+    </div>
+
+    <div class="partners" id="partners">
+        <h1 class="title">Our Partners</h1>
+        <hr>
+        <div class="partners_pic">
+            <div class="partner"><a href="#"><img src="../../assets/images/partners/1.png"></a></div>
+            <div class="partner"><a href="#"><img src="../../assets/images/partners/2.png"></a></div>
+            <div class="partner"><a href="#"><img src="../../assets/images/partners/3.png"></a></div>
+            <div class="partner"><a href="#"><img src="../../assets/images/partners/4.png"></a></div>
+            <div class="partner"><a href="#"><img src="../../assets/images/partners/5.png"></a></div>
+        </div>
+    </div>
+
 </div>

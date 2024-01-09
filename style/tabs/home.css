@@ -312,12 +312,23 @@
       }
   }
 
+#home-wrapper .title{
+  text-transform: uppercase;
+  color: #333333;
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+}
+#home-wrapper hr{
+  width: 30px;
+}
 
 /* Our skills section*/
 .skills{
   display: flex;
   justify-content: space-between;
   background-color: #f8f8f8;
+  margin-top: 50px;
   padding: 70px 70px 50px;
   .skills-bar{
     width: 50%;
@@ -365,7 +376,7 @@
 
 /* Our partners section*/
 .partners{
-  margin: 50px 50px 100px;
+  margin: 50px 75px 0;
   background-color: #f8f8f8;
   padding: 50px 25px;
   border-radius: 20px;
@@ -385,26 +396,31 @@
   }
 }
 
-#home-wrapper .title{
-  text-transform: uppercase;
-  color: #333333;
-  font-size: 25px;
-  text-align: center;
-  font-weight: bold;
-}
-#home-wrapper hr{
-  width: 30px;
-}
-
 .best-seller{
-  padding: 50px 75px 150px;
+  padding: 10px 75px 0;
+}
+.best-seller button, .new-products button{
+  background-color: white;
+  border: 1px solid var(--violet-8);
+  color: var(--violet-8);
+  padding: 15px 20px;
+  font-size: 1.1rem;
+  margin-top: 50px;
+
+  display: flex;
+  /*align-content: center;*/
+  gap: 10px;
+}
+.best-seller button:hover, .new-products button:hover{
+  background-color: var(--violet-8);
+  color: white;
 }
 .new-products{
-  padding: 70px 75px 100px;
+  padding: 50px 75px 0;
 }
 /* Attribute section */
 #attributes{
-  padding: 50px;
+  padding: 50px 75px;
   display: flex;
   gap: 50px;
   justify-content: space-between;
@@ -429,4 +445,25 @@
 }
 .attributes-card svg path{
   fill: var(--purple-9)
+}
+.videos{
+  margin: 50px 75px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: calc(100vw - 150px);
+}
+.side-video{
+  grid-row-start: 1;
+  grid-row-end: span 2;
+  grid-column-start: 3;
+  overflow: hidden;
+}
+.gallery{
+  margin: 50px 75px 0;
+}
+.gallery div{
+  flex: 1;
+}
+.gallery img, .videos video, .gallery video{
+  width: 100%;
 }
