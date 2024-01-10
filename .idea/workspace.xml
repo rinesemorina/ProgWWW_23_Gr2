@@ -5,27 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7795cc23-bd68-4fce-8814-e87545432a00" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/images/home-gallery/harrison-broadbent-1mu9gF8OhNk-unsplash (1).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/home-gallery/pexels-diva-plavalaguna-6985525 (2160p).mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/home-gallery/pexels-garrett-morrow-610945.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/home-gallery/pexels-ivan-samkov-7567452 (1080p).mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/home-gallery/pexels-kampus-production-7287515 (2160p).mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/home-gallery/pexels-marcus-aurelius-4064696 (1).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/home-gallery/pexels-pramod-tiwari-17330220.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/home-gallery/pexels-roberto-nickson-7238759.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/home-gallery/pexels-ruben-daems-5552789.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/videos/pexels-pavel-danilyuk-8003414 (2160p).mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/videos/pexels-pavel-danilyuk-8003609.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/videos/pexels-pavel-danilyuk-8004275 (2160p).mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/videos/pexels-pavel-danilyuk-8004689.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/videos/pexels-pavel-danilyuk-8005696 (2160p) (online-video-cutter.com).mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/videos/production_id_4492797 (2160p).mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style/tabs/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/tabs/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style/utilities.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/utilities.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tabs/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tabs/home/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/components/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tabs/products/details-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/tabs/products/details-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tabs/user-info/user-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/tabs/user-info/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +40,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Rebasing home-screen",
+    "git-widget-placeholder": "develop",
     "last_opened_file_path": "C:/Users/Eljesa Kqiku/IdeaProjects/ProgWWW_23_Gr2/style/tabs",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
