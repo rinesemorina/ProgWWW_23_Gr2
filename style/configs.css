@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 @import url('./colors.css');
 @import url('./utilities.css');
 @import url('./tabs/home.css');
@@ -5,6 +6,7 @@
 @import url('./tabs/user-info.css');
 @import url('./tabs/detials-page.css');
 @import url('./tabs/contact.css');
+@import url('./tabs/login-page.css');
 
 @import url('./components/header.css');
 @import url('./components/footer.css');
@@ -16,12 +18,15 @@ html {
 body{
     font-family: 'Raleway', sans-serif;
     margin: 0;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 html, body {
     height: 100%;
     position: relative;
+}
+#tab-content:has(#home-wrapper){
+    padding: 24px 0;
 }
 
 .material-symbols-outlined {

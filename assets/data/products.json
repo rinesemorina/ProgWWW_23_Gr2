@@ -1,103 +1,130 @@
-[{
-  "id": "b52f7f0b-bf3b-4dff-8906-ce4fa6340179",
-  "category": "pc",
-  "type": "laptop",
-  "brand": "Lenovo",
-  "model": "YOGA Air14s",
-  "cpu":  "Intel Core i7-1280P",
-  "ram": 16,
-  "space": "1024",
-  "graphics-card": null,
-  "display": 14,
-  "price": 1723.46,
-  "colors": ["white"],
-  "reviews": 4,
-  "features": [
-    "touch screen",
-    "notebook"
-  ],
-  "img": {
-    "folder": "lenovo-yogaair14s",
-    "cover" : "img1.png",
-    "all": ["img1.png", "img2.png", "img3.png"]
+[
+  {
+    "id": "1b4a9260-bc19-436b-824b-7a23125d6b80",
+    "category": "computer",
+    "type": "computer",
+    "brand": "Lenovo",
+    "model": "Lenovo PC IdeaCentre 3 24ALC6",
+    "cpu": "AMD Ryzen 5",
+    "ram": 8,
+    "space": 512,
+    "graphics-card": "Integrated Graphics",
+    "display": 23.8,
+    "price": 810.46,
+    "colors": [
+      "white"
+    ],
+    "reviews": 4,
+    "features": [
+      "SSD",
+      "computer"
+    ],
+    "img": {
+      "folder": "AIO",
+      "cover": "aio.avif",
+      "all": [
+        "aio.avif",
+        "aio-1.avif",
+        "aio-2.avif",
+        "aio-3.avif"
+      ]
+    },
+    "images": [
+      "assets/data/product-images/AIO/aio.avif",
+      "assets/data/product-images/AIO/aio-1.avif",
+      "assets/data/product-images/AIO/aio-2.avif",
+      "assets/data/product-images/AIO/aio-3.avif"
+    ],
+    "description": "Kompjuterët kanë revolucionarizuar mënyrën se si ne punojmë, komunikojmë dhe argëtohemi. Me shpejtësinë, saktësinë dhe shkathtësinë e tyre, ato janë bërë një mjet thelbësor në shumë aspekte të jetës sonë.Një kompjuter tipik përbëhet nga disa komponentë, duke përfshirë një njësi përpunimi qendror (CPU), memorie, pajisje hyrëse/dalëse dhe softuer."
   },
-  "images": [
-    "assets/data/product-images/lenovo-yogaair14s/img1.png",
-    "assets/data/product-images/lenovo-yogaair14s/img2.png",
-    "assets/data/product-images/lenovo-yogaair14s/img3.png"
-  ]
-}, {
-  "id": "87b42314-a3bb-4abe-9b3a-6473b80ede6a",
-  "category": "pc",
-  "type": "laptop",
-  "brand": "Microsoft",
-  "model": "Surface Book3",
-  "cpu":  "Core i7-1065G7",
-  "ram": 16,
-  "space": "256",
-  "graphics-card": null,
-  "display": 13.5,
-  "price": 1723.46,
-  "color": ["white", "black"],
-  "reviews": 3,
-  "features": [
-    "full rotate",
-    "tablet"
-  ],
-  "images": [
-    "assets/data/product-images/microsoft-surfacebook3/img1.png",
-    "assets/data/product-images/microsoft-surfacebook3/img2.png",
-    "assets/data/product-images/microsoft-surfacebook3/img3.png"
-  ]
-},{
-  "id": "515d19df-593a-4488-9a92-7d4662be2615",
-  "category": "pc",
-  "type": "laptop",
-  "brand": "Apple",
-  "model": "MacBook Air",
-  "cpu":  "M1",
-  "ram": 8,
-  "space": 256,
-  "graphics-card": null,
-  "display": 13.3,
-  "price": 879.50,
-  "color": ["Space Gray"],
-  "reviews": 4,
-  "features": [],
-  "images": [
-    "assets/data/product-images/apple-macbookair/img1.png",
-    "assets/data/product-images/apple-macbookair/img2.png",
-    "assets/data/product-images/apple-macbookair/img3.png"
-  ]
-}, {
-  "id": "515d19df-593a-4488-9a92-7d4662be2615",
-  "category": "pc",
-  "type": "laptop",
-  "brand": "Apple",
-  "model": "MacBook Air",
-  "cpu":  "M1",
-  "ram": 8,
-  "space": 256,
-  "graphics-card": null,
-  "display": 13.3,
-  "price": 879.50,
-  "color": ["Space Gray"],
-  "reviews": 4,
-  "features": []
-},
+  {
+    "id": "87b42314-a3bb-4abe-9b3a-6473b80ede6a",
+    "category": "tablet",
+    "type": "tablet",
+    "brand": "Microsoft",
+    "model": "Surface Book3",
+    "cpu": "Core i7-1065G7",
+    "ram": 16,
+    "space": "256",
+    "graphics-card": null,
+    "display": 13.5,
+    "price": 1723.46,
+    "color": [
+      "white",
+      "black"
+    ],
+    "reviews": 3,
+    "features": [
+      "full rotate",
+      "tablet"
+    ],
+    "images": [
+      "assets/data/product-images/microsoft-surfacebook3/img1.png",
+      "assets/data/product-images/microsoft-surfacebook3/img2.png",
+      "assets/data/product-images/microsoft-surfacebook3/img3.png"
+    ]
+  },
+  {
+    "id": "515d19df-593a-4488-9a92-7d4662be2615",
+    "category": "laptop",
+    "type": "laptop",
+    "brand": "Apple",
+    "model": "MacBook Air",
+    "cpu": "M1",
+    "ram": 8,
+    "space": 256,
+    "graphics-card": null,
+    "display": 13.3,
+    "price": 879.50,
+    "color": [
+      "Space Gray"
+    ],
+    "reviews": 4,
+    "features": [],
+    "images": [
+      "assets/data/product-images/apple-macbookair/apple-macbook-air-m1.avif",
+      "assets/data/product-images/apple-macbookair/img2.png",
+      "assets/data/product-images/apple-macbookair/img3.png"
+    ]
+  },
+  {
+    "id": "0f481a76-7cd9-4288-a292-68cc049e96cd",
+    "category": "laptop",
+    "type": "laptop",
+    "brand": "Apple",
+    "model": "MacBook Air",
+    "cpu": "M1",
+    "ram": 8,
+    "space": 256,
+    "graphics-card": null,
+    "display": 13.3,
+    "price": 879.50,
+    "color": [
+      "Space Gray"
+    ],
+    "reviews": 4,
+    "features": [],
+    "images": [
+      "assets/data/product-images/apple-macbookair/apple-macbook-air-m2.avif",
+      "assets/data/product-images/apple-macbookair/img2.png",
+      "assets/data/product-images/apple-macbookair/img3.png"
+    ]
+  },
   {
     "id": "b52f7f0b-bf3b-4dff-8906-ce4fa6340179",
-    "category": "pc",
+    "category": "laptop",
     "type": "laptop",
     "brand": "Lenovo",
     "model": "YOGA Air14s",
-    "cpu":  "Intel Core i7-1280P",
+    "cpu": "Intel Core i7-1280P",
     "ram": 16,
     "space": "1024",
     "graphics-card": null,
     "display": 14,
     "price": 1723.46,
-    "colors": ["white"],
+    "colors": [
+      "white"
+    ],
     "reviews": 4,
     "features": [
       "touch screen",
@@ -105,70 +132,583 @@
     ],
     "img": {
       "folder": "lenovo-yogaair14s",
-      "cover" : "img1.png",
-      "all": ["img1.png", "img2.png", "img3.png"]
+      "cover": "img1.png",
+      "all": [
+        "img1.png",
+        "img2.png",
+        "img3.png"
+      ]
     },
     "images": [
       "assets/data/product-images/lenovo-yogaair14s/img1.png",
       "assets/data/product-images/lenovo-yogaair14s/img2.png",
       "assets/data/product-images/lenovo-yogaair14s/img3.png"
     ]
-  }, {
-  "id": "87b42314-a3bb-4abe-9b3a-6473b80ede6a",
-  "category": "pc",
-  "type": "laptop",
-  "brand": "Microsoft",
-  "model": "Surface Book3",
-  "cpu":  "Core i7-1065G7",
-  "ram": 16,
-  "space": "256",
-  "graphics-card": null,
-  "display": 13.5,
-  "price": 1723.46,
-  "color": ["white", "black"],
-  "reviews": 3,
-  "features": [
-    "full rotate",
-    "tablet"
-  ],
-  "images": [
-    "assets/data/product-images/microsoft-surfacebook3/img1.png",
-    "assets/data/product-images/microsoft-surfacebook3/img2.png",
-    "assets/data/product-images/microsoft-surfacebook3/img3.png"
-  ]
-},{
-  "id": "515d19df-593a-4488-9a92-7d4662be2615",
-  "category": "pc",
-  "type": "laptop",
-  "brand": "Apple",
-  "model": "MacBook Air",
-  "cpu":  "M1",
-  "ram": 8,
-  "space": 256,
-  "graphics-card": null,
-  "display": 13.3,
-  "price": 879.50,
-  "color": ["Space Gray"],
-  "reviews": 4,
-  "features": [],
-  "images": [
-    "assets/data/product-images/apple-macbookair/img1.png",
-    "assets/data/product-images/apple-macbookair/img2.png",
-    "assets/data/product-images/apple-macbookair/img3.png"
-  ]
-}, {
-  "id": "515d19df-593a-4488-9a92-7d4662be2615",
-  "category": "pc",
-  "type": "laptop",
-  "brand": "Apple",
-  "model": "MacBook Air",
-  "cpu":  "M1",
-  "ram": 8,
-  "space": 256,
-  "graphics-card": null,
-  "display": 13.3,
-  "price": 879.50,
-  "color": ["Space Gray"],
-  "reviews": 4,
-  "features": []
-}]
+  },
+  {
+    "id": "87b42314-a3bb-4abe-9b3a-6473b80ede6a",
+    "category": "laptop",
+    "type": "laptop",
+    "brand": "Microsoft",
+    "model": "Surface Go",
+    "cpu": "Core i7-1065G7",
+    "ram": 16,
+    "space": "256",
+    "graphics-card": null,
+    "display": 13.5,
+    "price": 1000.00,
+    "color": [
+      "white",
+      "black"
+    ],
+    "reviews": 3,
+    "features": [
+      "full rotate",
+      "touch screen"
+    ],
+    "img": {
+      "folder": "surface-go",
+      "cover": "surface-go.avif",
+      "all": [
+        "surface-go.avif",
+        "surface-go-1.avif",
+        "surface-go-1.avif"
+      ]
+    },
+    "images": [
+      "assets/data/product-images/surface-go/surface-go.avif",
+      "assets/data/product-images/surface-go/surface-go-1.avif",
+      "assets/data/product-images/surface-go/surface-go-2.avif"
+    ]
+  },
+  {
+    "id": "b4960905-936b-4336-9de9-367fe2348824",
+    "category": "laptop",
+    "type": "laptop",
+    "brand": "Apple",
+    "model": "MacBook Air",
+    "cpu": "M1",
+    "ram": 8,
+    "space": 256,
+    "graphics-card": null,
+    "display": 13.3,
+    "price": 879.50,
+    "color": [
+      "Space Gray"
+    ],
+    "reviews": 4,
+    "features": [],
+    "images": [
+      "assets/data/product-images/apple-macbookair/img1.png",
+      "assets/data/product-images/apple-macbookair/img2.png",
+      "assets/data/product-images/apple-macbookair/img3.png"
+    ]
+  },
+  {
+    "id": "9eb6fa38-da05-4876-8bee-450f0f64f20f",
+    "category": "laptop",
+    "type": "laptop",
+    "brand": "Apple",
+    "model": "MacBook Air",
+    "cpu": "M1",
+    "ram": 8,
+    "space": 256,
+    "graphics-card": null,
+    "display": 13.3,
+    "price": 879.50,
+    "color": [
+      "Space Gray"
+    ],
+    "reviews": 4,
+    "features": [],
+    "images": [
+      "assets/data/product-images/apple-macbookair/apple-macbook-air-136.avif",
+      "assets/data/product-images/apple-macbookair/img2.png",
+      "assets/data/product-images/apple-macbookair/img3.png"
+    ]
+  },
+  {
+    "id": "03ae8138-3f4e-4bd2-b68d-82adf97fbcc8",
+    "category": "phone",
+    "type": "phone",
+    "brand": "Samsung",
+    "model": "Samsung Galaxyy S23 Ultra",
+    "cpu": "5G",
+    "ram": 8,
+    "space": 256,
+    "graphics-card": "OLED",
+    "display": 6.8,
+    "price": 1204.99,
+    "colors": [
+      "yellow"
+    ],
+    "reviews": 1,
+    "features": [
+      "android",
+      "phone"
+    ],
+    "img": {
+      "folder": "s23",
+      "cover": "s23-1.avif",
+      "all": [
+        "s23.avif",
+        "s23-1.avif",
+        "s23-1.avif"
+      ]
+    },
+    "images": [
+      "assets/data/product-images/s23/s23-1.avif",
+      "assets/data/product-images/s23/s23.avif",
+      "assets/data/product-images/s23/s23-2.avif"
+    ],
+    "description": "Me Samsung Galaxy S23 Ultra, me siguri nuk do të lini askënd indiferent.Duke shfaqur një ekran mahnitës 6,8' Infinity-O Dynamic AMOLED me rezolucion Quad HD+ 1440 x 3088 pixel, ai ofron rifreskim adaptiv 120 Hz për zbutje të jashtëzakonshme 8 GB Ram 256 Gb memorie"
+  },
+  {
+    "id": "1af241d6-3c5f-4029-a073-344deda9c9cd",
+    "category": "laptop",
+    "type": "laptop",
+    "brand": "MSI",
+    "model": "Katana 17",
+    "cpu": "Intel Core i7",
+    "ram": 16,
+    "space": "1024",
+    "graphics-card": null,
+    "display": 17.3,
+    "price": 1629.51,
+    "colors": [
+      "black"
+    ],
+    "reviews": 0,
+    "features": [
+      "gaming pc",
+      "no OS installed"
+    ],
+    "img": {
+      "folder": "msi-katana",
+      "cover": "msi-katana-17-1.avif",
+      "all": [
+        "msi-katana-17-2.avif",
+        "msi-katana-17-3.avif",
+        "msi-katana-17-4.avif"
+      ]
+    },
+    "images": [
+      "assets/data/product-images/msi-katana/msi-katana-17-1.avif",
+      "assets/data/product-images/msi-katana/msi-katana-17-2.avif",
+      "assets/data/product-images/msi-katana/msi-katana-17-3.avif"
+    ],
+    "description": "MSI Katana 17 B13VFK-841XPL është një laptop me performancë të lartë i krijuar për lojtarë dhe profesionistë. Mundësuar nga një procesor i7-13620H, ky laptop ofron performancë të shpejtë dhe efikase për aplikacione me shumë detyra dhe kërkuese. Ekrani 17.3' ofron një përvojë të madhe dhe gjithëpërfshirëse shikimi, e përsosur për lojëra dhe krijimin e përmbajtjes."
+  },
+  {
+    "id": "6d4a190b-b478-4038-a331-d5f8eb32c1a1",
+    "category": "laptop",
+    "type": "laptop",
+    "brand": "Apple",
+    "model": "Apple MacBook Pro",
+    "cpu": "M3 Pro 12-core",
+    "ram": 18,
+    "space": "1024",
+    "graphics-card": "18-core GPU",
+    "display": 16,
+    "price": 2989.99,
+    "colors": [
+      "black, gray"
+    ],
+    "reviews": 0,
+    "features": [],
+    "img": {
+      "folder": "apple-pro-m3",
+      "cover": "apple-macbook-pro-m3.avif",
+      "all": [
+        "apple-macbook-pro-m3.avif"
+      ]
+    },
+    "images": [
+      "assets/data/product-images/apple-pro-m3/apple-macbook-pro-m3.avif"
+    ],
+    "description": "Apple MacBook Pro vjen me një ekran 16″, i projektuar për ata që dëshirojnë një perfomancë superiore. Macbook Pro është inovacioni i radhës i laptopit profesional të Apple.i pajisur me një çip të shpejtë revolucionar M3 Pro që siguron shpejtësi të lartë dhe efikasitet të baterisë. Pavarësisht nëse jeni duke punuar në projekte të ndryshme apo duke shfletuar ueb faqe laptopi ofron perfomanca të jashtëzakondshme. Ekrani Liquid Retina XDR do të mbështesin punën e specialistëve të imazhit dhe zërit. I krijuar për çdo student, krijues apo profesionist biznesi."
+  },
+  {
+    "id": "57a5b109-a0b1-4ef2-b1b6-9e7de4c264f6",
+    "category": "headphones",
+    "type": "headphones",
+    "brand": "Apple",
+    "model": "AirPods Pro (2nd gen)",
+    "cpu": "Noise cancellation",
+    "ram": null,
+    "graphics-card": "USB Type-C",
+    "display": null,
+    "price": 339.99,
+    "colors": [
+      "white"
+    ],
+    "reviews": 0,
+    "features": [],
+    "img": {
+      "folder": "airpods-pro-2",
+      "cover": "apple-airpods-pro-2.avif",
+      "all": [
+        "apple-airpods-pro-2-1.avif",
+        "apple-airpods-pro-2-2.avif",
+        "apple-airpods-pro-2-3.avif",
+        "apple-airpods-pro-2-4.avif"
+      ]
+    },
+    "images": [
+      "assets/data/product-images/airpods-pro-2/apple-airpods-pro-2.avif",
+      "assets/data/product-images/airpods-pro-2/apple-airpods-pro-2-1.avif",
+      "assets/data/product-images/airpods-pro-2/apple-airpods-pro-2-2.avif",
+      "assets/data/product-images/airpods-pro-2/apple-airpods-pro-2-3.avif",
+      "assets/data/product-images/airpods-pro-2/apple-airpods-pro-2-4.avif"
+    ],
+    "description": "Kufjet audio mbi vesh, transmetojnë me valë tingull me cilësi të lartë nga telefoni juaj inteligjent ose çdo pajisje tjetër Bluetooth, pa asnjë kabllo. Ata lidhen me Bluetooth me çdo pajisje që përfshin këtë teknologji, ju jep liri duke e lejuar muzikën të ndjekë çdo lëvizje tuajën."
+  },
+  {
+    "id": "a839fe6d-fa73-4d29-9cc9-1b6f0e5ab75b",
+    "category": "headphones",
+    "type": "headphones",
+    "brand": "Beyer",
+    "model": "Beyer dynamic DT 770 Pro",
+    "cpu": null,
+    "ram": null,
+    "graphics-card": null,
+    "display": null,
+    "price": 171.99,
+    "colors": [
+      "black",
+      "grey"
+    ],
+    "reviews": 0,
+    "features": [],
+    "img": {
+      "folder": "beyer-dynamic",
+      "cover": "beyer-dt-770.avif",
+      "all": [
+        "beyer-dt-770.avif",
+        "beyer-dt-770-1.avif",
+        "beyer-dt-770-2.avif"
+      ]
+    },
+    "images": [
+      "assets/data/product-images/beyer-dynamic/beyer-dt-770.avif",
+      "assets/data/product-images/beyer-dynamic/beyer-dt-770.avif",
+      "assets/data/product-images/beyer-dynamic/beyer-dt-770.avif"
+    ],
+    "description": "Fuqia dhe saktësia janë kërkesa kritike kur bëhet fjalë për riprodhimin e zërit. Modeli mundëson arritjen e zërit të saktë dhe pa deformim edhe në nivele të larta të prodhimit."
+  },
+  {
+    "id": "f3b2e433-5442-4c8b-a744-f1c5041ca25c",
+    "category": "headphones",
+    "type": "headphones",
+    "brand": "Razer",
+    "model": "Razer Barracuda",
+    "cpu": null,
+    "ram": null,
+    "graphics-card": null,
+    "display": null,
+    "price": 199.99,
+    "colors": [
+      "pink"
+    ],
+    "reviews": 0,
+    "features": [],
+    "img": {
+      "folder": "razer-barracuda",
+      "cover": "razer-barracuda.avif",
+      "all": [
+        "razer-barracuda.avif",
+        "razer-barracuda-1.avif",
+        "razer-barracuda-2.avif"
+      ]
+    },
+    "images": [
+      "assets/data/product-images/razer-barracuda/razer-barracuda.avif",
+      "assets/data/product-images/razer-barracuda/razer-barracuda-1.avif",
+      "assets/data/product-images/razer-barracuda/razer-barracuda-2.avif"
+    ],
+    "description": "Razer Barracuda në ngjyrë rozë është një kufje me cilësi të lartë lojrash dhe transmetimi të krijuar nga Razer. Vjen me një përshtatës (USB-C > USB) dhe një marrës USB-C për lidhje të lehtë me pajisjet tuaja. Mund të përdoret wireless ashtu edhe me kabllo, dhe ka një lidhës prej 1 x 3,5 mm mini-jack dhe 1 x USB-C."
+  },
+  {
+    "id": "04eaf4f3-ffaa-4a6e-afbc-1080c21b03d1",
+    "category": "printer",
+    "type": "printer",
+    "brand": "Canon",
+    "model": "Printer Canon i-SENSYS LBP122dw",
+    "cpu": null,
+    "ram": null,
+    "graphics-card": null,
+    "display": null,
+    "price": 220,
+    "colors": [
+      "black"
+    ],
+    "reviews": 0,
+    "features": [],
+    "img": {
+      "folder": "canon-printer",
+      "cover": "canon-printer.avif",
+      "all": [
+        "canon-printer.avif",
+        "canon-printer-1.avif",
+        "canon-printer-2.avif"
+      ]
+    },
+    "images": [
+      "assets/data/product-images/canon-printer/canon-printer.avif",
+      "assets/data/product-images/canon-printer/canon-printer-1.avif",
+      "assets/data/product-images/canon-printer/canon-printer-2.avif"
+    ],
+    "description": "Mbështetuni në cilësinë me shpejtësi të lartë, me bojë me pigment që siguron tekst të mprehtë dhe bojëra me ngjyra që japin foto me ngjyra të gjalla.Vëllim i jashtëzakonshëm, printim me kosto të ulët. Vazhdoni të printoni duke mbajtur kostot e ulëta falë rendimenteve të mëdha me ngjyra ose bojë të zezë."
+  },
+  {
+    "id": "76df6aa8-706b-4d9c-925c-a03c265a56cf",
+    "category": "phone",
+    "type": "phone",
+    "brand": "Samsung",
+    "model": "Samsung Galaxy A04s",
+    "cpu": "Xham Corning",
+    "ram": 3,
+    "space": 32,
+    "graphics-card": null,
+    "display": 6.5,
+    "price": 128.89,
+    "colors": [
+      "black"
+    ],
+    "reviews": 3,
+    "features": [
+      "android",
+      "phone"
+    ],
+    "img": {
+      "folder": "a04s",
+      "cover": "samsung-a04s.avif",
+      "all": [
+        "samsung-a04s.avif",
+        "a04s-1.avif"
+      ]
+    },
+    "images": [
+      "assets/data/product-images/a04s/samsung-a04s.avif",
+      "assets/data/product-images/a04s/a04s-1.avif"
+    ],
+    "description": "Kamera makro 2MP e celularit Samsung A04S, i nxerr në pah detajet jashtëzakonisht të imta në foton tuaj. Kamera e thellësisë 2MP ju lejon të rregulloni thellësinë e fushës në fotot tuaja si dhe rregullon turbullimin e sfondit për shkrepje portreti me cilësi të lartë që e bëjnë subjektin tuaj të dallohet shumë qartë. Bateria 5000 mAh ju lejon të punoni në telefon për orë të tëra. Menaxhimi i energjisë nga AI ju mundëson që bateria e e celularit të përshtatet me zakonet tuaja të përdorimit të celularit për kohë afatgjate."
+  },
+  {
+    "id": "829e9046-6d51-45c6-8992-036b5bd5ca6b",
+    "category": "phone",
+    "type": "phone",
+    "brand": "Apple",
+    "model": "Apple iPhone 15",
+    "cpu": "M2",
+    "ram": 16,
+    "space": 128,
+    "graphics-card": "OLED",
+    "display": 6.1,
+    "price": 1328.89,
+    "colors": [
+      "green"
+    ],
+    "reviews": 3,
+    "features": [
+      "android",
+      "phone"
+    ],
+    "img": {
+      "folder": "iphone-15",
+      "cover": "apple-iphone-15.avif",
+      "all": [
+        "apple-iphone-15.avif",
+        "apple-iphone-15-1.avif",
+        "apple-iphone-15-2.avif",
+        "apple-iphone-15-3.avif"
+      ]
+    },
+    "images": [
+      "assets/data/product-images/iphone-15/apple-iphone-15.avif",
+      "assets/data/product-images/iphone-15/apple-iphone-15-1.avif",
+      "assets/data/product-images/iphone-15/apple-iphone-15-2.avif",
+      "assets/data/product-images/iphone-15/apple-iphone-15-3.avif"
+    ],
+    "description": "Apple iPhone 15 është një smartphone me performancë të lartë me veçori të avancuara. Ka një ekran OLED 15,5 cm (6,1') me një rezolucion prej 3840 x 2160 piksele, duke ofruar një përvojë të qartë dhe të gjallë shikimi. Telefoni mbështet teknologjinë 5G, duke lejuar lidhje të shpejtë dhe të besueshme në internet. Me kapacitetin e tij të ruajtjes së brendshme prej 128 GB, ju mund t'i ruani të gjitha fotot, videot dhe aplikacionet tuaja pa u mbaruar hapësira."
+  },
+  {
+    "id": "99743238-c553-4118-a31b-2ec57db3cb2d",
+    "category": "phone",
+    "type": "phone",
+    "brand": "Apple",
+    "model": "Apple iPhone 15 Pro",
+    "cpu": "M2",
+    "ram": 8,
+    "space": 128,
+    "graphics-card": "OLED",
+    "display": 7.1,
+    "price": 1128.89,
+    "colors": [
+      "green"
+    ],
+    "reviews": 3,
+    "features": [
+      "android",
+      "phone"
+    ],
+    "img": {
+      "folder": "iphone-15",
+      "cover": "apple-iphone-15-1.avif",
+      "all": [
+        "apple-iphone-15-1.avif",
+        "apple-iphone-15.avif",
+        "apple-iphone-15-2.avif",
+        "apple-iphone-15-3.avif"
+      ]
+    },
+    "images": [
+      "assets/data/product-images/iphone-15/apple-iphone-15-1.avif",
+      "assets/data/product-images/iphone-15/apple-iphone-15.avif",
+      "assets/data/product-images/iphone-15/apple-iphone-15-2.avif",
+      "assets/data/product-images/iphone-15/apple-iphone-15-3.avif"
+    ],
+    "description": "Apple iPhone 15 është një smartphone me performancë të lartë me veçori të avancuara. Ka një ekran OLED 15,5 cm (6,1') me një rezolucion prej 3840 x 2160 piksele, duke ofruar një përvojë të qartë dhe të gjallë shikimi. Telefoni mbështet teknologjinë 5G, duke lejuar lidhje të shpejtë dhe të besueshme në internet. Me kapacitetin e tij të ruajtjes së brendshme prej 128 GB, ju mund t'i ruani të gjitha fotot, videot dhe aplikacionet tuaja pa u mbaruar hapësira."
+  },
+  {
+    "id": "7ecfa766-b6ac-41b6-8f03-2fc9222c81db",
+    "category": "phone",
+    "type": "phone",
+    "brand": "Apple",
+    "model": "Apple iPhone 15 SE",
+    "cpu": "M2",
+    "ram": 8,
+    "space": 128,
+    "graphics-card": "OLED",
+    "display": 6.1,
+    "price": 1543.89,
+    "colors": [
+      "green"
+    ],
+    "reviews": 3,
+    "features": [
+      "android",
+      "phone"
+    ],
+    "img": {
+      "folder": "iphone-15",
+      "cover": "apple-iphone-15-2.avif",
+      "all": [
+        "apple-iphone-15-2.avif",
+        "apple-iphone-15-1.avif",
+        "apple-iphone-15.avif",
+        "apple-iphone-15-3.avif"
+      ]
+    },
+    "images": [
+      "assets/data/product-images/iphone-15/apple-iphone-15-2.avif",
+      "assets/data/product-images/iphone-15/apple-iphone-15-1.avif",
+      "assets/data/product-images/iphone-15/apple-iphone-15.avif",
+      "assets/data/product-images/iphone-15/apple-iphone-15-3.avif"
+    ],
+    "description": "Apple iPhone 15 është një smartphone me performancë të lartë me veçori të avancuara. Ka një ekran OLED 15,5 cm (6,1') me një rezolucion prej 3840 x 2160 piksele, duke ofruar një përvojë të qartë dhe të gjallë shikimi. Telefoni mbështet teknologjinë 5G, duke lejuar lidhje të shpejtë dhe të besueshme në internet. Me kapacitetin e tij të ruajtjes së brendshme prej 128 GB, ju mund t'i ruani të gjitha fotot, videot dhe aplikacionet tuaja pa u mbaruar hapësira."
+  },
+  {
+    "id": "ea4f310f-5476-4d7f-8838-09ed6ed34d83",
+    "category": "phone",
+    "type": "phone",
+    "brand": "Samsung",
+    "model": "Samsung Galaxyy S23 Ultra",
+    "cpu": "5G",
+    "ram": 8,
+    "space": 256,
+    "graphics-card": "OLED",
+    "display": 6.8,
+    "price": 1204.99,
+    "colors": [
+      "yellow"
+    ],
+    "reviews": 1,
+    "features": [
+      "android",
+      "phone"
+    ],
+    "img": {
+      "folder": "s23",
+      "cover": "s23.avif",
+      "all": [
+        "s23.avif",
+        "s23-1.avif",
+        "s23-1.avif"
+      ]
+    },
+    "images": [
+      "assets/data/product-images/s23/s23.avif",
+      "assets/data/product-images/s23/s23-1.avif",
+      "assets/data/product-images/s23/s23-2.avif"
+    ],
+    "description": "Me Samsung Galaxy S23 Ultra, me siguri nuk do të lini askënd indiferent.Duke shfaqur një ekran mahnitës 6,8' Infinity-O Dynamic AMOLED me rezolucion Quad HD+ 1440 x 3088 pixel, ai ofron rifreskim adaptiv 120 Hz për zbutje të jashtëzakonshme 8 GB Ram 256 Gb memorie"
+  },
+  {
+    "id": "0b14e42e-a1c1-48ed-816e-d335b122077e",
+    "category": "laptop",
+    "type": "laptop",
+    "brand": "Apple",
+    "model": "Apple MacBook Air",
+    "cpu": "M3 Pro 12-core",
+    "ram": 8,
+    "space": "1024",
+    "graphics-card": "18-core GPU",
+    "display": 16,
+    "price": 890.99,
+    "colors": [
+      "gray"
+    ],
+    "reviews": 0,
+    "features": [],
+    "img": {
+      "folder": "apple-macbookair",
+      "cover": "apple-macbook-air-13.avif",
+      "all": [
+        "apple-macbook-air-13.avif"
+      ]
+    },
+    "images": [
+      "assets/data/product-images/apple-macbookair/apple-macbook-air-13.avif",
+      "assets/data/product-images/apple-macbookair/img2.png",
+      "assets/data/product-images/apple-macbookair/img3.png"
+    ],
+    "description": "Apple MacBook Air është një laptop i fuqishëm dhe elegant që është i përsosur për përdoruesit në lëvizje. Me çipin Apple M1, ky laptop ofron performancë dhe shpejtësi të jashtëzakonshme. CPU është deri në 3,5 herë më i shpejtë, ndërsa GPU është në funksion deri në 5 herë më shpejt, duke ofruar një përvojë të qetë dhe efikase të përdoruesit. Laptopi gjithashtu krenohet me jetëgjatësinë më të gjatë të baterisë ndonjëherë në një MacBook Air, duke siguruar që ju të mund të punoni ose të luani për orë të tëra pa u shqetësuar se mos ju mbaron energjia."
+  },
+  {
+    "id": "398d0b26-fbe5-4f76-b77d-f52dabf26b46",
+    "category": "laptop",
+    "type": "laptop",
+    "brand": "Microsoft",
+    "model": "Surface Go",
+    "cpu": "Core i7-1065G7",
+    "ram": 16,
+    "space": "256",
+    "graphics-card": null,
+    "display": 13.5,
+    "price": 1000.90,
+    "color": [
+      "white",
+      "black"
+    ],
+    "reviews": 3,
+    "features": [
+      "full rotate",
+      "touch screen"
+    ],
+    "img": {
+      "folder": "surface-go",
+      "cover": "surface-go-1.avif",
+      "all": [
+        "surface-go.avif",
+        "surface-go-1.avif",
+        "surface-go-1.avif"
+      ]
+    },
+    "images": [
+      "assets/data/product-images/surface-go/surface-go-1.avif",
+      "assets/data/product-images/surface-go/surface-go.avif",
+      "assets/data/product-images/surface-go/surface-go-2.avif"
+    ]
+  }
+]
