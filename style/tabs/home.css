@@ -32,31 +32,31 @@
     animation: 120s slideshow-hero-mobile -3s infinite;
   }
   .slideshow--hero .slide1 {
-    background-image: url(/assets/images/pic14.webp);
+    background-image: url(../../assets/images/pic14.webp);
     animation: 20s slides-set-1 -0.1s infinite;
   }
   .slideshow--hero .slide2 {
-    background-image: url(/assets/images/pic17.webp);
+    background-image: url(../../assets/images/pic17.webp);
     animation: 20s slides-set-2 -0.1s infinite;
   }
   .slideshow--hero .slide3 {
-    background-image: url(/assets/images/pic6.webp);
+    background-image: url(../../assets/images/pic6.webp);
     animation: 20s slides-set-3 -0.1s infinite;
   }
   .slideshow--hero .slide4 {
-    background-image: url(/assets/images/pic11.webp);
+    background-image: url(../../assets/images/pic11.webp);
     animation: 20s slides-set-4 -0.1s infinite;
   }
   .slideshow--hero .slide5 {
-    background-image: url(/assets/images/pic2.webp);
+    background-image: url(../../assets/images/pic2.webp);
     animation: 20s slides-set-5 -0.1s infinite;
   }
   .slideshow--hero .slide6 {
-    background-image: url(/assets/images/pic5.webp);
+    background-image: url(../../assets/images/pic5.webp);
     animation: 20s slides-set-6 -0.1s infinite; /* Updated animation name */
   }
   .slideshow--hero .slide7 {
-    background-image: url(/assets/images/pic14.webp);
+    background-image: url(../../assets/images/pic14.webp);
     animation: 20s slides-set-7 -0.1s infinite;
   }
   @media (min-width: 600px) {
@@ -100,33 +100,33 @@
     animation: 14s slideshow-contrast -5s infinite;
   }
   .slideshow--contrast .slide1 {
-    background-image: linear-gradient(to bottom, rgba(165, 34, 179, 0.5) 0, rgba(0, 4, 255, 0.25) 100%), url(/assets/images/pic14.webp);
+    background-image: linear-gradient(to bottom, rgba(165, 34, 179, 0.5) 0, rgba(0, 4, 255, 0.25) 100%), url(../../assets/images/pic14.webp);
     animation: 20s slides-set-1 -0.2s infinite;
   }
   .slideshow--contrast .slide2 {
-    background-image: linear-gradient(to bottom, rgba(0, 4, 247, 0.25) 0, rgba(253, 0, 211, 0.5) 100%), url(/assets/images/pic17.webp);
+    background-image: linear-gradient(to bottom, rgba(0, 4, 247, 0.25) 0, rgba(253, 0, 211, 0.5) 100%), url(../../assets/images/pic17.webp);
     animation: 20s slides-set-2 -0.2s infinite;
   }
   .slideshow--contrast .slide3 {
-    background-image: linear-gradient(to bottom, rgba(0, 4, 247, 0.25) 0, rgba(253, 0, 211, 0.5) 100%), url(/assets/images/pic6.webp);
+    background-image: linear-gradient(to bottom, rgba(0, 4, 247, 0.25) 0, rgba(253, 0, 211, 0.5) 100%), url(../../assets/images/pic6.webp);
     animation: 20s slides-set-3 -0.2s infinite;
   }
   .slideshow--contrast .slide4 {
-    background-image: linear-gradient(to bottom, rgba(165, 34, 179, 0.5) 0, rgba(0, 4, 255, 0.25) 100%), url(/assets/images/pic11.webp);
+    background-image: linear-gradient(to bottom, rgba(165, 34, 179, 0.5) 0, rgba(0, 4, 255, 0.25) 100%), url(../../assets/images/pic11.webp);
     animation: 20s slides-set-4 -0.2s infinite;
   }
   .slideshow--contrast .slide5 {
-    background-image: linear-gradient(to bottom, rgba(165, 34, 179, 0.5) 0, rgba(0, 4, 255, 0.25) 100%), url(/assets/images/pic2.webp);
+    background-image: linear-gradient(to bottom, rgba(165, 34, 179, 0.5) 0, rgba(0, 4, 255, 0.25) 100%), url(../../assets/images/pic2.webp);
     animation: 20s slides-set-5 -0.2s infinite; /* Updated animation name */
   }
   
   .slideshow--contrast .slide6 {
-    background-image: linear-gradient(to bottom, rgba(165, 34, 179, 0.5) 0, rgba(0, 4, 255, 0.25) 100%), url(/assets/images/pic5.webp);
+    background-image: linear-gradient(to bottom, rgba(165, 34, 179, 0.5) 0, rgba(0, 4, 255, 0.25) 100%), url(../../assets/images/pic5.webp);
     animation: 20s slides-set-6 -0.2s infinite; /* Updated animation name */
   }
 
   .slideshow--contrast .slide7 {
-    background-image: linear-gradient(to bottom, rgba(165, 34, 179, 0.5) 0, rgba(0, 4, 255, 0.25) 100%), url(/assets/images/pic14.webp);
+    background-image: linear-gradient(to bottom, rgba(165, 34, 179, 0.5) 0, rgba(0, 4, 255, 0.25) 100%), url(../../assets/images/pic14.webp);
     animation: 20s slides-set-7 -0.2s infinite;
   }
   .slideshow--contrast--after {
@@ -311,4 +311,159 @@
         opacity: 1;
       }
   }
-  
+
+#home-wrapper .title{
+  text-transform: uppercase;
+  color: #333333;
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+}
+#home-wrapper hr{
+  width: 30px;
+}
+
+/* Our skills section*/
+.skills{
+  display: flex;
+  justify-content: space-between;
+  background-color: #f8f8f8;
+  margin-top: 50px;
+  padding: 70px 70px 50px;
+  .skills-bar{
+    width: 50%;
+  }
+  .bars{
+    margin-top: 50px;
+    margin-left: 40px;
+  }
+  .bars div{
+    background-color: var(--purple-2);
+    height: 3px;
+    width: 70%;
+    margin: 20px 0 40px;
+  }
+  .left{
+    float: right;
+  }
+  #bar1{
+    width: 80%;
+    color:var(--purple-6);
+  }
+  #bar2{
+    width: 90%;
+    color:var(--purple-6);
+  }
+  #bar3{
+    width: 60%;
+    color:var(--purple-6);
+  }
+  #bar4{
+    width: 73%;
+    color: var(--purple-6);
+  }
+  #bar5{
+    width: 75%;
+    color:var(--purple-6);
+  }
+  .bckg-img{
+    width: 45%;
+    background-image: url("../../assets/images/pic23.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+}
+
+/* Our partners section*/
+.partners{
+  margin: 50px 75px 0;
+  background-color: #f8f8f8;
+  padding: 50px 25px;
+  border-radius: 20px;
+  .partners_pic{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    margin-top: 30px;
+  }
+  .partners_pic img{
+    margin: 15px;
+    opacity: 0.6;
+  }
+  .partners_pic img:hover{
+    opacity: 1;
+  }
+}
+
+.best-seller{
+  padding: 10px 75px 0;
+}
+.best-seller button, .new-products button{
+  background-color: white;
+  border: 1px solid var(--violet-8);
+  color: var(--violet-8);
+  padding: 15px 20px;
+  font-size: 1.1rem;
+  margin-top: 50px;
+
+  display: flex;
+  /*align-content: center;*/
+  gap: 10px;
+}
+.best-seller button:hover, .new-products button:hover{
+  background-color: var(--violet-8);
+  color: white;
+}
+.new-products{
+  padding: 50px 75px 0;
+}
+/* Attribute section */
+#attributes{
+  padding: 50px 75px;
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+}
+
+.attributes-card{
+  background-color: #f8f8f8;
+  border-radius: 20px;
+  padding: 20px;
+  flex: 1;
+  text-align: center;
+}
+.at-title{
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.color{
+  color: var(--purple-9)
+}
+.attributes-card svg{
+  min-height: 100px;
+}
+.attributes-card svg path{
+  fill: var(--purple-9)
+}
+.videos{
+  margin: 50px 75px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: calc(100vw - 150px);
+}
+.side-video{
+  grid-row-start: 1;
+  grid-row-end: span 2;
+  grid-column-start: 3;
+  overflow: hidden;
+}
+.gallery{
+  margin: 50px 75px 0;
+}
+.gallery div{
+  flex: 1;
+}
+.gallery img, .videos video, .gallery video{
+  width: 100%;
+}

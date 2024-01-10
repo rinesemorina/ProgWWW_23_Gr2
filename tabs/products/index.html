@@ -25,79 +25,24 @@
         </div>
     </div>
 </div>
-
 <script>
-    var all_data = []
     var all_filters = []
     let showFilters = false
-
     let display_type = "grid"
     let list = document.getElementById("products-list")
     changeDisplayType()
-    getData()
+    initializeData()
     navigateTo('#filters', 'tabs/products/filters.html')
 
-    function getData(){
-        fetch('../assets/data/products.json')
-            .then((response) => response.json())
-            .then((json) => {
-                all_data = json
-                displayData()
-            });
+    async function initializeData(){
+        await getProductsData()
+        injectProductsDataInto("products-list", all_filters)
     }
-    function displayData(){
-        list.innerHTML = ''
-
-        let filteredData = getFilteredData()
-        if(filteredData.length === 0){
-            list.innerHTML = `<p class="no-data">No data available.</p>`
-        }
-
-        filteredData.forEach(item => {
-            let item_html = document.createElement('div')
-            item_html.className = 'card'
-            item_html.innerHTML = `
-                <div class="center mb-20">
-                    <img class="img" src="${item.images && item.images.length > 0 ? item.images[0] : '../../assets/images/no-img.png'}" alt="">
-                </div>
-                <div>
-                    <p class="bold mb-10">${item.brand} ${item.model}</p>
-                    <p class="description">${formattedDescription(item)}</p>
-                    <div class="footer">
-                        <p class="bold mb-0">${item.price}</p>
-                        <p class="more-link fs-14 mb-0" onclick="showDetails('${item.id}')">More Details -></p>
-                    </div>
-                </div>`
-
-            list.append(item_html)
-        })
-    }
-    function getFilteredData(){
-        let data = JSON.parse(JSON.stringify(all_data))
-
-        if(all_filters.length === 0)
-            return data
-
-        all_filters.forEach(filter_type => {
-            let query = filter_type?.options.filter(i => i.checked)?.map(i => i.code)
-            if(query.length > 0) {
-                data = data.filter(opt => {
-                    if(Array.isArray(opt[filter_type.code]))
-                        return opt[filter_type.code].find(i => query.includes(i))
-                    return query.includes(opt[filter_type.code])
-                })
-            }
-        })
-        return data
-    }
-    function showDetails(id){
-        lastSelectedItem = all_data.find(item => item.id == id)
-        $(function(){
-            $('#tab-content').load("/tabs/products/details-page.html");
-        });
+    function refreshProductsData(){
+        injectProductsDataInto("products-list", all_filters)
     }
     function changeDisplayType(type){
-        display_type = type || display_type || 'products-list'
+        display_type = type || display_type || 'grid'
         let current_active = document.getElementById(display_type)
         current_active.className = current_active.className.replace('active', '')
 
@@ -105,10 +50,6 @@
         active_item.className = active_item.className + " " + 'active'
 
         list.className = display_type + (showFilters && display_type === 'grid' ? ' col-3' : '')
-        // displayData()
-    }
-    function formattedDescription(item){
-        return `${item.cpu}, ${item.ram}GB, ${item.space > 1024 ? item.space % 1024 + 'TB' : item.space + 'GB'}, ${item.display}"`
     }
     function toggleShowFilters(){
         showFilters = !showFilters
@@ -117,7 +58,7 @@
         }else{
             document.getElementById('filters').style.display = 'block'
         }
-        displayData()
+        refreshProductsData()
         changeDisplayType()
     }
     function copyFilterUrl(){
