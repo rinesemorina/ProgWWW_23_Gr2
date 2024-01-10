@@ -5,7 +5,7 @@
     <div class="container">
         <div class="left-side">
             <h3 style="color: ghostwhite">Send Us a Message</h3>
-            <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+            <form method="POST" id="contactForm" name="contactForm" class="contactForm" onsubmit="sendEmail()">
 
                 <div class="form-group">
                     <input type="text" class="form-control" name="name" id="name" placeholder="Name" required>
@@ -24,7 +24,7 @@
                               placeholder="Message" required></textarea>
                 </div>
 
-                <input type="submit" id="submitButton" value="Send Message" onsubmit="">
+                <input type="submit" id="submitButton" value="Send Message">
             </form>
         </div>
         <div class="right-side">
@@ -140,6 +140,33 @@
          return false;
      }
      return true;
+ }
+ // endregion
+
+ // region sendEmail
+ function sendEmail(){
+     var username = name.value;
+     var lastname = surname.value;
+     var userEmail = email.value;
+     var phoneNumber = phone.value;
+     var messageBody = message.value.trim();
+     var body =
+         "Name: " + username +
+         "<br/> Last Name: " + lastname +
+         "<br/> User Email: " + userEmail +
+         "<br/> Phone Number: " + phoneNumber +
+         "<br/> Message: " + messageBody;
+
+     Email.send({
+         Host : "smtp.elasticemail.com",
+         Username : "rinesam8@gmail.com",
+         Password : "",
+         To : "ask.shopit@gmail.com",
+         From : "rinesam8@gmail.com",
+         Subject : "ShopIT Request from " + username + " " + lastname,
+         Body : body
+     }).then(message => {
+     });
  }
  // endregion
 
