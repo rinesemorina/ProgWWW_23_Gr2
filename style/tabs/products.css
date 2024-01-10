@@ -142,3 +142,14 @@
 .no-data{
     color: var(--red-7);
 }
+
+.small-wishlist{
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    width: 20px;
+    height: 20px;
+}
+.small-icon-container{
+    position: relative;
+}

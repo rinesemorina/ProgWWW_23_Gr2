@@ -1,0 +1,14 @@
+<div id="wishlist-wrapper">
+    <h1 class="title fs-24">Wishlist</h1>
+    <div id="wishlist" class="grid">
+        <!--   Best Sellers (Products) will be injected here  -->
+    </div>
+</div>
+
+<script>
+    initializeData()
+    async function initializeData(){
+        await getProductsData()
+        injectProductsDataInto("wishlist", "wishlist")
+    }
+</script>
