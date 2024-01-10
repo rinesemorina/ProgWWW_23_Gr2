@@ -32,31 +32,31 @@
     animation: 120s slideshow-hero-mobile -3s infinite;
   }
   .slideshow--hero .slide1 {
-    background-image: url(/assets/images/pic14.webp);
+    background-image: url(../../assets/images/pic14.webp);
     animation: 20s slides-set-1 -0.1s infinite;
   }
   .slideshow--hero .slide2 {
-    background-image: url(/assets/images/pic17.webp);
+    background-image: url(../../assets/images/pic17.webp);
     animation: 20s slides-set-2 -0.1s infinite;
   }
   .slideshow--hero .slide3 {
-    background-image: url(/assets/images/pic6.webp);
+    background-image: url(../../assets/images/pic6.webp);
     animation: 20s slides-set-3 -0.1s infinite;
   }
   .slideshow--hero .slide4 {
-    background-image: url(/assets/images/pic11.webp);
+    background-image: url(../../assets/images/pic11.webp);
     animation: 20s slides-set-4 -0.1s infinite;
   }
   .slideshow--hero .slide5 {
-    background-image: url(/assets/images/pic2.webp);
+    background-image: url(../../assets/images/pic2.webp);
     animation: 20s slides-set-5 -0.1s infinite;
   }
   .slideshow--hero .slide6 {
-    background-image: url(/assets/images/pic5.webp);
+    background-image: url(../../assets/images/pic5.webp);
     animation: 20s slides-set-6 -0.1s infinite; /* Updated animation name */
   }
   .slideshow--hero .slide7 {
-    background-image: url(/assets/images/pic14.webp);
+    background-image: url(../../assets/images/pic14.webp);
     animation: 20s slides-set-7 -0.1s infinite;
   }
   @media (min-width: 600px) {
@@ -100,33 +100,33 @@
     animation: 14s slideshow-contrast -5s infinite;
   }
   .slideshow--contrast .slide1 {
-    background-image: linear-gradient(to bottom, rgba(165, 34, 179, 0.5) 0, rgba(0, 4, 255, 0.25) 100%), url(/assets/images/pic14.webp);
+    background-image: linear-gradient(to bottom, rgba(165, 34, 179, 0.5) 0, rgba(0, 4, 255, 0.25) 100%), url(../../assets/images/pic14.webp);
     animation: 20s slides-set-1 -0.2s infinite;
   }
   .slideshow--contrast .slide2 {
-    background-image: linear-gradient(to bottom, rgba(0, 4, 247, 0.25) 0, rgba(253, 0, 211, 0.5) 100%), url(/assets/images/pic17.webp);
+    background-image: linear-gradient(to bottom, rgba(0, 4, 247, 0.25) 0, rgba(253, 0, 211, 0.5) 100%), url(../../assets/images/pic17.webp);
     animation: 20s slides-set-2 -0.2s infinite;
   }
   .slideshow--contrast .slide3 {
-    background-image: linear-gradient(to bottom, rgba(0, 4, 247, 0.25) 0, rgba(253, 0, 211, 0.5) 100%), url(/assets/images/pic6.webp);
+    background-image: linear-gradient(to bottom, rgba(0, 4, 247, 0.25) 0, rgba(253, 0, 211, 0.5) 100%), url(../../assets/images/pic6.webp);
     animation: 20s slides-set-3 -0.2s infinite;
   }
   .slideshow--contrast .slide4 {
-    background-image: linear-gradient(to bottom, rgba(165, 34, 179, 0.5) 0, rgba(0, 4, 255, 0.25) 100%), url(/assets/images/pic11.webp);
+    background-image: linear-gradient(to bottom, rgba(165, 34, 179, 0.5) 0, rgba(0, 4, 255, 0.25) 100%), url(../../assets/images/pic11.webp);
     animation: 20s slides-set-4 -0.2s infinite;
   }
   .slideshow--contrast .slide5 {
-    background-image: linear-gradient(to bottom, rgba(165, 34, 179, 0.5) 0, rgba(0, 4, 255, 0.25) 100%), url(/assets/images/pic2.webp);
+    background-image: linear-gradient(to bottom, rgba(165, 34, 179, 0.5) 0, rgba(0, 4, 255, 0.25) 100%), url(../../assets/images/pic2.webp);
     animation: 20s slides-set-5 -0.2s infinite; /* Updated animation name */
   }
   
   .slideshow--contrast .slide6 {
-    background-image: linear-gradient(to bottom, rgba(165, 34, 179, 0.5) 0, rgba(0, 4, 255, 0.25) 100%), url(/assets/images/pic5.webp);
+    background-image: linear-gradient(to bottom, rgba(165, 34, 179, 0.5) 0, rgba(0, 4, 255, 0.25) 100%), url(../../assets/images/pic5.webp);
     animation: 20s slides-set-6 -0.2s infinite; /* Updated animation name */
   }
 
   .slideshow--contrast .slide7 {
-    background-image: linear-gradient(to bottom, rgba(165, 34, 179, 0.5) 0, rgba(0, 4, 255, 0.25) 100%), url(/assets/images/pic14.webp);
+    background-image: linear-gradient(to bottom, rgba(165, 34, 179, 0.5) 0, rgba(0, 4, 255, 0.25) 100%), url(../../assets/images/pic14.webp);
     animation: 20s slides-set-7 -0.2s infinite;
   }
   .slideshow--contrast--after {
