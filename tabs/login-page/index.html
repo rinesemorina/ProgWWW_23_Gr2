@@ -3,26 +3,26 @@
 
 <head>
     <meta charset="UTF-8">
-    <link href="login-page.css" rel="stylesheet">
+    <link rel="stylesheet" href="login-page.css">
 </head>
 
 <body>
-<div id="login-div">
+    <div id="login-div">
 
     <div class="login-container" id="login-container">
         <div class="login-form-container login-sign-up">
             <form>
                 <h1>Create Account</h1>
                 <div class="login-social-icons">
-                    <a class="icon" href="#"><i class="fa-brands fa-google-plus-g"></i></a>
-                    <a class="icon" href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a class="icon" href="#"><i class="fa-brands fa-github"></i></a>
-                    <a class="icon" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
                 <span>or use your email for registeration</span>
-                <input placeholder="Name" type="login-text">
-                <input id="login-sign-up-email" placeholder="Email" type="login-email">
-                <input id="login-sign-up-password" placeholder="Password" type="login-password">
+                <input type="login-text" placeholder="Name">
+                <input id="login-sign-up-email" type="login-email" placeholder="Email">
+                <input id="login-sign-up-password" type="login-password" placeholder="Password">
                 <button id="login-sign-up-button">Sign Up</button>
             </form>
         </div>
@@ -30,14 +30,14 @@
             <form>
                 <h1>Sign In</h1>
                 <div class="login-social-icons">
-                    <a class="icon" href="#"><i class="fa-brands fa-google-plus-g"></i></a>
-                    <a class="icon" href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a class="icon" href="#"><i class="fa-brands fa-github"></i></a>
-                    <a class="icon" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
                 <span>or use your email password</span>
-                <input id="login-sign-in-email" placeholder="Email" type="login-email">
-                <input id="login-sign-in-password" placeholder="Password" type="login-password">
+                <input id="login-sign-in-email" type="login-email" placeholder="Email">
+                <input id="login-sign-in-password" type="login-password" placeholder="Password">
                 <a href="#">Forget Your Password?</a>
                 <button id="login-sign-in-button">Sign In</button>
             </form>
@@ -58,26 +58,24 @@
         </div>
     </div>
 </div>
-</body>
+    </body>
 
-<script>
-    const container = document.getElementById('login-container');
-    const registerBtn = document.getElementById('login-register');
-    const loginBtn = document.getElementById('login-login');
-    const signinBtn = document.getElementById('login-sign-in-button');
-    const signupBtn = document.getElementById('login-sign-up-button');
-    let all_users = []
-    getUserData()
+    <script>
+        const container = document.getElementById('login-container');
+const registerBtn = document.getElementById('login-register');
+const loginBtn = document.getElementById('login-login');
+const signinBtn = document.getElementById('login-sign-in-button');
+const signupBtn = document.getElementById('login-sign-up-button');
 
-    registerBtn.addEventListener('click', () => {
-        container.classList.add("login-active");
-        checkUser();
-    });
+registerBtn.addEventListener('click', () => {
+    container.classList.add("login-active");
+    checkUser();
+});
 
-    loginBtn.addEventListener('click', () => {
-        container.classList.remove("login-active");
-        checkUser();
-    });
+loginBtn.addEventListener('click', () => {
+    container.classList.remove("login-active");
+    checkUser();
+});
 
         signupBtn.onclick = (event) => {
             event.preventDefault();
@@ -88,7 +86,7 @@
                 password: password,
             }
             localStorage.setItem('user', JSON.stringify(user));
-            changeTab('products')
+            navigateTo('#tab-content', 'tabs/products/index.html');
         };
         signinBtn.onclick = (event) => {
             event.preventDefault();
@@ -98,50 +96,20 @@
                 username: email,
                 password: password,
             }
-            if(all_users.find(item => item.username === user.username && item.password === user.password)){
-                localStorage.setItem('user', JSON.stringify(user));
-                changeTab('products')
-            }
-            else{
-                toastr.options = {
-                    "closeButton": true,
-                    "debug": false,
-                    "newestOnTop": true,
-                    "progressBar": true,
-                    "positionClass": "toast-top-right",
-                    "preventDuplicates": false,
-                    "onclick": null,
-                    "showDuration": "300",
-                    "hideDuration": "1000",
-                    "timeOut": "5000",
-                    "extendedTimeOut": "1000",
-                    "showEasing": "swing",
-                    "hideEasing": "linear",
-                    "showMethod": "fadeIn",
-                    "hideMethod": "fadeOut"
-                }
-                toastr.error('Please try again or create account', 'Invalid credentials');
-            }
+            localStorage.setItem('user', JSON.stringify(user));
+            navigateTo('#tab-content', 'tabs/products/index.html');
         };
 
-    function checkUser() {
-        if (localStorage.getItem('user') !== null) {
-            console.log('The user key exists');
-            console.log(localStorage.getItem('user'));
-        } else {
-            console.log('The user key does NOT exist');
+        function checkUser() {
+            if (localStorage.getItem('user') !== null) {
+                console.log('The user key exists');
+                console.log(localStorage.getItem('user'));
+            } else {
+                console.log('The user key does NOT exist');
+            }
         }
-    }
-    async function getUserData(){
-        try{
-            let response = await fetch('../../assets/data/users.json')
-            all_users = await response.json()
-        } catch (e) {
-            console.error(e)
-        }
-    }
 
-</script>
+    </script>
 </body>
 
 </html>
