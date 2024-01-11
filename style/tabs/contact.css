@@ -44,6 +44,7 @@ var(--white) background-color: var(--white);
 
 h3 {
     margin-top: 0;
+    padding-bottom: 0.5em;
 }
 
 .form-group {
@@ -71,7 +72,7 @@ p {
 .address-container {
     flex: 1;
 }
-input[type=submit]{
+button[type=submit]{
     padding: 10px 20px;
     background-color: var(--purple-6);
     color: #ffffff;
@@ -82,7 +83,7 @@ input[type=submit]{
     margin-right: 20px;
     width: 150px;
 }
-input[type=submit]:hover{
+button[type=submit]:hover{
     background-color: var(--purple-4);
     /* Darker violet on hover */
     transform: scale(1.05);
@@ -140,14 +141,19 @@ input[type=submit]:hover{
 }
 
 .right-side p {
-    padding-bottom: 4.5em;
+    padding-bottom: 0.5em;
+    margin-top: 0px;
 }
 
 textarea {
     box-sizing: border-box;
     width: 100%;
 }
-
+.form-control{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 3.5px;
+}
 
 @media only screen and (max-width: 600px) {
     .container {

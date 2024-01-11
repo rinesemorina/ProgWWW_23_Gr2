@@ -1,11 +1,10 @@
 <div id="contact-wrapper">
-    <p class="bold fs-20">Contact Us Page</p>
 </div>
 <div id="contact-container">
     <div class="container">
         <div class="left-side">
             <h3 style="color: ghostwhite">Send Us a Message</h3>
-            <form method="POST" id="contactForm" name="contactForm" class="contactForm" onsubmit="sendEmail()">
+            <form action="https://formsubmit.co/ask.shopit@gmail.com" id="contactForm" method="POST" name="contactForm" class="contactForm">
 
                 <div class="form-group">
                     <input type="text" class="form-control" name="name" id="name" placeholder="Name" required>
@@ -23,8 +22,13 @@
                     <textarea name="message" class="form-control" id="message" cols="30" rows="6"
                               placeholder="Message" required></textarea>
                 </div>
-
-                <input type="submit" id="submitButton" value="Send Message">
+                <div class="form-group">
+                    <button type="submit">Send Message</button>
+                    <input type="hidden" name="_subject" value="New Client ShopIT Request">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://shot-it-up.netlify.app/">
+                    <input type="hidden" name="_template" value="table">
+                </div>
             </form>
         </div>
         <div class="right-side">
@@ -49,7 +53,7 @@
                 <div class="info-row">
                     <img style="height: 20px; width: 20px;" src="../assets/icons/website.png" alt="Logo 1">
                     <span class="info-keyword">Website:</span>
-                    <a href="#" id="websiteUrl"><span>websiteUrl</span></a>
+                    <a href="#" id="websiteUrl"><span>shopIT.com</span></a>
                 </div>
             </div>
         </div>
@@ -60,10 +64,33 @@
 <script>
 
  // region constants
- const webUrl = new String("http://localhost:63343/ProgWWW_23_Gr2");
+ const webUrl = new String("https://kodelabs.slack.com/archives/D04T748PDAL/p1704968802732999");
+ const websiteLink = document.getElementById("websiteUrl");
+ websiteLink.setAttribute("href", webUrl);
+ websiteLink.style.textDecoration = "none";
+ websiteLink.style.color = "black"
  const address = new String("https://www.google.com/maps/dir/42.6577868,21.1533572/fshmn+location+in+prishtina+google+maps/@42.6572768,21.1485004,15z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x13549ee896b552d7:0x31bf5e925cb705a3!2m2!1d21.1612898!2d42.6554261?entry=ttu");
- document.getElementById("websiteUrl").setAttribute("href", webUrl);
- document.getElementById("addressLink").setAttribute("href", address);
+ const addressLink = document.getElementById("addressLink");
+ addressLink.setAttribute("href", address);
+ addressLink.style.textDecoration = "none";
+ addressLink.style.color = "black";
+
+ websiteLink.addEventListener("mouseover", function () {
+     websiteLink.style.color = "blue";
+ });
+
+ websiteLink.addEventListener("mouseout", function () {
+     websiteLink.style.color = "black";
+ });
+
+ // Repeat the same for the address link
+ addressLink.addEventListener("mouseover", function () {
+     addressLink.style.color = "blue";
+ });
+
+ addressLink.addEventListener("mouseout", function () {
+     addressLink.style.color = "black";
+ });
  // endregion
 
  // region validate form-inputs
@@ -140,33 +167,6 @@
          return false;
      }
      return true;
- }
- // endregion
-
- // region sendEmail
- function sendEmail(){
-     var username = name.value;
-     var lastname = surname.value;
-     var userEmail = email.value;
-     var phoneNumber = phone.value;
-     var messageBody = message.value.trim();
-     var body =
-         "Name: " + username +
-         "<br/> Last Name: " + lastname +
-         "<br/> User Email: " + userEmail +
-         "<br/> Phone Number: " + phoneNumber +
-         "<br/> Message: " + messageBody;
-
-     Email.send({
-         Host : "smtp.elasticemail.com",
-         Username : "rinesam8@gmail.com",
-         Password : "9EF9873D32997F2601D5FF95B0E96FE9596F",
-         To : "rinese.morina@student.uni-pr.edu",
-         From : "rinesam8@gmail.com",
-         Subject : "ShopIT Request from " + username + " " + lastname,
-         Body : body
-     }).then(message => {
-     });
  }
  // endregion
 
