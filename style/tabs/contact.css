@@ -44,6 +44,7 @@ var(--white) background-color: var(--white);
 
 h3 {
     margin-top: 0;
+    padding-bottom: 0.5em;
 }
 
 .form-group {
@@ -140,14 +141,19 @@ input[type=submit]:hover{
 }
 
 .right-side p {
-    padding-bottom: 4.5em;
+    padding-bottom: 0.5em;
+    margin-top: 0px;
 }
 
 textarea {
     box-sizing: border-box;
     width: 100%;
 }
-
+.form-control{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 3.5px;
+}
 
 @media only screen and (max-width: 600px) {
     .container {

@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7795cc23-bd68-4fce-8814-e87545432a00" name="Changes" comment="Details page back button, slider on user-info, removed large size videos">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/Product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/data/products.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/data/products.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/components/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tabs/products/details-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/tabs/products/details-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/tabs/contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/tabs/contact.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tabs/contact-us/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tabs/contact-us/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
