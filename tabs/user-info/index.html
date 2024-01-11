@@ -1,6 +1,6 @@
-<div class="user-profile">
+<div class="user-profile" id="user-profile">
   <div class="profile-picture">
-    <img src="ProgWWW_23_Gr2/assets/images/blankProfile.jpg" alt="User Avatar" id="profilePic" style="cursor: pointer;">
+    <img src="./assets/images/profile_pic.webp" alt="User Avatar" id="profilePic" style="cursor: pointer;">
     <input type="file" id="upload" style="display: none;">
   </div>
   <div class="user-info">
@@ -42,6 +42,7 @@
       </div>
     </form>
   </div>
+  <img src="../assets/icons/logout.png" alt="" class="icon logout-icon icon-button" onclick="logout()">
 </div>
 
 <script>
@@ -52,6 +53,11 @@
   const uploadInput = document.getElementById('upload');
   let creditCard = document.getElementById('creditCard');
   let phone = document.getElementById('phone');
+
+  $('html, body').animate({
+    scrollTop: ($('#user-profile').position().top - 100)+'px'
+  }, 500, 'linear', function() {})
+
 
   creditCard.addEventListener('input', function (event) {
     let input = event.target.value.replace(/\s/g, '');
@@ -163,5 +169,10 @@
       input.classList.remove('valid');
       errorMessage.style.display = 'block';
     }
+  }
+
+  function logout(){
+    localStorage.removeItem('user')
+    changeTab('user-info')
   }
 </script>
