@@ -401,8 +401,8 @@
 }
 .best-seller button, .new-products button{
   background-color: white;
-  border: 1px solid var(--violet-8);
-  color: var(--violet-8);
+  border: 1px solid var(--purple-9);
+  color: var(--purple-9);
   padding: 15px 20px;
   font-size: 1.1rem;
   margin-top: 50px;
@@ -412,7 +412,7 @@
   gap: 10px;
 }
 .best-seller button:hover, .new-products button:hover{
-  background-color: var(--violet-8);
+  background-color: var(--purple-9);
   color: white;
 }
 .new-products{
