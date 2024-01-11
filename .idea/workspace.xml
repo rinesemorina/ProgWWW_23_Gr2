@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7795cc23-bd68-4fce-8814-e87545432a00" name="Changes" comment="Details page back button, slider on user-info, removed large size videos">
+      <change afterPath="$PROJECT_DIR$/assets/icons/hamburger.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/components/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/components/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/components/header.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +60,7 @@
       <recent name="C:\Users\Eljesa Kqiku\IdeaProjects\ProgWWW_23_Gr2\assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/icons" />
       <recent name="$PROJECT_DIR$/tabs/home" />
     </key>
   </component>
@@ -87,6 +91,11 @@
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="f32708d1-2fc4-4728-a9e5-34412e682912" value="TOOL_WINDOW" />
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -104,6 +113,11 @@
                 </map>
               </option>
             </State>
+          </value>
+        </entry>
+        <entry key="f32708d1-2fc4-4728-a9e5-34412e682912">
+          <value>
+            <State />
           </value>
         </entry>
       </map>

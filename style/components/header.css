@@ -6,48 +6,91 @@
     background-color: white;
     z-index: 10000;
 }
-.header-container{
+
+.header-container {
     display: flex;
     box-shadow: 10px 0 10px var(--black-2);
     padding-right: 10px;
-    .logo-container{
+
+.logo-container {
+    display: flex;
+
+.logo {
+    width: 180px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.mt-25 {
+    margin-top: 21px;
+}
+
+}
+.tabs-container {
+    flex: 1;
+    padding: 7px;
+
+#nav-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    cursor: pointer;
+    color: var(--violet-10)
+}
+
+:hover {
+    color: var(--violet-8);
+    /*transition: all 0.1s ease;*/
+}
+
+}
+.controls-container {
+    padding: 15px;
+    display: flex;
+    gap: 25px;
+
+.icon {
+    width: 30px;
+    height: 30px;
+}
+
+:hover {
+    cursor: pointer;
+    opacity: 75%;
+}
+
+}
+.menu-icon-container {
+    display: none;
+}
+
+}
+
+.menu-popup {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .tabs-container {
+        display: none;
+    }
+
+    .controls-container {
+        order: 2;
+    }
+
+    .header-container{
+        justify-content: space-between;
+    }
+    .header-container .menu-icon-container {
         display: flex;
-        .logo{
-            width: 180px;
-            margin-left: 10px;
-            margin-top: 5px;
-        }
-        .mt-25{
-            margin-top: 21px;
-        }
-    }
-    .tabs-container{
-        flex: 1;
-        padding: 7px;
-        #nav-list{
-            list-style-type: none;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            cursor: pointer;
-            color: var(--violet-10)
-        }
-        :hover{
-            color: var(--violet-8);
-            /*transition: all 0.1s ease;*/
-        }
-    }
-    .controls-container{
+        order: 3;
         padding: 15px;
-        display: flex;
-        gap: 25px;
-        .icon{
-            width: 30px;
-            height: 30px;
-        }
-        :hover{
-            cursor: pointer;
-            opacity: 75%;
-        }
+    .icon {
+        height: 30px;
+        width: 30px;
     }
+
+}
 }

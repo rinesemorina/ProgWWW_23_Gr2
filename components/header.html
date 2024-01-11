@@ -13,46 +13,35 @@
         <img src="../assets/icons/shopping-bag.png" alt="" class="icon" onclick="changeTab('wishlist')">
         <img src="../assets/icons/user-1.png" alt="" class="icon" onclick="changeTab('user-info')">
     </div>
+    <div class="menu-icon-container">
+        <img src="../assets/icons/hamburger.png" alt="" class="icon" id="menu-icon-container-img">
+    </div>
+    <div class="menu-popup" id="menu-popup">
+        <ul id="menu-list">
+            <!-- Data from tabs list go here (Home, Products, Contact Us -->
+        </ul>
+    </div>
 </div>
 
 <script>
-    const tabs = [
-        {
-            name: 'Home',
-            tab_name: 'home'
-        },
-        {
-            name: 'Products',
-            tab_name: 'products'
-        },
-        {
-            name: 'Contact Us',
-            tab_name: 'contact-us'
-        }
-    ]
-    let header = document.getElementById('nav-list')
-
-
-    createTabs()
 
     let url = new URL(window.location)
-    if(url.searchParams.get('tab'))
+    if (url.searchParams.get('tab'))
         changeTab(url.searchParams.get('tab'))
     else changeTab('home')
 
-    function changeTab(tab){
-        if(tab === 'home' || tab === 'user-info')
+    function changeTab(tab) {
+        if (tab === 'home' || tab === 'user-info')
             navigateTo('#slider', 'tabs/home/slider.html')
         else
             document.getElementById("slider").innerHTML = ''
 
-        if(tab === 'user-info'){
+        if (tab === 'user-info') {
             console.log('qergewrgwerger', localStorage);
-            if(localStorage.getItem('user')){
+            if (localStorage.getItem('user')) {
                 navigateTo('#tab-content', 'tabs/user-info/index.html')
                 navigateTo('#footer', 'components/footer.html')
-            }
-            else{
+            } else {
                 navigateTo('#tab-content', 'tabs/login-page/index.html')
                 document.getElementById("footer").innerHTML = ''
             }
@@ -62,23 +51,58 @@
 
         navigateTo('#tab-content', `tabs/${tab}/index.html`)
     }
-    function createTabs(){
-        header.innerHTML = ''
 
-        tabs.forEach((item) => {
-            let tab = document.createElement('li')
-            tab.innerText = item.name
-            tab.addEventListener('click', function (event){
-                changeTab(item.tab_name)
-            })
-
-            header.append(tab)
-        })
-    }
-
-    function userInfo(){
-        $(function(){
+    function userInfo() {
+        $(function () {
             $('#tab-content').load("tabs/user-info/user-info.html");
         });
     }
+
+    // Create a MediaQueryList object
+    var x = window.matchMedia("only screen and (max-width: 600px)")
+
+    function applyMediaQueryForScreen(x) {
+        const tabs = [
+            {
+                name: 'Home',
+                tab_name: 'home'
+            },
+            {
+                name: 'Products',
+                tab_name: 'products'
+            },
+            {
+                name: 'Contact Us',
+                tab_name: 'contact-us'
+            }
+        ]
+
+        function createTabs(element) {
+            element.innerHTML = ''
+
+            tabs.forEach((item) => {
+                let tab = document.createElement('li')
+                tab.innerText = item.name
+                tab.addEventListener('click', function (event) {
+                    changeTab(item.tab_name)
+                })
+
+                element.append(tab)
+            })
+        }
+
+        if (x.matches) {
+            let menu = document.getElementById('menu-list')
+            createTabs(menu)
+        } else {
+            let header = document.getElementById('nav-list')
+            createTabs(header)
+        }
+    }
+
+    applyMediaQueryForScreen(x);
+    x.addEventListener("change", function () {
+        applyMediaQueryForScreen(x);
+    });
+
 </script>
