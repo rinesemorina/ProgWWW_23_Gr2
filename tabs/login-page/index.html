@@ -21,8 +21,8 @@
                 </div>
                 <span>or use your email for registeration</span>
                 <input type="login-text" placeholder="Name">
-                <input type="login-email" placeholder="Email">
-                <input type="login-password" placeholder="Password">
+                <input id="login-sign-up-email" type="login-email" placeholder="Email">
+                <input id="login-sign-up-password" type="login-password" placeholder="Password">
                 <button id="login-sign-up-button">Sign Up</button>
             </form>
         </div>
@@ -36,8 +36,8 @@
                     <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
                 <span>or use your email password</span>
-                <input type="login-email" placeholder="Email">
-                <input type="login-password" placeholder="Password">
+                <input id="login-sign-in-email" type="login-email" placeholder="Email">
+                <input id="login-sign-in-password" type="login-password" placeholder="Password">
                 <a href="#">Forget Your Password?</a>
                 <button id="login-sign-in-button">Sign In</button>
             </form>
@@ -69,20 +69,46 @@ const signupBtn = document.getElementById('login-sign-up-button');
 
 registerBtn.addEventListener('click', () => {
     container.classList.add("login-active");
+    checkUser();
 });
 
 loginBtn.addEventListener('click', () => {
     container.classList.remove("login-active");
+    checkUser();
 });
 
-signupBtn.onclick = () => {
-    window.location.replace("http://127.0.0.1:5500/index.html");
-    console.log('signin');
-};
-signinBtn.onclick = () => {
-    location.href = "http://127.0.0.1:5500/index.html";
-    console.log('signin');
-};
+        signupBtn.onclick = (event) => {
+            event.preventDefault();
+            let email = document.getElementById('login-sign-up-email').value;
+            let password = document.getElementById('login-sign-up-password').value;
+            let user = {
+                username: email,
+                password: password,
+            }
+            localStorage.setItem('user', JSON.stringify(user));
+            navigateTo('#tab-content', 'tabs/products/index.html');
+        };
+        signinBtn.onclick = (event) => {
+            event.preventDefault();
+            let email = document.getElementById('login-sign-in-email').value;
+            let password = document.getElementById('login-sign-in-password').value;
+            let user = {
+                username: email,
+                password: password,
+            }
+            localStorage.setItem('user', JSON.stringify(user));
+            navigateTo('#tab-content', 'tabs/products/index.html');
+        };
+
+        function checkUser() {
+            if (localStorage.getItem('user') !== null) {
+                console.log('The user key exists');
+                console.log(localStorage.getItem('user'));
+            } else {
+                console.log('The user key does NOT exist');
+            }
+        }
+
     </script>
 </body>
 
