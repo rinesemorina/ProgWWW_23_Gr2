@@ -4,7 +4,7 @@
     <div class="container">
         <div class="left-side">
             <h3 style="color: ghostwhite">Send Us a Message</h3>
-            <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+            <form action="https://formsubmit.co/ask.shopit@gmail.com" id="contactForm" method="POST" name="contactForm" class="contactForm">
 
                 <div class="form-group">
                     <input type="text" class="form-control" name="name" id="name" placeholder="Name" required>
@@ -23,7 +23,11 @@
                               placeholder="Message" required></textarea>
                 </div>
                 <div class="form-group">
-                <input type="submit" id="submitButton" value="Send Message">
+                    <button type="submit">Send Message</button>
+                    <input type="hidden" name="_subject" value="New Client ShopIT Request">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://shot-it-up.netlify.app/">
+                    <input type="hidden" name="_template" value="table">
                 </div>
             </form>
         </div>
@@ -100,7 +104,6 @@
  form.addEventListener('submit', function (event) {
      event.preventDefault();
      if (validateFormInputs()) {
-         sendEmail();
          showValidationSuccess();
      }
  });
@@ -164,33 +167,6 @@
          return false;
      }
      return true;
- }
- // endregion
-
- // region sendEmail
- function sendEmail(){
-     var username = name.value;
-     var lastname = surname.value;
-     var userEmail = email.value;
-     var phoneNumber = phone.value;
-     var messageBody = message.value.trim();
-     var body =
-         "Name: " + username +
-         "<br/> Last Name: " + lastname +
-         "<br/> User Email: " + userEmail +
-         "<br/> Phone Number: " + phoneNumber +
-         "<br/> Message: " + messageBody;
-
-     Email.send({
-         Host : "smtp.elasticemail.com",
-         Username : "rinesam8@gmail.com",
-         Password : "9EF9873D32997F2601D5FF95B0E96FE9596F",
-         To : "rinese.morina@student.uni-pr.edu",
-         From : "rinesam8@gmail.com",
-         Subject : "ShopIT Request from " + username + " " + lastname,
-         Body : body
-     }).then(message => {
-     });
  }
  // endregion
 
