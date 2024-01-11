@@ -87,5 +87,7 @@ function getById(id) {
 
 function showDetails(id) {
     lastSelectedItem = getById(id)
+
+    document.getElementById('slider').innerHTML = ''
     navigateTo('#tab-content', '/tabs/products/details-page.html');
 }
