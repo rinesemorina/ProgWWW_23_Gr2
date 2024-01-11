@@ -49,12 +49,12 @@
 
     function addToCart() {
         let user = JSON.parse(localStorage.getItem('user')) || {}
-        lastSelectedItem.isInWishlist = !lastSelectedItem.isInWishlist
         if (lastSelectedItem.isInWishlist) {
             user.wishlist = user.wishlist.filter(item => item !== lastSelectedItem.id)
         } else {
-            user.wishlist.push(lastSelectedItem.id)
+            user.wishlist?.push(lastSelectedItem.id)
         }
+
         // vetem me bo refresh screen
         navigateTo('#tab-content', '/tabs/products/details-page.html');
         localStorage.setItem('user', JSON.stringify(user))
@@ -77,6 +77,8 @@
             "hideMethod": "fadeOut"
         }
         toastr.success(lastSelectedItem.isInWishlist ? 'Produkti u largua nga shporta juaj' : 'Produkti u shtua në shportën tuaj', 'Sukses');
+        lastSelectedItem.isInWishlist = !lastSelectedItem.isInWishlist
+        changeTab('products')
     }
 
     function goBack() {
