@@ -1,0 +1,169 @@
+#contact-container {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--purple-0);
+}
+
+.left-side, .right-side {
+    border-radius: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    padding-top: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.left-side {
+    background: var(--purple-11);
+    background: -moz-linear-gradient(-45deg, var(--purple-11) 0%, var(--blue-11) 100%);
+    background: -webkit-linear-gradient(-45deg, var(--purple-11) 0%, var(--blue-11) 100%);
+    background: -webkit-linear-gradient(-45deg, var(--purple-11) 0%, var(--blue-11) 100%);
+    background: -o-linear-gradient(-45deg, var(--purple-11) 0%, var(--blue-11) 100%);
+    background: -ms-linear-gradient(-45deg, var(--purple-11) 0%, var(--blue-11) 100%);
+    background: -webkit-linear-gradient(315deg, var(--purple-11) 0%, var(--blue-11) 100%);
+    background: -o-linear-gradient(315deg, var(--purple-11) 0%, var(--blue-11) 100%);
+    background: linear-gradient(135deg, var(--purple-11) 0%, var(--blue-11) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='var(--purple-11)', endColorstr='var(--blue-11)', GradientType=1);
+}
+
+.right-side {
+var(--white) background-color: var(--white);
+    justify-content: center;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.contact-info {
+    display: flex;
+    margin-top: 20px;
+}
+
+.icon-container {
+    flex: 0 0 auto;
+    margin-right: 10px;
+}
+
+.address-container {
+    flex: 1;
+}
+input[type=submit]{
+    padding: 10px 20px;
+    background-color: var(--purple-6);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-right: 20px;
+    width: 150px;
+}
+input[type=submit]:hover{
+    background-color: var(--purple-4);
+    /* Darker violet on hover */
+    transform: scale(1.05);
+    /* Scale effect on hover */
+}
+
+.address-container p {
+    margin: 0;
+    color: white; /* Set the text color to white */
+}
+
+.contact-info table {
+    width: 100%;
+    border-collapse: separate;
+    margin-top: 20px;
+    border-spacing:  5em;
+}
+
+.contact-info td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.contact-info .logo-column {
+    width: 20px;
+}
+
+.contact-info tr {
+    margin-bottom: 20px;
+}
+
+.contact-info td {
+    margin-right: 20px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 3em;
+}
+
+.info-row {
+    display: block;
+    gap: 8px;
+    align-items: center;
+    justify-content: start;
+}
+.info-keyword{
+    margin-left: 12px;
+}
+
+.right-side {
+    padding-left: 20px;
+}
+
+.right-side p {
+    padding-bottom: 4.5em;
+}
+
+textarea {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 0;
+        /*background-color: var(--white);*/
+        background-color: #fff;
+        flex-direction: column;
+        gap: 20px;
+        box-shadow: none;
+    }
+
+    .right-side {
+        background-color: var(--purple-0);
+    }
+
+    .right-side p {
+        padding-bottom: 0;
+    }
+}

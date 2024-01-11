@@ -1,16 +1,18 @@
 <div class="container" id="product-container">
-  <!-- Product details will be injected here -->
+    <!-- Product details will be injected here -->
 </div>
 
 <script>
-  injectProductDetails();
-  function toggleImage(src) {
-    let mainImage = document.querySelector('#main-image');
-    mainImage.src = src;
-  }
+    injectProductDetails();
 
-  function injectProductDetails() {
-    var html = `
+    function toggleImage(src) {
+        let mainImage = document.querySelector('#main-image');
+        mainImage.src = src;
+    }
+
+    function injectProductDetails() {
+        var html = `
+      <span class="material-symbols-outlined icon-button" style="height: fit-content" onclick="goBack()">keyboard_arrow_left</span>
       <div class="product-images">
         <div class="main-image-container">
           <div class="main-image-div" id>
@@ -29,41 +31,57 @@
       <p> Modeli: ${lastSelectedItem.model} </p>
       <p> CPU: ${lastSelectedItem.cpu} </p>
       <p class="product-price">Çmimi i produktit: ${lastSelectedItem.price}€</p>
-      <button class="add-to-cart-btn" onclick="addToCart()" >Shto në shportë</button>
+      <button class="add-to-cart-btn" onclick="addToCart()" >${lastSelectedItem.isInWishlist ? 'Fshij nga shporta' : 'Shto ne shporte'}</button>
     </div>
     `;
-    this.document.getElementById('product-container').innerHTML = html;
-  }
+        this.document.getElementById('product-container').innerHTML = html;
+    }
 
-  function injectSmallImages() {
-    return lastSelectedItem.images.map((image, index) => {
-      return `
+    function injectSmallImages() {
+        return lastSelectedItem.images.map((image, index) => {
+            return `
         <div class="small-image-container">
           <img src="${image}" class="small-image" alt="Small Product Image ${index}" onclick="toggleImage('${image}')">
         </div>
       `;
-    }).join('');
-  }
-
-  function addToCart() {
-    toastr.options = {
-      "closeButton": true,
-      "debug": false,
-      "newestOnTop": true,
-      "progressBar": true,
-      "positionClass": "toast-top-right",
-      "preventDuplicates": false,
-      "onclick": null,
-      "showDuration": "300",
-      "hideDuration": "1000",
-      "timeOut": "5000",
-      "extendedTimeOut": "1000",
-      "showEasing": "swing",
-      "hideEasing": "linear",
-      "showMethod": "fadeIn",
-      "hideMethod": "fadeOut"
+        }).join('');
     }
-    toastr.success('Produkti u shtua në shportën tuaj', 'Sukses');
-    console.log('Add to cart clicked');
-  }
+
+    function addToCart() {
+        let user = JSON.parse(localStorage.getItem('user')) || {}
+        if (lastSelectedItem.isInWishlist) {
+            user.wishlist = user.wishlist.filter(item => item !== lastSelectedItem.id)
+        } else {
+            user.wishlist?.push(lastSelectedItem.id)
+        }
+
+        // vetem me bo refresh screen
+        navigateTo('#tab-content', '/tabs/products/details-page.html');
+        localStorage.setItem('user', JSON.stringify(user))
+
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": true,
+            "progressBar": true,
+            "positionClass": "toast-top-right",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        }
+        toastr.success(lastSelectedItem.isInWishlist ? 'Produkti u largua nga shporta juaj' : 'Produkti u shtua në shportën tuaj', 'Sukses');
+        lastSelectedItem.isInWishlist = !lastSelectedItem.isInWishlist
+        changeTab('products')
+    }
+
+    function goBack() {
+        navigateTo("#tab-content", "tabs/products/index.html")
+    }
 </script>

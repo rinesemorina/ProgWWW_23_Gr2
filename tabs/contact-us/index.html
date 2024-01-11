@@ -1,3 +1,194 @@
 <div id="contact-wrapper">
     <p class="bold fs-20">Contact Us Page</p>
 </div>
+<div id="contact-container">
+    <div class="container">
+        <div class="left-side">
+            <h3 style="color: ghostwhite">Send Us a Message</h3>
+            <form method="POST" id="contactForm" name="contactForm" class="contactForm" onsubmit="sendEmail()">
+
+                <div class="form-group">
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="surname" id="surname" placeholder="Last Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="youremail@gmail.com" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" class="form-control" name="phone" id="phone" maxlength="11" placeholder="123/456-789">
+                </div>
+                <div class="form-group">
+                    <textarea name="message" class="form-control" id="message" cols="30" rows="6"
+                              placeholder="Message" required></textarea>
+                </div>
+
+                <input type="submit" id="submitButton" value="Send Message">
+            </form>
+        </div>
+        <div class="right-side">
+            <h3>Contact Us</h3>
+            <p>We're open for any suggestion or just to have a chat</p>
+            <div class="info">
+                <div class="info-row">
+                    <img style="height: 20px; width: 20px;" src="../assets/icons/location.png" alt="Logo 1">
+                    <span class="info-keyword">Address:</span>
+                    <a href="#" id="addressLink"><span>m9 Eqrem Çabej, Prishtina 10000</span></a>
+                </div>
+                <div class="info-row">
+                    <img style="height: 20px; width: 20px;" src="../assets/icons/phone.png" alt="Logo 1">
+                    <span class="info-keyword">Phone:</span>
+                    <span>+383 38 249 872</span>
+                </div>
+                <div class="info-row">
+                    <img style="height: 20px; width: 20px;" src="../assets/icons/email.png" alt="Logo 1">
+                    <span class="info-keyword">Email:</span>
+                    <span>ask.shopit@gmail.com</span>
+                </div>
+                <div class="info-row">
+                    <img style="height: 20px; width: 20px;" src="../assets/icons/website.png" alt="Logo 1">
+                    <span class="info-keyword">Website:</span>
+                    <a href="#" id="websiteUrl"><span>websiteUrl</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+ // region constants
+ const webUrl = new String("http://localhost:63343/ProgWWW_23_Gr2");
+ const address = new String("https://www.google.com/maps/dir/42.6577868,21.1533572/fshmn+location+in+prishtina+google+maps/@42.6572768,21.1485004,15z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x13549ee896b552d7:0x31bf5e925cb705a3!2m2!1d21.1612898!2d42.6554261?entry=ttu");
+ document.getElementById("websiteUrl").setAttribute("href", webUrl);
+ document.getElementById("addressLink").setAttribute("href", address);
+ // endregion
+
+ // region validate form-inputs
+ let form = document.querySelector("#contactForm");
+ let name = document.getElementById('name')
+ let surname = document.getElementById('surname')
+ let phone = document.getElementById('phone')
+ let email = document.getElementById('email')
+ let message = document.getElementById('message')
+
+ form.addEventListener('submit', function (event) {
+     event.preventDefault();
+     if (validateFormInputs()) {
+         showValidationSuccess();
+     }
+ });
+
+ function validateFormInputs() {
+     let isFormValid = true;
+
+     if (!validateName(name.value)) {
+         isFormValid = false;
+     }
+     if (!validateSurname(surname.value)){
+         isFormValid = false;
+     }
+     if (!validateEmail(email.value.trim())){
+         isFormValid = false;
+     }
+     if (!validatePhone(phone.value)){
+         isFormValid = false;
+     }
+     if (!validateMessage(message.value.trim())){
+         isFormValid = false;
+     }
+     return isFormValid;
+ }
+ // endregion
+
+ // region validate individual fields
+ function validateName(name) {
+     if (name.length < 2 || name.length > 20) {
+         showValidationError("Please type a name between 2-20 characters");
+         return false;
+     }
+     return true;
+ }
+ function validateSurname(surname){
+     if (surname.length < 2 || surname.length > 30){
+         showValidationError("Please type a last name between 2-30 characters");
+         return false;
+     }
+     return true;
+ }
+ function validateEmail(email){
+     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+     if (emailPattern.test(email)) {
+         return true;
+     }
+     showValidationError("Invalid email address");
+     return false;
+ }
+ function validatePhone(phone){
+     const phonePattern = /^\d{3}\/\d{3}-\d{3}$/;
+     if (phone && !phonePattern.test(phone)) {
+         showValidationError("Invalid phone number. Please use the format: 123/456-789");
+         return false;
+     }
+     return true;
+ }
+ function validateMessage(message){
+     if (message.length < 1) {
+         showValidationError("Please enter a message");
+         return false;
+     }
+     return true;
+ }
+ // endregion
+
+ // region sendEmail
+ function sendEmail(){
+     var username = name.value;
+     var lastname = surname.value;
+     var userEmail = email.value;
+     var phoneNumber = phone.value;
+     var messageBody = message.value.trim();
+     var body =
+         "Name: " + username +
+         "<br/> Last Name: " + lastname +
+         "<br/> User Email: " + userEmail +
+         "<br/> Phone Number: " + phoneNumber +
+         "<br/> Message: " + messageBody;
+
+     Email.send({
+         Host : "smtp.elasticemail.com",
+         Username : "rinesam8@gmail.com",
+         Password : "9EF9873D32997F2601D5FF95B0E96FE9596F",
+         To : "rinese.morina@student.uni-pr.edu",
+         From : "rinesam8@gmail.com",
+         Subject : "ShopIT Request from " + username + " " + lastname,
+         Body : body
+     }).then(message => {
+     });
+ }
+ // endregion
+
+ // region show validation message
+ function showValidationError(message) {
+     Swal.fire({
+         icon: 'error',
+         title: 'Oops!',
+         text: message,
+     });
+ }
+ function showValidationSuccess() {
+     Swal.fire({
+         icon: 'success',
+         title: 'Thank you!',
+         text: 'Your message was submitted successfully!',
+     }).then(() => {
+         form.submit();
+     });
+ }
+ // endregion
+
+</script>
+
+

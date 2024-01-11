@@ -16,8 +16,7 @@
     ],
     "reviews": 4,
     "features": [
-      "SSD",
-      "computer"
+      "SSD"
     ],
     "img": {
       "folder": "AIO",
@@ -55,8 +54,7 @@
     ],
     "reviews": 3,
     "features": [
-      "full rotate",
-      "tablet"
+      "full rotate"
     ],
     "images": [
       "assets/data/product-images/microsoft-surfacebook3/img1.png",
@@ -244,8 +242,7 @@
     ],
     "reviews": 1,
     "features": [
-      "android",
-      "phone"
+      "android"
     ],
     "img": {
       "folder": "s23",
@@ -477,8 +474,7 @@
     ],
     "reviews": 3,
     "features": [
-      "android",
-      "phone"
+      "android"
     ],
     "img": {
       "folder": "a04s",
@@ -511,8 +507,7 @@
     ],
     "reviews": 3,
     "features": [
-      "android",
-      "phone"
+      "android"
     ],
     "img": {
       "folder": "iphone-15",
@@ -549,8 +544,7 @@
     ],
     "reviews": 3,
     "features": [
-      "android",
-      "phone"
+      "android"
     ],
     "img": {
       "folder": "iphone-15",
@@ -587,8 +581,7 @@
     ],
     "reviews": 3,
     "features": [
-      "android",
-      "phone"
+      "android"
     ],
     "img": {
       "folder": "iphone-15",
@@ -625,8 +618,7 @@
     ],
     "reviews": 1,
     "features": [
-      "android",
-      "phone"
+      "android"
     ],
     "img": {
       "folder": "s23",
