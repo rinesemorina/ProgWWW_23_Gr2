@@ -31,7 +31,7 @@
       <p> Modeli: ${lastSelectedItem.model} </p>
       <p> CPU: ${lastSelectedItem.cpu} </p>
       <p class="product-price">Çmimi i produktit: ${lastSelectedItem.price}€</p>
-      <button class="add-to-cart-btn" onclick="addToCart()" >${lastSelectedItem.isInWishlist ? 'Fshij nga shporta' : 'Shto ne shporte'}</button>
+      <button class="add-to-cart-btn" style="display:${localStorage.getItem('user') ? 'block' : 'none'}" onclick="addToCart()" >${lastSelectedItem.isInWishlist ? 'Fshij nga shporta' : 'Shto ne shporte'}</button>
     </div>
     `;
         this.document.getElementById('product-container').innerHTML = html;
@@ -82,6 +82,6 @@
     }
 
     function goBack() {
-        navigateTo("#tab-content", "tabs/products/index.html")
+        changeTab('products')
     }
 </script>

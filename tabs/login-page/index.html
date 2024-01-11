@@ -86,7 +86,7 @@ loginBtn.addEventListener('click', () => {
                 password: password,
             }
             localStorage.setItem('user', JSON.stringify(user));
-            navigateTo('#tab-content', 'tabs/products/index.html');
+            changeTab('products')
         };
         signinBtn.onclick = (event) => {
             event.preventDefault();

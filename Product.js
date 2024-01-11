@@ -70,7 +70,12 @@ function getFilteredData(filters) {
 }
 
 function formattedDescription(item) {
-    return `${item.cpu}, ${item.ram}GB, ${item.space > 1024 ? item.space % 1024 + 'TB' : item.space + 'GB'}, ${item.display}"`
+    let description = ''
+    if(item.cpu) description += item.cpu + ', '
+    if(item.ram) description += item.ram + 'GB, '
+    if(item.space) description += item.space + (item.space > 1024 ? item.space % 1024 + 'TB' : item.space + 'GB') + ', '
+    if(item.display) description += item.display + ', '
+    return description.substring(0, description.length - 2)
 }
 
 function getAllFeatures(all_filters) {

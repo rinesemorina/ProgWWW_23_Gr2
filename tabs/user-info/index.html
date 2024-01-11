@@ -42,6 +42,7 @@
       </div>
     </form>
   </div>
+  <img src="../assets/icons/logout.png" alt="" class="icon logout-icon icon-button" onclick="logout()">
 </div>
 
 <script>
@@ -168,5 +169,10 @@
       input.classList.remove('valid');
       errorMessage.style.display = 'block';
     }
+  }
+
+  function logout(){
+    localStorage.removeItem('user')
+    changeTab('user-info')
   }
 </script>

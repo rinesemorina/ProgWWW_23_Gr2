@@ -9,6 +9,7 @@
     border-radius: 20px;
     padding: 40px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 .profile-picture img {
@@ -125,4 +126,12 @@ button:hover {
     #userProfileTitle {
         margin: 12px auto 0;
     }
+}
+
+.logout-icon{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
