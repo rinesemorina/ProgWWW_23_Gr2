@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7795cc23-bd68-4fce-8814-e87545432a00" name="Changes" comment="Details page back button, slider on user-info, removed large size videos">
-      <change afterPath="$PROJECT_DIR$/assets/icons/hamburger.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/components/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style/components/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/components/header.css" afterDir="false" />

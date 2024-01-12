@@ -16,8 +16,8 @@
     <div class="menu-icon-container">
         <img src="../assets/icons/hamburger.png" alt="" class="icon" id="menu-icon-container-img">
     </div>
-    <div class="menu-popup" id="menu-popup">
-        <ul id="menu-list">
+    <div class="menu-popup" id="menu-popup-id">
+        <ul id="menu-list-container">
             <!-- Data from tabs list go here (Home, Products, Contact Us -->
         </ul>
     </div>
@@ -90,13 +90,25 @@
                 element.append(tab)
             })
         }
-
+        let menuPopup = document.getElementsByClassName('menu-popup')
+        let menuPopupId = document.getElementById('menu-popup-id')
         if (x.matches) {
-            let menu = document.getElementById('menu-list')
+            let menuIconContainer = document.getElementById('menu-icon-container-img')
+            let menu = document.getElementById('menu-list-container')
             createTabs(menu)
+            menuIconContainer.addEventListener('click', function (event){
+                event.preventDefault()
+                menuPopupId.style.display = 'block'
+            })
+            window.addEventListener('click', function (event) {
+                if (!menuIconContainer.contains(event.target) && event.target !== menuPopup) {
+                    menuPopupId.style.display = 'none';
+                }
+            });
         } else {
             let header = document.getElementById('nav-list')
             createTabs(header)
+            menuPopup.style.display = 'none';
         }
     }
 
@@ -104,5 +116,7 @@
     x.addEventListener("change", function () {
         applyMediaQueryForScreen(x);
     });
+
+
 
 </script>
