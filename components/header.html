@@ -13,72 +13,103 @@
         <img src="../assets/icons/shopping-bag.png" alt="" class="icon" onclick="changeTab('wishlist')">
         <img src="../assets/icons/user-1.png" alt="" class="icon" onclick="changeTab('user-info')">
     </div>
-</div>
+    <div class="menu-icon-container">
+        <img src="../assets/icons/hamburger.png" alt="" class="icon" id="menu-icon-container-img">
+    </div>
+    <div class="menu-popup" id="menu-popup">
+        <ul id="menu-list">
+            <div class="menu-popup" id="menu-popup-id">
+                <ul id="menu-list-container">
+                    <!-- Data from tabs list go here (Home, Products, Contact Us -->
+                </ul>
+            </div>
+    </div>
 
-<script>
-    const tabs = [
-        {
-            name: 'Home',
-            tab_name: 'home'
-        },
-        {
-            name: 'Products',
-            tab_name: 'products'
-        },
-        {
-            name: 'Contact Us',
-            tab_name: 'contact-us'
-        }
-    ]
-    let header = document.getElementById('nav-list')
-
-
-    createTabs()
-
-    let url = new URL(window.location)
-    if(url.searchParams.get('tab'))
-        changeTab(url.searchParams.get('tab'))
-    else changeTab('home')
-
-    function changeTab(tab){
-        if(tab === 'home' || tab === 'user-info')
-            navigateTo('#slider', 'tabs/home/slider.html')
-        else
-            document.getElementById("slider").innerHTML = ''
-
-        if(tab === 'user-info'){
-            console.log('qergewrgwerger', localStorage);
-            if(localStorage.getItem('user')){
-                navigateTo('#tab-content', 'tabs/user-info/index.html')
-                navigateTo('#footer', 'components/footer.html')
+    <script>
+        let url = new URL(window.location)
+        if (url.searchParams.get('tab'))
+            changeTab(url.searchParams.get('tab'))
+        else changeTab('home')
+        function changeTab(tab) {
+            if (tab === 'home' || tab === 'user-info')
+                navigateTo('#slider', 'tabs/home/slider.html')
+            else
+                document.getElementById("slider").innerHTML = ''
+            if (tab === 'user-info') {
+                console.log('qergewrgwerger', localStorage);
+                if (localStorage.getItem('user')) {
+                    navigateTo('#tab-content', 'tabs/user-info/index.html')
+                    navigateTo('#footer', 'components/footer.html')
+                } else {
+                    navigateTo('#tab-content', 'tabs/login-page/index.html')
+                    document.getElementById("footer").innerHTML = ''
+                }
+                return;
             }
-            else{
-                navigateTo('#tab-content', 'tabs/login-page/index.html')
-                document.getElementById("footer").innerHTML = ''
-            }
-            return;
+            navigateTo('#footer', 'components/footer.html')
+            navigateTo('#tab-content', `tabs/${tab}/index.html`)
         }
-        navigateTo('#footer', 'components/footer.html')
+        function userInfo() {
+            $(function () {
+                $('#tab-content').load("tabs/user-info/user-info.html");
+            });
+        }
+        // Create a MediaQueryList object
+        var x = window.matchMedia("only screen and (max-width: 600px)")
+        function applyMediaQueryForScreen(x) {
+            const tabs = [
+                {
+                    name: 'Home',
+                    tab_name: 'home'
+                },
+                {
+                    name: 'Products',
+                    tab_name: 'products'
+                },
+                {
+                    name: 'Contact Us',
+                    tab_name: 'contact-us'
+                }
+            ]
+            function createTabs(element) {
+                element.innerHTML = ''
+                tabs.forEach((item) => {
+                    let tab = document.createElement('li')
+                    tab.innerText = item.name
+                    tab.addEventListener('click', function (event) {
+                        changeTab(item.tab_name)
+                    })
+                    element.append(tab)
+                })
+            }
 
-        navigateTo('#tab-content', `tabs/${tab}/index.html`)
-    }
-    function createTabs(){
-        header.innerHTML = ''
 
-        tabs.forEach((item) => {
-            let tab = document.createElement('li')
-            tab.innerText = item.name
-            tab.addEventListener('click', function (event){
-                changeTab(item.tab_name)
-            })
+            let menuPopupId = document.getElementById('menu-popup-id')
+            if (x.matches) {
+                let menuIconContainer = document.getElementById('menu-icon-container-img')
+                let menu = document.getElementById('menu-list-container')
+                createTabs(menu)
+                menuIconContainer.addEventListener('click', function (event){
+                    event.preventDefault()
+                    menuPopupId.style.display = 'block'
+                })
+                window.addEventListener('click', function (event) {
+                    if (!menuIconContainer.contains(event.target) && event.target !== menuPopupId) {
+                        menuPopupId.style.display = 'none';
+                    }
+                });
+            } else {
+                let header = document.getElementById('nav-list')
+                createTabs(header)
+                menuPopupId.style.display = 'none';
+            }
+        }
 
-            header.append(tab)
-        })
-    }
-
-    function userInfo(){
-        $(function(){
-            $('#tab-content').load("tabs/user-info/user-info.html");
+        applyMediaQueryForScreen(x);
+        x.addEventListener("change", function () {
+            applyMediaQueryForScreen(x);
         });
-    }
-</script>
+
+
+
+    </script>
