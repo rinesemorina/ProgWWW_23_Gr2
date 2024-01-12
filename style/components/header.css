@@ -58,7 +58,6 @@
     display: none;
     background-color: var(--violet-6);
     color: #FFF;
-    border-radius: 8px;
     height: 120px;
     width: -webkit-fill-available;
     position: absolute;
@@ -67,7 +66,7 @@
     margin: 3px;
     padding: 3px;
     text-align: center;
-    left: 0px;
+    left: 0;
 }
 .menu-popup li{
     cursor: pointer;
