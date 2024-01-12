@@ -49,7 +49,7 @@
 
     function addToCart() {
         let user = JSON.parse(localStorage.getItem('user')) || {}
-        user.wishlist = []
+        user.wishlist = user.wishlist || []
         if (lastSelectedItem.isInWishlist) {
             user.wishlist = user.wishlist.filter(item => item !== lastSelectedItem.id)
         } else {
