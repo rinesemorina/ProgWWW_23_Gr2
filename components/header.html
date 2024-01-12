@@ -17,12 +17,11 @@
         <img src="../assets/icons/hamburger.png" alt="" class="icon" id="menu-icon-container-img">
     </div>
     <div class="menu-popup" id="menu-popup">
-        <ul id="menu-list">
-            <div class="menu-popup" id="menu-popup-id">
-                <ul id="menu-list-container">
-                    <!-- Data from tabs list go here (Home, Products, Contact Us -->
-                </ul>
-            </div>
+        <div class="menu-popup" id="menu-popup-id">
+            <ul id="menu-list-container">
+                <!-- Data from tabs list go here (Home, Products, Contact Us -->
+            </ul>
+        </div>
     </div>
 
     <script>
@@ -30,6 +29,7 @@
         if (url.searchParams.get('tab'))
             changeTab(url.searchParams.get('tab'))
         else changeTab('home')
+
         function changeTab(tab) {
             if (tab === 'home' || tab === 'user-info')
                 navigateTo('#slider', 'tabs/home/slider.html')
@@ -49,13 +49,16 @@
             navigateTo('#footer', 'components/footer.html')
             navigateTo('#tab-content', `tabs/${tab}/index.html`)
         }
+
         function userInfo() {
             $(function () {
                 $('#tab-content').load("tabs/user-info/user-info.html");
             });
         }
+
         // Create a MediaQueryList object
         var x = window.matchMedia("only screen and (max-width: 600px)")
+
         function applyMediaQueryForScreen(x) {
             const tabs = [
                 {
@@ -71,6 +74,7 @@
                     tab_name: 'contact-us'
                 }
             ]
+
             function createTabs(element) {
                 element.innerHTML = ''
                 tabs.forEach((item) => {
@@ -89,7 +93,7 @@
                 let menuIconContainer = document.getElementById('menu-icon-container-img')
                 let menu = document.getElementById('menu-list-container')
                 createTabs(menu)
-                menuIconContainer.addEventListener('click', function (event){
+                menuIconContainer.addEventListener('click', function (event) {
                     event.preventDefault()
                     menuPopupId.style.display = 'block'
                 })
@@ -109,7 +113,6 @@
         x.addEventListener("change", function () {
             applyMediaQueryForScreen(x);
         });
-
 
 
     </script>
